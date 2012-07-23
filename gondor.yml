@@ -5,7 +5,10 @@ key: 23SIEQ8HFR2
 vcs: hg
 
 # Framework to use on Gondor.
-framework: wsgi
+framework: django
+
+django:
+    managepy: manage.py
 
 # This path is relative to your project root (the directory gondor.yml lives in.)
 requirements_file: requirements.txt
