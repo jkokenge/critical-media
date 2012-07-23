@@ -29,6 +29,10 @@ for i, arg in enumerate(sys.argv):
         sys.argv.pop(i)
 
 from django.core.management import execute_manager
+
+os.environ['DJANGO_SETTINGS_MODULE'] = "cml.settings"
+
+
 try:
     from django.conf import settings  # Assumed to be in the same directory.
 except ImportError:
