@@ -7,8 +7,8 @@ vcs: hg
 # Framework to use on Gondor.
 framework: django
 
-django:
-    managepy: manage.py
+#django:
+#    managepy: manage.py
 
 # This path is relative to your project root (the directory gondor.yml lives in.)
 requirements_file: requirements.txt
