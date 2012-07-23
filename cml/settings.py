@@ -56,7 +56,7 @@
 
 # Setting to turn on featured images for blog posts. Defaults to False.
 #
-# BLOG_USE_FEATURED_IMAGE = True
+BLOG_USE_FEATURED_IMAGE = True
 
 # If ``True``, users will be automatically redirected to HTTPS
 # for the URLs specified by the ``SSL_FORCE_URL_PREFIXES`` setting.
@@ -79,6 +79,8 @@
 # INSTALLED_APPS setting. This setting is not defined in
 # mezzanine.conf.defaults as is the case with the above settings.
 USE_SOUTH = True
+
+PAGE_MENU_TEMPLATES = ((1, u'Top navigation bar', 'pages/menus/dropdown.html'), (2, u'Left-hand tree', 'pages/menus/tree.html'), (3, u'Footer', 'pages/menus/footer.html'))
 
 
 ########################
@@ -146,11 +148,6 @@ STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
-
-
-#############
-# DATABASES #
-#############
 
 
 #########
@@ -285,29 +282,6 @@ OPTIONAL_APPS = (
 )
 
 DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
-
-###################
-# DEPLOY SETTINGS #
-###################
-
-# These settings are used by the default fabfile.py provided.
-# Check fabfile.py for defaults.
-
-# FABRIC = {
-#     "SSH_USER": "", # SSH username
-#     "SSH_PASS":  "", # SSH password (consider key-based authentication)
-#     "SSH_KEY_PATH":  "", # Local path to SSH key file, for key-based auth
-#     "HOSTS": [], # List of hosts to deploy to
-#     "VIRTUALENV_HOME":  "", # Absolute remote path for virtualenvs
-#     "PROJECT_NAME": "", # Unique identifier for project
-#     "REQUIREMENTS_PATH": "", # Path to pip requirements, relative to project
-#     "GUNICORN_PORT": 8000, # Port gunicorn will listen on
-#     "LOCALE": "en_US.UTF-8", # Should end with ".UTF-8"
-#     "LIVE_HOSTNAME": "www.example.com", # Host for public site.
-#     "REPO_URL": "", # Git or Mercurial remote repo URL for the project
-#     "DB_PASS": "", # Live database password
-#     "ADMIN_PASS": "", # Live admin user password
-# }
 
 
 ##################
