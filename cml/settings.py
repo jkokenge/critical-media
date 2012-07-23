@@ -208,6 +208,11 @@ TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
 # APPLICATIONS #
 ################
 
+# Store these package names here as they may change in the future since
+# at the moment we are using custom forks of them.
+PACKAGE_NAME_FILEBROWSER = "filebrowser_safe"
+PACKAGE_NAME_GRAPPELLI = "grappelli_safe"
+
 INSTALLED_APPS = (
     "django.contrib.admin",
     "django.contrib.auth",
@@ -228,8 +233,8 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     #"mezzanine.accounts",
     #"mezzanine.mobile",
-    "filebrowser_safe",
-    "grappelli_safe",
+    PACKAGE_NAME_FILEBROWSER,
+    PACKAGE_NAME_GRAPPELLI,
 )
 
 # List of processors used by RequestContext to populate the context.
@@ -266,6 +271,9 @@ MIDDLEWARE_CLASSES = (
     "mezzanine.pages.middleware.PageMiddleware",
     "mezzanine.core.middleware.FetchFromCacheMiddleware",
 )
+
+
+
 
 #########################
 # OPTIONAL APPLICATIONS #
