@@ -25,6 +25,8 @@ urlpatterns = patterns("",
     # one out.
 
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
+    
+    url(r"^cml/", include("cmlproject.urls")),
 
     # HOMEPAGE AS AN EDITABLE PAGE IN THE PAGE TREE
     # ---------------------------------------------
