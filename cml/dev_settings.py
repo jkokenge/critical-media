@@ -15,6 +15,19 @@ USE_SOUTH = True
 #not yet supported (in 1.1.4)
 PAGE_MENU_TEMPLATES = ((1, u'Top navigation bar', 'pages/menus/dropdown.html'), (2, u'Left-hand tree', 'pages/menus/tree.html'), (3, u'Footer', 'pages/menus/footer.html'))
 
+DASHBOARD_TAGS = (
+    ("mezzanine_tags.app_list",),
+    ("mezzanine_tags.recent_actions",), #fix this
+    ("mezzanine_tags.recent_actions",),
+)
+
+ADMIN_MENU_ORDER = (
+    ("Content", ("pages.Page","blog.BlogPost", "generic.ThreadedComment",
+        ("Media Library", "fb_browse"),)),
+    ("Site", ("conf.Setting","auth.User", "auth.Group", "sites.Site", "redirects.Redirect")),
+    ("Critical Media Literacy Project", ("cmlproject.Topic", "cmlproject.TeacherGuidePage", "cmlproject.MediaArtefact")),
+)
+
 
 ########################
 # MAIN DJANGO SETTINGS #
@@ -158,6 +171,7 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     #"mezzanine.accounts",
     #"mezzanine.mobile",
+    "cml.cmlproject",
 )
 
 # List of processors used by RequestContext to populate the context.
