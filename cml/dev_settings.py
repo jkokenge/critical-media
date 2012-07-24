@@ -229,14 +229,6 @@ try:
 except ImportError:
     pass
 
-# defined per machine.
-try:
-    from settings_gondor import *
-except ImportError:
-    pass
-
-
-
 ####################
 # DYNAMIC SETTINGS #
 ####################
