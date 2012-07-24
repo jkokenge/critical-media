@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load i18n mezzanine_tags blog_tags keyword_tags %}
 
-{% block meta_title %}{% if page %}{{ page.richtextpage.title }}{% else %}{% trans "Teacher Guides" %}{% endif %}{% endblock %}
+{% block meta_title %}{% if page %}{{ page.richtextpage.title }}{% else %}{% trans "Media" %}{% endif %}{% endblock %}
 
 {% block meta_keywords %}{% metablock %}
 {% if page %}
@@ -21,7 +21,7 @@
 {% if page %}
 {% editable page.title %}{{ page.title }}{% endeditable %}
 {% else %}
-{% trans "Teacher Guides" %}
+{% trans "Media" %}
 {% endif %}
 {% endblock %}
 
@@ -29,9 +29,9 @@
 {{ block.super }}
 <li class="active">
 {% if topic %}
-{{ topic.title }} / {% trans "Teacher Guide Pages" %} 
+{{ topic.title }} / {% trans "Media" %} 
 {% else %}
-{% trans "Teacher Guide Pages" %}
+{% trans "Media" %}
 {% endif %}
 </li>
 
@@ -61,35 +61,35 @@
     {% endif %}
 {% endif %}
 
-{% for teacherguide in teacherguides.object_list %}
-{% editable teacherguide.title %}
+{% for mediaartefact in mediaartefacts.object_list %}
+{% editable mediaartefact.title %}
 <h2>
-    <a href="{{ teacherguide.get_absolute_url }}">{{ teacherguide.title }}</a>
+    <a href="{{ mediaartefact.get_absolute_url }}">{{ mediaartefact.title }}</a>
 </h2>
 {% endeditable %}
 
 
-{% editable teacherguide.content %}
-{{ teacherguide.description_from_content|safe }}
+{% editable mediaartefact.content %}
+{{ mediaartefact.description_from_content|safe }}
 {% endeditable %}
 
 <p class="blog-list-detail">
-    {% if teacherguide.keyword_list %}
+    {% if mediaartefact.keyword_list %}
     {% trans "Tags" %}:
     {% spaceless %}
-    {% for tag in teacherguide.keyword_list %}
-    <a href="{% url teacherguide_list_tag tag.slug %}" class="tag">{{ tag }}</a>
+    {% for tag in mediaartefact.keyword_list %}
+    <a href="{% url mediaartefact_list_tag tag.slug %}" class="tag">{{ tag }}</a>
     {% endfor %}
     {% endspaceless %}
     <br>
     {% endif %}
-    <a href="{{ teacherguide.get_absolute_url }}">{% trans "read more" %}</a>
+    <a href="{{ mediaartefact.get_absolute_url }}">{% trans "read more" %}</a>
     
     
 </p>
 {% endfor %}
 
-{% pagination_for teacherguides %}
+{% pagination_for mediaartefacts %}
 
 {% endblock %}
 

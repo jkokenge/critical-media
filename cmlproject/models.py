@@ -87,7 +87,6 @@ class LeafPage(Orderable, Displayable):
         if parent is not None:
             titles.insert(0, unicode(self._meta.verbose_name_plural))
             titles.insert(0, parent.title)
-            
 
         self.titles = " / ".join(titles)
         super(LeafPage, self).save(*args, **kwargs)

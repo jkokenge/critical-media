@@ -1,43 +1,43 @@
-{% extends "cmlproject/teacherguide_list.html" %}
+{% extends "cmlproject/mediaartefact_list.html" %}
 {% load mezzanine_tags comment_tags keyword_tags i18n %}
 
-{% block meta_title %}{{ teacherguide.title }}{% endblock %}
+{% block meta_title %}{{ mediaartefact.title }}{% endblock %}
 
 {% block meta_keywords %}{% metablock %}
-{% keywords_for teacherguide as tags %}
+{% keywords_for mediaartefact as tags %}
 {% for tag in tags %}{% if not forloop.first %}, {% endif %}{{ tag }}{% endfor %}
 {% endmetablock %}{% endblock %}
 
 {% block meta_description %}{% metablock %}
-{{ teacherguide.description }}
+{{ mediaartefact.description }}
 {% endmetablock %}{% endblock %}
 
 {% block title %}
-{% editable teacherguide.title %}{{ teacherguide.title }}{% endeditable %}
+{% editable mediaartefact.title %}{{ mediaartefact.title }}{% endeditable %}
 {% endblock %}
 
 {% block breadcrumb_menu %}
-<li class="active">{{ teacherguide.titles }}</li>
+<li class="active">{{ mediaartefact.titles }}</li>
 {% endblock %}
 
 {% block main %}
 
-{% editable teacherguide.content %}
-{{ teacherguide.content|richtext_filter|safe }}
+{% editable mediaartefact.content %}
+{{ mediaartefact.content|richtext_filter|safe }}
 {% endeditable %}
 
-<!--{% keywords_for teacherguide as tags %}
+<!--{% keywords_for mediaartefact as tags %}
 {% if tags %}
 {% spaceless %}
 <ul class="unstyled tags">
     <li>{% trans "Tags" %}:</li>
     {% for tag in tags %}
-    <li><a href="{% url teacherguide_list_tag tag.slug %}">{{ tag }}</a></li>
+    <li><a href="{% url mediaartefact_list_tag tag.slug %}">{{ tag }}</a></li>
     {% endfor %}
 </ul>
 {% endspaceless %}
 {% endif %}-->
 
-{% set_short_url_for teacherguide %}
+{% set_short_url_for mediaartefact %}
 
 {% endblock %}
