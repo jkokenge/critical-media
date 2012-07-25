@@ -5,9 +5,12 @@
   
   {% get_topics as topic_list %}
   {% for topic in topic_list %}
-  <li class="{% if forloop.first %} first{% endif %}
-             {% if forloop.last %} last{% endif %}">
+  <btn class="nav-header 
+  			 {% if forloop.first %} first in{% endif %}
+             {% if forloop.last %} last{% endif %}" 
+             data-toggle="collapse" data-target="#{{topic.title}}-content">
   {{topic.title}}
+  <div class="collapse in" id="{{topic.title}}-content">
   <ul class="nav nav-list navlist-menu-level-{{ branch_level }}">
   
   <li class="{% active request "mediaartefact_list_topic" topic.slug %} first">
@@ -17,7 +20,7 @@
   <a href="{% url teacherguide_list_topic topic.slug %}">Teacher Guides </a>
   </li>
   </ul>
-             
+  </div>           
   </li>
   
   {% endfor %}

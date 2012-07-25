@@ -28,6 +28,7 @@
 {% compress js %}
 <script src="{{ STATIC_URL }}mezzanine/js/{{ settings.JQUERY_FILENAME }}"></script>
 <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+<script src="{{ STATIC_URL }}js/bootstrap_collapse.js"></script>
 <script>
 $(function() {
     $('.middleinput:text, textarea').addClass('xlarge');
@@ -130,6 +131,8 @@ $(function() {
 </footer>
 
 {% include "includes/footer_scripts.html" %}
-
+<script>
+$(".collapse").collapse()
+</script>
 </body>
 </html>
