@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load pages_tags mezzanine_tags i18n %}
 
 {% load i18n %}
 
@@ -14,4 +15,10 @@
 
 {% block main %}
 {% trans "This is the homepage." %}
+{% endblock %}
+
+{% block right_panel %}
+    {% ifinstalled mezzanine.twitter %}
+    {% include "twitter/tweets.html" %}
+    {% endifinstalled %}
 {% endblock %}
