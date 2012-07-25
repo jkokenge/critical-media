@@ -5,7 +5,7 @@ from django.contrib import admin
 
 from .models import LeafPage, TeacherGuidePage, MediaArtefact, Topic
 
-from mezzanine.core.admin import DisplayableAdmin
+from mezzanine.core.admin import DisplayableAdmin, TabularDynamicInlineAdmin
 
 page_fieldsets = (
         (None, {

@@ -1,0 +1,44 @@
+{% extends "admin/change_list.html" %}
+{% load cml_tags i18n adminmedia %}
+
+{% block extrahead %}
+{{ block.super }}
+<link rel="stylesheet" href="{{ STATIC_URL }}mezzanine/css/admin/page_tree.css">
+<style>
+.delete {width:10px; height:10px; margin:2px 4px 0 10px; display:block; float:right; background:url('{% admin_media_prefix %}img/admin/icon_deletelink.gif');}
+.grappelli-delete {width:11px; height:11px; margin:4px 4px 0 10px; background:url('{% admin_media_prefix %}img/icons/icon-inline_item_tools-deletelink.png');}
+.grappelli-delete:hover {background:url('{% admin_media_prefix %}img/icons/icon-inline_item_tools-deletelink-hover.png');}
+</style>
+<script>window.__topic_ordering_url = '{% url admin_topic_ordering %}';</script>
+<script src="{{ STATIC_URL }}mezzanine/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script src="{{ STATIC_URL }}js/admin/topic_admin.js"></script>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+
+{% if cl.result_count == 0 %}
+<p class="paginator">0 {{ cl.opts.verbose_name_plural }}</p>
+{% else %}
+<div id="tree">
+<ul>
+    {% get_topics as topic_list %}
+  	{% for topic in topic_list %}
+    <li id="ordering_{{ topic.id }}">
+        <div class="{% cycle 'row1' 'row2' %}">
+            <a href="{% url admin:cmlproject_topic_change topic.id %}"
+                class="changelink">{{ topic.title }}</a>
+            <span class="ordering">
+                <img src="{% admin_media_prefix %}img/admin/arrow-up.gif" />
+                <img src="{% admin_media_prefix %}img/admin/arrow-down.gif" />
+            </span>
+        </div>
+        <br style="clear:both;">
+    </li>
+    {% endfor %}
+</ul>
+</div>
+{% endif %}
+
+</div>
+{% endblock %}

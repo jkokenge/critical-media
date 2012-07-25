@@ -17,18 +17,16 @@ PAGE_MENU_TEMPLATES = ((1, u'Top navigation bar', 'pages/menus/dropdown.html'), 
 
 DASHBOARD_TAGS = (
     ("mezzanine_tags.app_list",),
-    ("mezzanine_tags.recent_actions",),
+    ("mezzanine_tags.recent_actions",), #fix this
     ("mezzanine_tags.recent_actions",),
 )
 
 ADMIN_MENU_ORDER = (
-    ("Content", ("pages.Page", "blog.BlogPost", "blog.Comment",
+    ("Content", ("pages.Page","blog.BlogPost", "generic.ThreadedComment",
         ("Media Library", "fb_browse"),)),
-    ("Site", ("auth.User", "auth.Group", "sites.Site", "redirects.Redirect")),
-    ("Critical Media Literacy Project", ("cmlproject.Topic", "cmlproject.TeacherGuide", "cmlproject.MediaArtefact")),
+    ("Site", ("conf.Setting","auth.User", "auth.Group", "sites.Site", "redirects.Redirect")),
+    ("Critical Media Literacy Project", ("cmlproject.Topic", "cmlproject.TeacherGuidePage", "cmlproject.MediaArtefact")),
 )
-
-
 
 ########################
 # MAIN DJANGO SETTINGS #

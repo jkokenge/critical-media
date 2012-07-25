@@ -18,7 +18,7 @@ from mezzanine.utils.urls import admin_url, slugify
 # case, date of birth.
 
 
-class Topic(Slugged, AdminThumbMixin, ):
+class Topic(Orderable, Slugged, AdminThumbMixin):
     
     icon = FileField(verbose_name=_("Icon"),
                                upload_to="thumbs", format="Image",
@@ -165,11 +165,6 @@ class TeacherGuidePage(LeafPage, RichText):
         return self.titles
     
     def get_absolute_url(self):
-        """
-        URL for a page - for ``Link`` page types, simply return its
-        slug since these don't have an actual URL pattern. Also handle
-        the special case of the homepage being a page object.
-        """
         slug = self.slug
         return reverse("teacherguide_detail", kwargs={"slug": slug})
         
@@ -188,11 +183,6 @@ class MediaArtefact(LeafPage, RichText, AdminThumbMixin):
         return self.titles
     
     def get_absolute_url(self):
-        """
-        URL for a page - for ``Link`` page types, simply return its
-        slug since these don't have an actual URL pattern. Also handle
-        the special case of the homepage being a page object.
-        """
         slug = self.slug
         return reverse("mediaartefact_detail", kwargs={"slug": slug})
  

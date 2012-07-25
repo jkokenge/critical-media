@@ -14,36 +14,27 @@ from mezzanine.utils.views import render, paginate
 page_processors.autodiscover()
 
 
-def admin_page_ordering(request):
+def admin_topic_ordering(request):
     """
-    Updates the ordering of pages via AJAX from within the admin.
+    Updates the ordering of topics via AJAX from within the admin.
     """
+    print "here"
     get_id = lambda s: s.split("_")[-1]
-    for ordering in ("ordering_from", "ordering_to"):
-        ordering = request.POST.get(ordering, "")
-        if ordering:
-            for i, page in enumerate(ordering.split(",")):
-                try:
-                    LeafPage.objects.filter(id=get_id(page)).update(_order=i)
-                except Exception, e:
-                    return HttpResponse(str(e))
+    ordering = request.POST.get("ordering_from", "")
+    if ordering:
+        for i, topic in enumerate(ordering.split(",")):
+            try:
+                Topic.objects.filter(id=get_id(topic)).update(_order=i)
+                print"updated topic"
+            except Exception, e:
+                return HttpResponse(str(e))
     try:
-        moved_page = int(get_id(request.POST.get("moved_page", "")))
+        moved_topic = int(get_id(request.POST.get("moved_topic", "")))
     except ValueError, e:
         pass
-    else:
-        moved_parent = get_id(request.POST.get("moved_parent", ""))
-        if not moved_parent:
-            moved_parent = None
-        try:
-            page = LeafPage.objects.get(id=moved_page)
-            page.parent_id = moved_parent
-            page.save()
-            page.reset_slugs()
-        except Exception, e:
-            return HttpResponse(str(e))
+    
     return HttpResponse("ok")
-admin_page_ordering = staff_member_required(admin_page_ordering)
+admin_topic_ordering = staff_member_required(admin_topic_ordering)
 
 def teacherguide_list (request, tag=None, topic=None, template="cmlproject/teacherguide_list.html"):
     """

@@ -2,19 +2,24 @@
 
 {% spaceless %}
 <ul class="nav nav-list navlist-menu-level-{{ branch_level }}">
-  <li class="first{% if on_home %} active{% endif %}">
-    <a href="{% url home %}">{% trans "Home" %}</a>
-  </li>
   
   {% get_topics as topic_list %}
   {% for topic in topic_list %}
-  <li class="
-             {% if topic.is_current %} active{% endif %}
-             {% if not topic.is_primary and forloop.first %} first{% endif %}
-             {% if forloop.last %} last{% endif %}"
-      id="tree-menu-{{ topic.html_id }}">
-    <a href="{{ topic.get_absolute_url }}">{{ topic.title }}</a>
+  <li class="{% if forloop.first %} first{% endif %}
+             {% if forloop.last %} last{% endif %}">
+  {{topic.title}}
+  <ul class="nav nav-list navlist-menu-level-{{ branch_level }}">
+  
+  <li class="{% active request "mediaartefact_list_topic" topic.slug %} first">
+  <a href="{% url mediaartefact_list_topic topic.slug %}">Media</a>
   </li>
+  <li class="{% active request "teacherguide_list_topic" topic.slug %} first">
+  <a href="{% url teacherguide_list_topic topic.slug %}">Teacher Guides </a>
+  </li>
+  </ul>
+             
+  </li>
+  
   {% endfor %}
 </ul>
 {% endspaceless %}
