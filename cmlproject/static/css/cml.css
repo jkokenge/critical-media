@@ -9,6 +9,13 @@ background-image:url("");
 [class^="icon-"]:last-child,[class*=" icon-"]:last-child{*margin-left:0;}
 
 
+.well.active
+{
+background-color:#CCCCCC;
+color:white;
+}
+
+
 .center,
 .center > div {
     float:none;

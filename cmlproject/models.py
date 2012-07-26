@@ -43,6 +43,13 @@ class Topic(Orderable, Slugged, AdminThumbMixin):
             self.save()
         for child in self.children.all():
             child.reset_slugs()
+            
+    def save(self, *args, **kwargs):
+        super(Topic, self).save(*args, **kwargs)
+        topicpage = TopicBackgroundPage.objects.create(parent=self, title = "Background: %s" %self.title)
+        topicpage.save()
+        
+        
     
 class LeafPage(Orderable, Displayable):
     """
