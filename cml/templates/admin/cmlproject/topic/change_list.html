@@ -41,6 +41,7 @@
   	{% for topic in topic_list %}
     <li id="ordering_{{ topic.id }}">
         <div class="{% cycle 'row1' 'row2' %}">
+        	<a href="{% url admin:cmlproject_topic_delete topic.id %}?fromtree" class="delete"></a>
             <a href="{% url admin:cmlproject_topic_change topic.id %}"
                 class="changelink">{{ topic.title }}</a>
             <span class="ordering">
