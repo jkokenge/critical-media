@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "cmlproject/cml_base.html" %}
 {% load i18n mezzanine_tags blog_tags keyword_tags %}
 
 {% block meta_title %}{% if page %}{{ page.richtextpage.title }}{% else %}{% trans "Teacher Guides" %}{% endif %}{% endblock %}
@@ -25,26 +25,6 @@
 {% endif %}
 {% endblock %}
 
-{% block breadcrumb_menu %}
-{{ block.super }}
-<li class="active">
-{% if topic %}
-{{ topic.title }} / {% trans "Teacher Guide Pages" %} 
-{% else %}
-{% trans "Teacher Guide Pages" %}
-{% endif %}
-</li>
-
-
-{% if tag %}
-<li>{% spaceless %}
-{% if tag %}
-    {% trans "Tag:" %} {{ tag }}
-{% endif %}
-{% endspaceless %}
-</li>
-{% endif %}
-{% endblock %}
 
 {% block main %}
 {% if tag %}

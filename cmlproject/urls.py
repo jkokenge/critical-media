@@ -3,6 +3,7 @@ from django.conf.urls.defaults import patterns, url
 urlpatterns = patterns("cmlproject.views",
     url("^admin_topic_ordering/$", "admin_topic_ordering",
         name="admin_topic_ordering"),
+    url("^topicbackground/(?P<parentslug>.*)/$", "topic_background", name="topic_background"),
     url("^teacherguides/tag/(?P<tag>.*)/$", "teacherguide_list", name="teacherguide_list_tag"),
     url("^teacherguides/$", "teacherguide_list", name="teacherguide_list"),
     url("^teacherguides/topic/(?P<topic>.*)/$", "teacherguide_list", name="teacherguide_list_topic"),

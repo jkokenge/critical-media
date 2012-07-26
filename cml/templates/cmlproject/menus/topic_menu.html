@@ -1,0 +1,12 @@
+{% load i18n cml_tags %}
+
+{% spaceless %}
+<ul class="nav nav-tabs nav-stacked">
+  {% get_topics as topic_list %}
+  {% for t in topic_list %}
+  <li class="{% if t == topic %}active{% endif %}" id="topic_title_{{t.slug}}">
+  <a href="{% url topic_background t.slug %}">{{t.title}}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endspaceless %}

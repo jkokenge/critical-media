@@ -36,6 +36,16 @@ def admin_topic_ordering(request):
     return HttpResponse("ok")
 admin_topic_ordering = staff_member_required(admin_topic_ordering)
 
+def topic_background(request, parentslug,
+                     template="cmlproject/topic_background.html"):
+    
+    topics = Topic.objects.all()
+    topic = get_object_or_404(topics, slug=parentslug)
+    topicpage = topic.background_page
+    context = {"topicpage": topicpage, "topic": topic}
+    templates = [template]
+    return render(request, templates, context)
+
 def teacherguide_list (request, tag=None, topic=None, template="cmlproject/teacherguide_list.html"):
     """
     Display a list of teacher guides that are filtered by tag or topic.
@@ -68,7 +78,7 @@ def teacherguide_detail(request, slug,
     
     teacherguides = TeacherGuidePage.objects.published(for_user=request.user)
     teacherguide = get_object_or_404(teacherguides, slug=slug)
-    context = {"teacherguide": teacherguide}
+    context = {"teacherguide": teacherguide, "topic": teacherguide.topic}
     templates = [template]
     return render(request, templates, context)
 
@@ -106,6 +116,6 @@ def mediaartefact_detail(request, slug,
     
     mediaartefacts = MediaArtefact.objects.published(for_user=request.user)
     mediaartefact = get_object_or_404(mediaartefacts, slug=slug)
-    context = {"mediaartefact": mediaartefact}
+    context = {"mediaartefact": mediaartefact, "topic": mediaartefact.topic}
     templates = [template]
     return render(request, templates, context)

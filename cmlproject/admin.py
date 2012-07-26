@@ -3,9 +3,9 @@ from django.utils.translation import ugettext_lazy as _
 
 from django.contrib import admin
 
-from .models import LeafPage, TeacherGuidePage, MediaArtefact, Topic
+from .models import LeafPage, TeacherGuidePage, MediaArtefact, Topic, TopicBackgroundPage
 
-from mezzanine.core.admin import DisplayableAdmin, TabularDynamicInlineAdmin
+from mezzanine.core.admin import DisplayableAdmin
 
 page_fieldsets = (
         (None, {
@@ -101,7 +101,15 @@ link_fieldsets[0][1]["fields"].insert(1, "slug")
 
 class TopicAdmin(admin.ModelAdmin):
     fields = ('title', 'icon')
+    
+class TopicBackgroundPageAdmin(DisplayableAdmin):
+    fieldsets = (
+        (None, {
+            "fields": ["parent","title", "content"],
+        }),
+    )
 
 admin.site.register(Topic, TopicAdmin)
+admin.site.register(TopicBackgroundPage, TopicBackgroundPageAdmin)
 admin.site.register(TeacherGuidePage, LeafPageAdmin)
 admin.site.register(MediaArtefact,LeafPageAdmin)

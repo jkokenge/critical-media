@@ -155,6 +155,22 @@ class LeafPage(Orderable, Displayable):
         return True
     
 
+class TopicBackgroundPage(Displayable, RichText):
+    
+    parent = models.OneToOneField("Topic",verbose_name=_("Parent Topic"),related_name="background_page")
+    
+    class Meta:
+        verbose_name = _("Topic Background Page")
+        verbose_name_plural = _("Topic Background Pages")
+        
+    def __unicode__(self):
+        return self.title
+        
+    def get_absolute_url(self):
+        slug = self.parent.slug
+        return reverse("topic_background", kwargs={"parentslug": slug})
+    
+    
 class TeacherGuidePage(LeafPage, RichText):
     
     class Meta:

@@ -28,7 +28,6 @@
 {% compress js %}
 <script src="{{ STATIC_URL }}mezzanine/js/{{ settings.JQUERY_FILENAME }}"></script>
 <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
-<script src="{{ STATIC_URL }}js/bootstrap_collapse.js"></script>
 <script>
 $(function() {
     $('.middleinput:text, textarea').addClass('xlarge');
@@ -76,26 +75,23 @@ $(function() {
 {% endfor %}
 {% endnevercache %}
 
-
-<h1>{% block title %}{% endblock %}</h1>
-
-<ul class="breadcrumb">
-{% spaceless %}
-{% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
-{% endspaceless %}
-</ul>
-
-</div>
-
 <div class="container">
 <div class="row">
 
 <div class="span2 left">
-    <div class="panel tree">{% page_menu "cmlproject/menus/tree.html" %}</div>
+    <div>{% include "cmlproject/menus/topic_menu.html" %}</div>
 </div>
 
+
 <div class="span7 middle">
+{% block subnav_top %}
+<div>
+<h1>{% block title %}{% endblock %}</h1>
+</div>
+{% endblock %}
+<div>
     {% block main %}{% endblock %}
+</div>
 </div>
 
 <div class="span3 right">
