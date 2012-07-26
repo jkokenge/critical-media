@@ -1,12 +1,21 @@
 {% load i18n cml_tags %}
 
 {% spaceless %}
-<ul class="nav nav-tabs nav-stacked">
+<div>
   {% get_topics as topic_list %}
   {% for t in topic_list %}
-  <li class="{% if t == topic %}active{% endif %}" id="topic_title_{{t.slug}}">
+  <div class="well center {% if t == topic %}active{% endif %}" id="topic_title_{{t.slug}}">
+  <div class="div-inner" style="font-size: 58px;">
+  <a href="{% url topic_background t.slug %}">
+  <i class="icon-camera-retro icon-large"></i>
+  </a>
+  <br/>
+  </div>
+  <div class="div-inner">
   <a href="{% url topic_background t.slug %}">{{t.title}}</a>
-  </li>
+  </div>
+  
+  </div>
   {% endfor %}
-</ul>
+</div>
 {% endspaceless %}
