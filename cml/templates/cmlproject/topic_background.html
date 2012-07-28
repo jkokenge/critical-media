@@ -1,17 +1,17 @@
 {% extends "cmlproject/cml_base.html" %}
 {% load i18n mezzanine_tags blog_tags keyword_tags %}
 
-{% block meta_title %}{{topicpage.title}}{% endblock %}
+{% block meta_title %}{{topic.title}}{% endblock %}
 
 {% block meta_description %}{% metablock %}
-{{ page.description }}
+{{ topic.description }}
 {% endmetablock %}{% endblock %}
 
 {% block title %}
-{{topicpage.title}}
+{{topic.title}}
 {% endblock %}
 
 {% block main %}
-{{ topicpage.content|richtext_filter|safe }}
+{{ topic.content|richtext_filter|safe }}
 {% endblock %}
 

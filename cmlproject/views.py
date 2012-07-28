@@ -7,7 +7,7 @@ from django import VERSION
 
 from mezzanine.conf import settings
 from mezzanine.pages import page_processors
-from .models import TeacherGuidePage, MediaArtefact, Topic
+from .models import MediaArtefact, Topic
 from mezzanine.utils.views import render, paginate
 
 
@@ -18,7 +18,6 @@ def admin_topic_ordering(request):
     """
     Updates the ordering of topics via AJAX from within the admin.
     """
-    print "here"
     get_id = lambda s: s.split("_")[-1]
     ordering = request.POST.get("ordering_from", "")
     if ordering:
@@ -36,49 +35,12 @@ def admin_topic_ordering(request):
     return HttpResponse("ok")
 admin_topic_ordering = staff_member_required(admin_topic_ordering)
 
-def topic_background(request, parentslug,
+def topic_background(request, slug,
                      template="cmlproject/topic_background.html"):
     
     topics = Topic.objects.all()
-    topic = get_object_or_404(topics, slug=parentslug)
-    topicpage = topic.background_page
-    context = {"topicpage": topicpage, "topic": topic}
-    templates = [template]
-    return render(request, templates, context)
-
-def teacherguide_list (request, tag=None, topic=None, template="cmlproject/teacherguide_list.html"):
-    """
-    Display a list of teacher guides that are filtered by tag or topic.
-    """
-    settings.use_editable()
-    templates = []
-    teacherguides = TeacherGuidePage.objects.published(for_user=request.user)
-    if tag is not None:
-        tag = get_object_or_404(Keyword, slug=tag)
-        teacherguides = teacherguides.filter(keywords__in=tag.assignments.all())
-    
-    if topic is not None:
-        topic = get_object_or_404(Topic, slug=topic)
-        teacherguides = teacherguides.filter(parent=topic)
-
-    #TODO prefetch tags
-
-    teacherguides = paginate(teacherguides,
-                          request.GET.get("page", 1),
-                          5,
-                          5)
-    context = {"teacherguides": teacherguides,
-               "tag": tag, "topic":topic}
-    templates.append(template)
-    return render(request, templates, context)
-
-
-def teacherguide_detail(request, slug,
-                     template="cmlproject/teacherguide_detail.html"):
-    
-    teacherguides = TeacherGuidePage.objects.published(for_user=request.user)
-    teacherguide = get_object_or_404(teacherguides, slug=slug)
-    context = {"teacherguide": teacherguide, "topic": teacherguide.topic}
+    topic = get_object_or_404(topics, slug=slug)
+    context = {"topic": topic}
     templates = [template]
     return render(request, templates, context)
 
@@ -95,9 +57,8 @@ def mediaartefact_list (request, tag=None, topic=None, template="cmlproject/medi
         mediaartefacts = mediaartefacts.filter(keywords__in=tag.assignments.all())
     
     if topic is not None:
-        print topic
         topic = get_object_or_404(Topic, slug=topic)
-        mediaartefacts = mediaartefacts.filter(parent=topic)
+        mediaartefacts = mediaartefacts.filter(featured_in__in=[topic])
 
     #TODO prefetch tags
 
@@ -109,7 +70,6 @@ def mediaartefact_list (request, tag=None, topic=None, template="cmlproject/medi
                "tag": tag, "topic":topic}
     templates.append(template)
     return render(request, templates, context)
-
 
 def mediaartefact_detail(request, slug,
                      template="cmlproject/mediaartefact_detail.html"):
