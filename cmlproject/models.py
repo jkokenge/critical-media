@@ -10,52 +10,10 @@ from mezzanine.utils.models import AdminThumbMixin
 
 from mezzanine.utils.urls import admin_url, slugify
 
-
-# The members of Page will be inherited by the Author model, such
-# as title, slug, etc. For authors we can use the title field to
-# store the author's name. For our model definition, we just add
-# any extra fields that aren't part of the Page model, in this
-# case, date of birth.
-
-
-class Topic(Orderable, Slugged, AdminThumbMixin):
-    
-    icon = FileField(verbose_name=_("Icon"),
-                               upload_to="thumbs", format="Image",
-                               max_length=255, null=True, blank=True)
-    
-    admin_thumb_field = "icon"
-    
-    class Meta:
-        verbose_name = _("Topic")
-        verbose_name_plural = _("Topics")
-        
-    def __unicode__(self):
-        return self.title
-    
-    def reset_slugs(self):
-        """
-        Called when the parent page is changed in the admin and the slug
-        plus all child slugs need to be recreated given the new parent.
-        """
-        if not self.overridden():
-            self.slug = None
-            self.save()
-        for child in self.children.all():
-            child.reset_slugs()
-            
-    def save(self, *args, **kwargs):
-        super(Topic, self).save(*args, **kwargs)
-        topicpage = TopicBackgroundPage.objects.create(parent=self, title = "Background: %s" %self.title)
-        topicpage.save()
-        
-        
-    
-class LeafPage(Orderable, Displayable):
+class LeafPage(Orderable, Displayable, RichText):
     """
     A page belonging to a topic. No child pages.
     """
-    parent = models.ForeignKey("Topic",verbose_name=_("Parent Topic"),related_name="children")
     titles = models.CharField(editable=False, max_length=1000, null=True)
     content_model = models.CharField(editable=False, max_length=50, null=True)
 
@@ -161,37 +119,37 @@ class LeafPage(Orderable, Displayable):
         """
         return True
     
-
-class TopicBackgroundPage(Displayable, RichText):
+class Topic(LeafPage, AdminThumbMixin):
     
-    parent = models.OneToOneField("Topic",verbose_name=_("Parent Topic"),related_name="background_page")
+    parent_topic = models.ForeignKeyField("self", related_name="sub_topics", limit_choices_to={"parent_topic":None})
+    featured_media = models.ManyToManyField("MediaArtefact", related_name="featured_in")
+    
+    icon = FileField(verbose_name=_("Icon"),
+                               upload_to="thumbs", format="Image",
+                               max_length=255, null=True, blank=True)
+    
+    admin_thumb_field = "icon"
     
     class Meta:
-        verbose_name = _("Topic Background Page")
-        verbose_name_plural = _("Topic Background Pages")
+        verbose_name = _("Topic")
+        verbose_name_plural = _("Topics")
         
     def __unicode__(self):
         return self.title
+    
+    def reset_slugs(self):
+        """
+        Called when the parent page is changed in the admin and the slug
+        plus all child slugs need to be recreated given the new parent.
+        """
+        if not self.overridden():
+            self.slug = None
+            self.save()
+        for child in self.children.all():
+            child.reset_slugs()
         
-    def get_absolute_url(self):
-        slug = self.parent.slug
-        return reverse("topic_background", kwargs={"parentslug": slug})
-    
-    
-class TeacherGuidePage(LeafPage, RichText):
-    
-    class Meta:
-        verbose_name = _("Teacher Guide Page")
-        verbose_name_plural = _("Teacher Guide Pages")
         
-    def __unicode__(self):
-        return self.titles
-    
-    def get_absolute_url(self):
-        slug = self.slug
-        return reverse("teacherguide_detail", kwargs={"slug": slug})
-        
-class MediaArtefact(LeafPage, RichText, AdminThumbMixin):
+class MediaArtefact(LeafPage, AdminThumbMixin):
     thumbnail = FileField(verbose_name=_("Thumbnail"),
                                upload_to="thumbs", format="Image",
                                max_length=255, null=True, blank=True)
