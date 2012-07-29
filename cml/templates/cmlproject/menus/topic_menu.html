@@ -4,7 +4,7 @@
 <div>
   {% get_topics as topic_list %}
   {% for t in topic_list %}
-  <div class="well well-small center {% if t == topic or t == topic.parent_topic %}active{% endif %}" id="topic_title_{{t.slug}}">
+  <div class="well well-small center topicmenu {% if t == topic or t == topic.parent_topic %}active{% endif %}" id="topic_title_{{t.slug}}">
   <div class="div-inner" style="font-size: 58px;">
   <a href="{% url topic_background t.slug %}">
   <i class="icon-camera-retro icon-large"></i>
