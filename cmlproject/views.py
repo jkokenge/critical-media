@@ -27,7 +27,7 @@ def admin_topic_ordering(request):
                     t = Topic.objects.get(id=get_id(topic))
                     t._order=i
                     t.save()
-                    print "updated topic %s with order %d" % (Topic.objects.get(id=get_id(topic)).title,i)
+                    #print "updated topic %s with order %d" % (Topic.objects.get(id=get_id(topic)).title,i)
                 except Exception, e:
                     return HttpResponse(str(e))
     try:
@@ -53,6 +53,7 @@ def topic_background(request, slug,
     
     topics = Topic.objects.all()
     topic = get_object_or_404(topics, slug=slug)
+    #print 'topic is %s' % topic.title
     context = {"topic": topic}
     templates = [template]
     return render(request, templates, context)
@@ -61,7 +62,6 @@ def mediaartefact_list (request, tag=None, topic=None, template="cmlproject/medi
     """
     Display a list of media artefacts that are filtered by tag or topic.
     """
-    
     settings.use_editable()
     templates = []
     mediaartefacts = MediaArtefact.objects.published(for_user=request.user)

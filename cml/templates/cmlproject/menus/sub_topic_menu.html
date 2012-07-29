@@ -1,0 +1,25 @@
+{% load i18n cml_tags %}
+{# if i'm a parent topic with subtopics #}
+{% if topic.ordered_sub_topics %}
+  <div id="{{topic.slug}}-subtopics">
+  <ul class="nav nav-pills">
+  {% for sub in topic.ordered_sub_topics %}
+  <li class="{% if topic == sub %}active{% endif %}">
+  <a href="{% url topic_background sub.slug %}">{{ sub.title }}</a>
+  </li>
+  {% endfor %}
+  </ul>
+  </div>
+
+{# elif i'm a subtopic #}
+{% elif topic.parent_topic %}
+  <div id="{{topic.parent_topic.slug}}-subtopics">
+  <ul class="nav nav-pills">
+  {% for sub in topic.parent_topic.ordered_sub_topics %}
+  <li class="{% if topic == sub %}active{% endif %}">
+  <a href="{% url topic_background sub.slug %}">{{ sub.title }}</a>
+  </li>
+  {% endfor %}
+  </ul>
+  </div>
+{% endif %}
