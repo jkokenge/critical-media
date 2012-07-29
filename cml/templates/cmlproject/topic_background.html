@@ -1,4 +1,4 @@
-{% extends "cmlproject/cml_base.html" %}
+{% extends "cmlproject/topic_base.html" %}
 {% load i18n mezzanine_tags blog_tags keyword_tags %}
 
 {% block meta_title %}{{topic.title}}{% endblock %}
@@ -11,7 +11,14 @@
 {{topic.title}}
 {% endblock %}
 
-{% block topic_content %}
+{% block main %}
+<div class="row">
+<div class="span5" id="{{topic.slug}}-content">
 {{ topic.content|richtext_filter|safe }}
+</div>
+<div class="span2" id="{{topic.slug}}-featured">
+<a class="btn btn-success" href="{% url mediaartefact_list_topic topic.slug %}">See Featured Media</a>
+</div>
+</div>
 {% endblock %}
 
