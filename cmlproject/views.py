@@ -19,19 +19,32 @@ def admin_topic_ordering(request):
     Updates the ordering of topics via AJAX from within the admin.
     """
     get_id = lambda s: s.split("_")[-1]
-    ordering = request.POST.get("ordering_from", "")
-    if ordering:
-        for i, topic in enumerate(ordering.split(",")):
-            try:
-                Topic.objects.filter(id=get_id(topic)).update(_order=i)
-                print"updated topic"
-            except Exception, e:
-                return HttpResponse(str(e))
+    for ordering in ("ordering_from", "ordering_to"):
+        ordering = request.POST.get(ordering, "")
+        if ordering:
+            for i, topic in enumerate(ordering.split(",")):
+                try:
+                    t = Topic.objects.get(id=get_id(topic))
+                    t._order=i
+                    t.save()
+                    print "updated topic %s with order %d" % (Topic.objects.get(id=get_id(topic)).title,i)
+                except Exception, e:
+                    return HttpResponse(str(e))
     try:
         moved_topic = int(get_id(request.POST.get("moved_topic", "")))
     except ValueError, e:
         pass
-    
+    else:
+        moved_parent = get_id(request.POST.get("moved_parent", ""))
+        if not moved_parent:
+            moved_parent = None
+        try:
+            topic = Topic.objects.get(id=moved_topic)
+            topic.parent_topic_id = moved_parent
+            topic.save()
+            topic.reset_slugs()
+        except Exception, e:
+            return HttpResponse(str(e))
     return HttpResponse("ok")
 admin_topic_ordering = staff_member_required(admin_topic_ordering)
 

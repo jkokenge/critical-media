@@ -44,17 +44,6 @@ showButtonWithChildren();
         return false;
     });
 
-    $('#tree .tree-toggle').click(function() {
-        // Show/hide the branch and toggle the icon.
-        var pageLink = $(this);
-        pageLink.parent().parent().find('ul:first').toggle();
-        pageLink.find('.icon').toggle();
-        // Add or remove the page ID from the cookie.
-        var opened = pageLink.find('.close:visible').length == 1;
-        var id = pageLink.attr('id').split('-')[1];
-        toggleID(opened, id);
-        return false;
-    });
 
     // Show previously opened branches.
     if (ids) {
@@ -66,30 +55,23 @@ showButtonWithChildren();
 		});
 	}
 
-    // The dropdown list for adding a new page contains URLs for each
-    // model - redirect when selected.
-    $('.addlist').change(function() {
-        // Ensure the branch is saved as open when adding to it so that
-        // the new branch will be visible directly after saving.
-        var id = $(this).attr('id');
-        if (id) {
-            toggleID(true, id.split('-')[1]);
-        }
-        var addUrl = this[this.selectedIndex].value;
-        if (addUrl) {
-            location.href = addUrl;
-        }
-        this.selectedIndex = 0;
-        return true;
-    });
     // AJAX callback that's triggered when dragging a topic to re-order
     // it has ended.
     var updateOrdering = function(event, ui) {
-    
     	var args = {
             'ordering_from': $(this).sortable('toArray').toString(),
+            'ordering_to': $(ui.item).parent().sortable('toArray').toString(),
         };
-        
+        if (args['ordering_from'] != args['ordering_to']) {
+            // Branch changed - set the new parent ID.
+            args['moved_topic'] = $(ui.item).attr('id');
+            args['moved_parent'] = $(ui.item).parent().parent().attr('id');
+            if (args['moved_parent'] == 'tree') {
+                delete args['moved_parent'];
+            }
+        } else {
+            delete args['ordering_to'];
+        }
         $.post(window.__topic_ordering_url, args, function(data) {
             if (data !== "ok") {
                 alert("Error occured: " + data + "\nOrdering wasn't updated.");

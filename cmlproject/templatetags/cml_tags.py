@@ -6,7 +6,7 @@ register = template.Library()
 
 @register.assignment_tag
 def get_topics():
-    topics = Topic.objects.all()
+    topics = Topic.objects.filter(parent_topic=None).order_by("_order")
     return topics
 
 @register.simple_tag

@@ -31,6 +31,9 @@ class Topic(Orderable, Displayable, RichText, AdminThumbMixin):
     def __unicode__(self):
         return self.title
     
+    def ordered_sub_topics(self):
+        return self.sub_topics.order_by('_order')
+    
     def get_slug(self):
         """
         Recursively build the slug from the chain of parents.
@@ -45,9 +48,9 @@ class Topic(Orderable, Displayable, RichText, AdminThumbMixin):
         Called when the parent page is changed in the admin and the slug
         plus all child slugs need to be recreated given the new parent.
         """
-        if not self.overridden():
-            self.slug = None
-            self.save()
+        self.slug = None
+        self.save()
+        
         for child in self.sub_topics.all():
             child.reset_slugs()
             
