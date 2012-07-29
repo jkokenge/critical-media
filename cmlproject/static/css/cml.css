@@ -8,13 +8,11 @@ background-image:url("");
 *margin-right:.3em;}
 [class^="icon-"]:last-child,[class*=" icon-"]:last-child{*margin-left:0;}
 
-
-.well.active
+.well.topicmenu.active, .well.topicmenu.active a, .well.topicmenu.active li
 {
-background-color:#CCCCCC;
+background-color:#08C;
 color:white;
 }
-
 
 .center,
 .center > div {
