@@ -1,20 +1,24 @@
+{% load i18n cml_tags %}
+
+{% get_tags 0 as topic_tag_list %}
+{% get_tags 1 as genre_tag_list %}
+
+
 <ul class="nav nav-list nav-menu-level-0">
 <li class="nav-header">Topic tags</li>
 <li>
 <ul class="nav nav-list nav-menu-level-1">
-<li><a href="#">tag 1</a></li>
-<li><a href="#">tag 2</a></li>
-<li><a href="#">tag 3</a></li>
-<li><a href="#">tag 4</a></li>
+{% for t in topic_tag_list %}
+<li><a href={% url mediaartefact_list_tag t.slug %}>{{t.name}}</a></li>
+{% endfor %}
 </ul>
 </li>
 <li class="nav-header">Genre tags</li>
 <li>
 <ul class="nav nav-list nav-menu-level-1">
-<li><a href="#">tag 5</a></li>
-<li><a href="#">tag 6</a></li>
-<li><a href="#">tag 7</a></li>
-<li><a href="#">tag 8</a></li>
+{% for t in genre_tag_list %}
+<li><a href={% url mediaartefact_list_tag t.slug %}>{{t.name}}</a></li>
+{% endfor %}
 </ul>
 </li>
 </ul>

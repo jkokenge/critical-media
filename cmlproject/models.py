@@ -14,9 +14,20 @@ TOPIC_TAG = 0
 GENRE_TAG = 1
 
 TAG_TYPE_CHOICES = (
-    (TOPIC_TAG, "topic tag"),
-    (GENRE_TAG, "genre tag"),
+    (TOPIC_TAG, "Topic Tag"),
+    (GENRE_TAG, "Genre Tag"),
 )
+
+VIDEO = 0
+SOUND = 1
+IMAGE = 2
+
+MEDIA_TYPE_CHOICES = (
+    (VIDEO, "Video"),
+    (SOUND, "Sound"),
+    (IMAGE, "Image"),
+)
+
 
     
 class Topic(Orderable, Displayable, RichText, AdminThumbMixin):
@@ -86,6 +97,9 @@ class MediaArtefact(Orderable, Displayable, RichText, AdminThumbMixin):
                                max_length=255, null=True, blank=True)
 
     admin_thumb_field = "thumbnail"
+    media_type = models.SmallIntegerField(choices=MEDIA_TYPE_CHOICES, default = VIDEO)
+    
+    embed_code = models.TextField("Embed Code",blank=True, null=True)
     
     tags = models.ManyToManyField("Tag", blank=True, null=True,related_name="tagged_media")
     
@@ -107,8 +121,8 @@ class MediaArtefact(Orderable, Displayable, RichText, AdminThumbMixin):
     def get_slug(self):
         slug = slugify(self.title)
         
-class Tag(models.Model):
-    name = models.CharField("Tag Name", max_length=100)
+class Tag(Slugged):
+    name = models.CharField(_("Tag Name"), max_length=100)
     tag_type = models.SmallIntegerField(choices=TAG_TYPE_CHOICES, default = TOPIC_TAG)
     
     class Meta:
@@ -117,5 +131,14 @@ class Tag(models.Model):
         
     def __unicode__(self):
         return self.name
+    
+    def save(self, *args, **kwargs):
+        """
+        Create a unique slug by appending an index.
+        """
+        if not self.title:
+            self.title = self.name
+            
+        super(Tag, self).save(*args, **kwargs)
 
  

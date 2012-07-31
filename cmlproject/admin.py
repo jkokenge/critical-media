@@ -11,7 +11,7 @@ from mezzanine.core.admin import DisplayableAdmin
 class MediaAdmin(DisplayableAdmin):
     fieldsets = (
                  (None, {
-                         "fields": ["title", "status","thumbnail","content","tags"],
+                         "fields": ["title", "media_type","thumbnail","embed_code","content","tags"],
                           }),
                  )
 
@@ -24,7 +24,11 @@ class TopicAdmin(DisplayableAdmin):
     )
     
 class TagAdmin(admin.ModelAdmin):
-    pass
+    fieldsets = (
+        (None, {
+            "fields": ["name","tag_type"],
+        }),
+    )
 
 admin.site.register(Topic, TopicAdmin)
 admin.site.register(MediaArtefact,MediaAdmin)

@@ -7,7 +7,7 @@ from django import VERSION
 
 from mezzanine.conf import settings
 from mezzanine.pages import page_processors
-from .models import MediaArtefact, Topic
+from .models import MediaArtefact, Topic, Tag
 from mezzanine.utils.views import render, paginate
 
 
@@ -66,14 +66,12 @@ def mediaartefact_list (request, tag=None, topic=None, template="cmlproject/medi
     templates = []
     mediaartefacts = MediaArtefact.objects.published(for_user=request.user)
     if tag is not None:
-        tag = get_object_or_404(Keyword, slug=tag)
-        mediaartefacts = mediaartefacts.filter(keywords__in=tag.assignments.all())
+        tag = get_object_or_404(Tag, slug=tag)
+        mediaartefacts = mediaartefacts.filter(tags__in=tag.tagged_media.all())
     
     if topic is not None:
         topic = get_object_or_404(Topic, slug=topic)
         mediaartefacts = mediaartefacts.filter(featured_in__in=[topic])
-
-    #TODO prefetch tags
 
     mediaartefacts = paginate(mediaartefacts,
                           request.GET.get("page", 1),
