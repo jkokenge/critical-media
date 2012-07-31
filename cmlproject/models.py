@@ -137,5 +137,16 @@ class Tag(Slugged):
             self.title = self.name
             
         super(Tag, self).save(*args, **kwargs)
+        
+class GlossaryTerm(models.Model):
+    name = models.CharField(_("Term"), max_length=1000)
+    explanation = models.TextField(_("Explanation"))
+    
+    class Meta:
+        verbose_name = _("Glossary Term")
+        verbose_name_plural = _("Glossary Terms")
+        
+    def __unicode__(self):
+        return self.name
 
  
