@@ -117,9 +117,6 @@ class MediaArtefact(Orderable, Displayable, RichText, AdminThumbMixin):
     
     def get_admin_url(self):
         return admin_url(self, "change", self.id)
-    
-    def get_slug(self):
-        slug = slugify(self.title)
         
 class Tag(Slugged):
     name = models.CharField(_("Tag Name"), max_length=100)
