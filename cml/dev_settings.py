@@ -10,7 +10,7 @@
 # Setting to turn on featured images for blog posts. Defaults to False.
 BLOG_USE_FEATURED_IMAGE = True
 
-USE_SOUTH = True
+USE_SOUTH = False
 
 #not yet supported (in 1.1.4)
 PAGE_MENU_TEMPLATES = ((1, u'Top navigation bar', 'pages/menus/dropdown.html'), (2, u'Left-hand tree', 'pages/menus/tree.html'), (3, u'Footer', 'pages/menus/footer.html'))
