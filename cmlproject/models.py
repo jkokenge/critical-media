@@ -10,6 +10,14 @@ from mezzanine.utils.models import AdminThumbMixin
 
 from mezzanine.utils.urls import admin_url, slugify
 
+TOPIC_TAG = 0
+GENRE_TAG = 1
+
+TAG_TYPE_CHOICES = (
+    (TOPIC_TAG, "topic tag"),
+    (GENRE_TAG, "genre tag"),
+)
+
     
 class Topic(Orderable, Displayable, RichText, AdminThumbMixin):
     
@@ -79,6 +87,9 @@ class MediaArtefact(Orderable, Displayable, RichText, AdminThumbMixin):
 
     admin_thumb_field = "thumbnail"
     
+    tags = models.ManyToManyField("Tag", blank=True, null=True,related_name="tagged_media")
+    
+    
     class Meta:
         verbose_name = _("Media Artefact")
         verbose_name_plural = _("Media Artefacts")
@@ -95,5 +106,16 @@ class MediaArtefact(Orderable, Displayable, RichText, AdminThumbMixin):
     
     def get_slug(self):
         slug = slugify(self.title)
+        
+class Tag(models.Model):
+    name = models.CharField("Tag Name", max_length=100)
+    tag_type = models.SmallIntegerField(choices=TAG_TYPE_CHOICES, default = TOPIC_TAG)
+    
+    class Meta:
+        verbose_name = _("Media Tag")
+        verbose_name_plural = _("Media Tags")
+        
+    def __unicode__(self):
+        return self.name
 
  
