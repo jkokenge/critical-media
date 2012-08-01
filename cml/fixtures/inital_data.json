@@ -1,0 +1,1808 @@
+[ { "fields" : { "app_label" : "blog",
+        "model" : "blogcategory",
+        "name" : "Blog Category"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 14
+  },
+  { "fields" : { "app_label" : "blog",
+        "model" : "blogpost",
+        "name" : "Blog post"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 13
+  },
+  { "fields" : { "app_label" : "grappelli_safe",
+        "model" : "bookmark",
+        "name" : "Bookmark"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 32
+  },
+  { "fields" : { "app_label" : "grappelli_safe",
+        "model" : "bookmarkitem",
+        "name" : "Bookmark Item"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 33
+  },
+  { "fields" : { "app_label" : "generic",
+        "model" : "threadedcomment",
+        "name" : "Comment"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 9
+  },
+  { "fields" : { "app_label" : "forms",
+        "model" : "field",
+        "name" : "Field"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 16
+  },
+  { "fields" : { "app_label" : "forms",
+        "model" : "form",
+        "name" : "Form"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 15
+  },
+  { "fields" : { "app_label" : "forms",
+        "model" : "formentry",
+        "name" : "Form entry"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 17
+  },
+  { "fields" : { "app_label" : "forms",
+        "model" : "fieldentry",
+        "name" : "Form field entry"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 18
+  },
+  { "fields" : { "app_label" : "galleries",
+        "model" : "gallery",
+        "name" : "Gallery"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 22
+  },
+  { "fields" : { "app_label" : "cmlproject",
+        "model" : "glossaryterm",
+        "name" : "Glossary Term"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 29
+  },
+  { "fields" : { "app_label" : "grappelli_safe",
+        "model" : "help",
+        "name" : "Help"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 34
+  },
+  { "fields" : { "app_label" : "grappelli_safe",
+        "model" : "helpitem",
+        "name" : "Help Entry"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 35
+  },
+  { "fields" : { "app_label" : "galleries",
+        "model" : "galleryimage",
+        "name" : "Image"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 23
+  },
+  { "fields" : { "app_label" : "generic",
+        "model" : "keyword",
+        "name" : "Keyword"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 10
+  },
+  { "fields" : { "app_label" : "pages",
+        "model" : "link",
+        "name" : "Link"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 21
+  },
+  { "fields" : { "app_label" : "cmlproject",
+        "model" : "mediaartefact",
+        "name" : "Media Artefact"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 27
+  },
+  { "fields" : { "app_label" : "cmlproject",
+        "model" : "tag",
+        "name" : "Media Tag"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 28
+  },
+  { "fields" : { "app_label" : "grappelli_safe",
+        "model" : "navigation",
+        "name" : "Navigation"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 30
+  },
+  { "fields" : { "app_label" : "grappelli_safe",
+        "model" : "navigationitem",
+        "name" : "Navigation Item"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 31
+  },
+  { "fields" : { "app_label" : "pages",
+        "model" : "page",
+        "name" : "Page"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 19
+  },
+  { "fields" : { "app_label" : "generic",
+        "model" : "rating",
+        "name" : "Rating"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 12
+  },
+  { "fields" : { "app_label" : "pages",
+        "model" : "richtextpage",
+        "name" : "Rich text page"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 20
+  },
+  { "fields" : { "app_label" : "conf",
+        "model" : "setting",
+        "name" : "Setting"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 8
+  },
+  { "fields" : { "app_label" : "cmlproject",
+        "model" : "topic",
+        "name" : "Topic"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 26
+  },
+  { "fields" : { "app_label" : "twitter",
+        "model" : "tweet",
+        "name" : "Tweet"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 25
+  },
+  { "fields" : { "app_label" : "twitter",
+        "model" : "query",
+        "name" : "Twitter query"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 24
+  },
+  { "fields" : { "app_label" : "generic",
+        "model" : "assignedkeyword",
+        "name" : "assigned keyword"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 11
+  },
+  { "fields" : { "app_label" : "comments",
+        "model" : "comment",
+        "name" : "comment"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 37
+  },
+  { "fields" : { "app_label" : "comments",
+        "model" : "commentflag",
+        "name" : "comment flag"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 38
+  },
+  { "fields" : { "app_label" : "contenttypes",
+        "model" : "contenttype",
+        "name" : "content type"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 4
+  },
+  { "fields" : { "app_label" : "auth",
+        "model" : "group",
+        "name" : "group"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 2
+  },
+  { "fields" : { "app_label" : "admin",
+        "model" : "logentry",
+        "name" : "log entry"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 36
+  },
+  { "fields" : { "app_label" : "auth",
+        "model" : "permission",
+        "name" : "permission"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 1
+  },
+  { "fields" : { "app_label" : "redirects",
+        "model" : "redirect",
+        "name" : "redirect"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 5
+  },
+  { "fields" : { "app_label" : "sessions",
+        "model" : "session",
+        "name" : "session"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 6
+  },
+  { "fields" : { "app_label" : "sites",
+        "model" : "site",
+        "name" : "site"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 7
+  },
+  { "fields" : { "app_label" : "auth",
+        "model" : "user",
+        "name" : "user"
+      },
+    "model" : "contenttypes.contenttype",
+    "pk" : 3
+  },
+  { "fields" : { "expire_date" : "2012-08-15T01:57:56.166Z",
+        "session_data" : "MDY3N2MyZTVjMjMwNWFhMTllNDFhMzZlMzM5NjcxN2Q1MWNhZmZiNDqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVS1tZXp6YW5pbmUuY29yZS5hdXRoX2JhY2tlbmRzLk1lenphbmluZUJhY2tl\nbmRxA1UNX2F1dGhfdXNlcl9pZHEESwF1Lg==\n"
+      },
+    "model" : "sessions.session",
+    "pk" : "c2bb7c38ca260c1b7c9ef5254e61c554"
+  },
+  { "fields" : { "domain" : "127.0.0.1:8000",
+        "name" : "Default"
+      },
+    "model" : "sites.site",
+    "pk" : 1
+  },
+  { "fields" : { "name" : "SSL_FORCE_HOST",
+        "site" : 1,
+        "value" : ""
+      },
+    "model" : "conf.setting",
+    "pk" : 24
+  },
+  { "fields" : { "name" : "COMMENTS_DISQUS_SHORTNAME",
+        "site" : 1,
+        "value" : ""
+      },
+    "model" : "conf.setting",
+    "pk" : 23
+  },
+  { "fields" : { "name" : "TAG_CLOUD_SIZES",
+        "site" : 1,
+        "value" : "4"
+      },
+    "model" : "conf.setting",
+    "pk" : 22
+  },
+  { "fields" : { "name" : "MAX_PAGING_LINKS",
+        "site" : 1,
+        "value" : "10"
+      },
+    "model" : "conf.setting",
+    "pk" : 21
+  },
+  { "fields" : { "name" : "BLOG_BITLY_KEY",
+        "site" : 1,
+        "value" : ""
+      },
+    "model" : "conf.setting",
+    "pk" : 20
+  },
+  { "fields" : { "name" : "COMMENTS_DISQUS_API_SECRET_KEY",
+        "site" : 1,
+        "value" : ""
+      },
+    "model" : "conf.setting",
+    "pk" : 19
+  },
+  { "fields" : { "name" : "COMMENTS_DISQUS_API_PUBLIC_KEY",
+        "site" : 1,
+        "value" : ""
+      },
+    "model" : "conf.setting",
+    "pk" : 18
+  },
+  { "fields" : { "name" : "BLOG_POST_PER_PAGE",
+        "site" : 1,
+        "value" : "5"
+      },
+    "model" : "conf.setting",
+    "pk" : 17
+  },
+  { "fields" : { "name" : "SITE_TITLE",
+        "site" : 1,
+        "value" : "The Critical Media Project"
+      },
+    "model" : "conf.setting",
+    "pk" : 16
+  },
+  { "fields" : { "name" : "TWITTER_DEFAULT_QUERY",
+        "site" : 1,
+        "value" : "#django"
+      },
+    "model" : "conf.setting",
+    "pk" : 15
+  },
+  { "fields" : { "name" : "BLOG_BITLY_USER",
+        "site" : 1,
+        "value" : ""
+      },
+    "model" : "conf.setting",
+    "pk" : 14
+  },
+  { "fields" : { "name" : "COMMENTS_DEFAULT_APPROVED",
+        "site" : 1,
+        "value" : "True"
+      },
+    "model" : "conf.setting",
+    "pk" : 13
+  },
+  { "fields" : { "name" : "AKISMET_API_KEY",
+        "site" : 1,
+        "value" : ""
+      },
+    "model" : "conf.setting",
+    "pk" : 12
+  },
+  { "fields" : { "name" : "SSL_ENABLED",
+        "site" : 1,
+        "value" : "False"
+      },
+    "model" : "conf.setting",
+    "pk" : 11
+  },
+  { "fields" : { "name" : "TWITTER_DEFAULT_NUM_TWEETS",
+        "site" : 1,
+        "value" : "3"
+      },
+    "model" : "conf.setting",
+    "pk" : 10
+  },
+  { "fields" : { "name" : "COMMENTS_REMOVED_VISIBLE",
+        "site" : 1,
+        "value" : "True"
+      },
+    "model" : "conf.setting",
+    "pk" : 9
+  },
+  { "fields" : { "name" : "TWITTER_DEFAULT_QUERY_TYPE",
+        "site" : 1,
+        "value" : "search"
+      },
+    "model" : "conf.setting",
+    "pk" : 8
+  },
+  { "fields" : { "name" : "SITE_TAGLINE",
+        "site" : 1,
+        "value" : "Critical media literacy resources for high school teachers."
+      },
+    "model" : "conf.setting",
+    "pk" : 7
+  },
+  { "fields" : { "name" : "COMMENTS_UNAPPROVED_VISIBLE",
+        "site" : 1,
+        "value" : "True"
+      },
+    "model" : "conf.setting",
+    "pk" : 6
+  },
+  { "fields" : { "name" : "RICHTEXT_FILTER_LEVEL",
+        "site" : 1,
+        "value" : "1"
+      },
+    "model" : "conf.setting",
+    "pk" : 5
+  },
+  { "fields" : { "name" : "COMMENTS_ACCOUNT_REQUIRED",
+        "site" : 1,
+        "value" : "False"
+      },
+    "model" : "conf.setting",
+    "pk" : 4
+  },
+  { "fields" : { "name" : "COMMENTS_NUM_LATEST",
+        "site" : 1,
+        "value" : "5"
+      },
+    "model" : "conf.setting",
+    "pk" : 3
+  },
+  { "fields" : { "name" : "SEARCH_PER_PAGE",
+        "site" : 1,
+        "value" : "10"
+      },
+    "model" : "conf.setting",
+    "pk" : 2
+  },
+  { "fields" : { "name" : "GOOGLE_ANALYTICS_ID",
+        "site" : 1,
+        "value" : ""
+      },
+    "model" : "conf.setting",
+    "pk" : 1
+  },
+  { "fields" : { "_order" : 1,
+        "content" : "<p>Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.</p>\n<p>High life 3 wolf moon street art fixie food truck, biodiesel flexitarian. Craft beer organic typewriter, sustainable DIY high life seitan forage williamsburg synth mustache direct trade pork belly PBR banh mi. Jean shorts vinyl cliche, cardigan skateboard pork belly tumblr salvia raw denim artisan bespoke williamsburg organic helvetica sartorial. Vegan locavore organic, lomo mcsweeney's cred carles. Pour-over cliche high life master cleanse, skateboard salvia fanny pack. Pork belly stumptown mumblecore high life trust fund sartorial selvage viral cliche, kale chips +1 vinyl artisan tattooed. Hoodie iphone sriracha, chillwave four loko mixtape marfa american apparel.</p>\n<p>Mlkshk skateboard farm-to-table leggings keytar banksy. Next level bespoke seitan sriracha, trust fund DIY twee put a bird on it +1 salvia hella blog. Sriracha skateboard small batch iphone, mlkshk hoodie brooklyn lomo terry richardson ennui art party. Farm-to-table mcsweeney's marfa pitchfork stumptown. Helvetica mixtape fap fingerstache brooklyn, selvage cray thundercats viral skateboard. Ethnic truffaut high life biodiesel, before they sold out readymade tofu next level locavore brooklyn you probably haven't heard of them. Banksy before they sold out cred, mixtape vice carles pickled gastropub bicycle rights keffiyeh.</p>\n<p>Trust fund vegan helvetica, fanny pack polaroid photo booth flexitarian kale chips fixie 8-bit keytar locavore mumblecore small batch fingerstache. +1 biodiesel tofu, mlkshk artisan bushwick craft beer jean shorts occupy art party master cleanse messenger bag forage shoreditch. Biodiesel brunch post-ironic, wolf quinoa ethnic etsy chillwave photo booth american apparel locavore pour-over kale chips. Semiotics organic leggings vegan. Gluten-free fanny pack before they sold out tattooed. Jean shorts ennui cardigan squid. Salvia occupy +1 art party.</p>",
+        "description" : "Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.",
+        "expiry_date" : null,
+        "featured_media" : [  ],
+        "gen_description" : true,
+        "icon" : "",
+        "keywords_string" : "",
+        "parent_topic" : 1,
+        "publish_date" : "2012-08-01T02:39:48.663Z",
+        "short_url" : null,
+        "site" : 1,
+        "slug" : "race-ethnicity/african-american",
+        "status" : 2,
+        "title" : "African American"
+      },
+    "model" : "cmlproject.topic",
+    "pk" : 7
+  },
+  { "fields" : { "_order" : 0,
+        "content" : "<p>Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.</p>\n<p>High life 3 wolf moon street art fixie food truck, biodiesel flexitarian. Craft beer organic typewriter, sustainable DIY high life seitan forage williamsburg synth mustache direct trade pork belly PBR banh mi. Jean shorts vinyl cliche, cardigan skateboard pork belly tumblr salvia raw denim artisan bespoke williamsburg organic helvetica sartorial. Vegan locavore organic, lomo mcsweeney's cred carles. Pour-over cliche high life master cleanse, skateboard salvia fanny pack. Pork belly stumptown mumblecore high life trust fund sartorial selvage viral cliche, kale chips +1 vinyl artisan tattooed. Hoodie iphone sriracha, chillwave four loko mixtape marfa american apparel.</p>\n<p>Mlkshk skateboard farm-to-table leggings keytar banksy. Next level bespoke seitan sriracha, trust fund DIY twee put a bird on it +1 salvia hella blog. Sriracha skateboard small batch iphone, mlkshk hoodie brooklyn lomo terry richardson ennui art party. Farm-to-table mcsweeney's marfa pitchfork stumptown. Helvetica mixtape fap fingerstache brooklyn, selvage cray thundercats viral skateboard. Ethnic truffaut high life biodiesel, before they sold out readymade tofu next level locavore brooklyn you probably haven't heard of them. Banksy before they sold out cred, mixtape vice carles pickled gastropub bicycle rights keffiyeh.</p>\n<p>Trust fund vegan helvetica, fanny pack polaroid photo booth flexitarian kale chips fixie 8-bit keytar locavore mumblecore small batch fingerstache. +1 biodiesel tofu, mlkshk artisan bushwick craft beer jean shorts occupy art party master cleanse messenger bag forage shoreditch. Biodiesel brunch post-ironic, wolf quinoa ethnic etsy chillwave photo booth american apparel locavore pour-over kale chips. Semiotics organic leggings vegan. Gluten-free fanny pack before they sold out tattooed. Jean shorts ennui cardigan squid. Salvia occupy +1 art party.</p>",
+        "description" : "Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.",
+        "expiry_date" : null,
+        "featured_media" : [  ],
+        "gen_description" : true,
+        "icon" : "",
+        "keywords_string" : "",
+        "parent_topic" : 1,
+        "publish_date" : "2012-08-01T02:39:38.295Z",
+        "short_url" : null,
+        "site" : 1,
+        "slug" : "race-ethnicity/asianpacific-islander",
+        "status" : 2,
+        "title" : "Asian/Pacific Islander"
+      },
+    "model" : "cmlproject.topic",
+    "pk" : 6
+  },
+  { "fields" : { "_order" : 3,
+        "content" : "<p>Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.</p>\n<p>High life 3 wolf moon street art fixie food truck, biodiesel flexitarian. Craft beer organic typewriter, sustainable DIY high life seitan forage williamsburg synth mustache direct trade pork belly PBR banh mi. Jean shorts vinyl cliche, cardigan skateboard pork belly tumblr salvia raw denim artisan bespoke williamsburg organic helvetica sartorial. Vegan locavore organic, lomo mcsweeney's cred carles. Pour-over cliche high life master cleanse, skateboard salvia fanny pack. Pork belly stumptown mumblecore high life trust fund sartorial selvage viral cliche, kale chips +1 vinyl artisan tattooed. Hoodie iphone sriracha, chillwave four loko mixtape marfa american apparel.</p>\n<p>Mlkshk skateboard farm-to-table leggings keytar banksy. Next level bespoke seitan sriracha, trust fund DIY twee put a bird on it +1 salvia hella blog. Sriracha skateboard small batch iphone, mlkshk hoodie brooklyn lomo terry richardson ennui art party. Farm-to-table mcsweeney's marfa pitchfork stumptown. Helvetica mixtape fap fingerstache brooklyn, selvage cray thundercats viral skateboard. Ethnic truffaut high life biodiesel, before they sold out readymade tofu next level locavore brooklyn you probably haven't heard of them. Banksy before they sold out cred, mixtape vice carles pickled gastropub bicycle rights keffiyeh.</p>\n<p>Trust fund vegan helvetica, fanny pack polaroid photo booth flexitarian kale chips fixie 8-bit keytar locavore mumblecore small batch fingerstache. +1 biodiesel tofu, mlkshk artisan bushwick craft beer jean shorts occupy art party master cleanse messenger bag forage shoreditch. Biodiesel brunch post-ironic, wolf quinoa ethnic etsy chillwave photo booth american apparel locavore pour-over kale chips. Semiotics organic leggings vegan. Gluten-free fanny pack before they sold out tattooed. Jean shorts ennui cardigan squid. Salvia occupy +1 art party.</p>",
+        "description" : "Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.",
+        "expiry_date" : null,
+        "featured_media" : [  ],
+        "gen_description" : true,
+        "icon" : "",
+        "keywords_string" : "",
+        "parent_topic" : null,
+        "publish_date" : "2012-08-01T02:22:47.206Z",
+        "short_url" : null,
+        "site" : 1,
+        "slug" : "class",
+        "status" : 2,
+        "title" : "Class"
+      },
+    "model" : "cmlproject.topic",
+    "pk" : 4
+  },
+  { "fields" : { "_order" : 0,
+        "content" : "<p>Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.</p>\n<p>High life 3 wolf moon street art fixie food truck, biodiesel flexitarian. Craft beer organic typewriter, sustainable DIY high life seitan forage williamsburg synth mustache direct trade pork belly PBR banh mi. Jean shorts vinyl cliche, cardigan skateboard pork belly tumblr salvia raw denim artisan bespoke williamsburg organic helvetica sartorial. Vegan locavore organic, lomo mcsweeney's cred carles. Pour-over cliche high life master cleanse, skateboard salvia fanny pack. Pork belly stumptown mumblecore high life trust fund sartorial selvage viral cliche, kale chips +1 vinyl artisan tattooed. Hoodie iphone sriracha, chillwave four loko mixtape marfa american apparel.</p>\n<p>Mlkshk skateboard farm-to-table leggings keytar banksy. Next level bespoke seitan sriracha, trust fund DIY twee put a bird on it +1 salvia hella blog. Sriracha skateboard small batch iphone, mlkshk hoodie brooklyn lomo terry richardson ennui art party. Farm-to-table mcsweeney's marfa pitchfork stumptown. Helvetica mixtape fap fingerstache brooklyn, selvage cray thundercats viral skateboard. Ethnic truffaut high life biodiesel, before they sold out readymade tofu next level locavore brooklyn you probably haven't heard of them. Banksy before they sold out cred, mixtape vice carles pickled gastropub bicycle rights keffiyeh.</p>\n<p>Trust fund vegan helvetica, fanny pack polaroid photo booth flexitarian kale chips fixie 8-bit keytar locavore mumblecore small batch fingerstache. +1 biodiesel tofu, mlkshk artisan bushwick craft beer jean shorts occupy art party master cleanse messenger bag forage shoreditch. Biodiesel brunch post-ironic, wolf quinoa ethnic etsy chillwave photo booth american apparel locavore pour-over kale chips. Semiotics organic leggings vegan. Gluten-free fanny pack before they sold out tattooed. Jean shorts ennui cardigan squid. Salvia occupy +1 art party.</p>",
+        "description" : "Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.",
+        "expiry_date" : null,
+        "featured_media" : [  ],
+        "gen_description" : true,
+        "icon" : "",
+        "keywords_string" : "",
+        "parent_topic" : 2,
+        "publish_date" : "2012-08-01T02:40:18.942Z",
+        "short_url" : null,
+        "site" : 1,
+        "slug" : "gender/femininity",
+        "status" : 2,
+        "title" : "Femininity"
+      },
+    "model" : "cmlproject.topic",
+    "pk" : 9
+  },
+  { "fields" : { "_order" : 4,
+        "content" : "<p>Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.</p>\n<p>High life 3 wolf moon street art fixie food truck, biodiesel flexitarian. Craft beer organic typewriter, sustainable DIY high life seitan forage williamsburg synth mustache direct trade pork belly PBR banh mi. Jean shorts vinyl cliche, cardigan skateboard pork belly tumblr salvia raw denim artisan bespoke williamsburg organic helvetica sartorial. Vegan locavore organic, lomo mcsweeney's cred carles. Pour-over cliche high life master cleanse, skateboard salvia fanny pack. Pork belly stumptown mumblecore high life trust fund sartorial selvage viral cliche, kale chips +1 vinyl artisan tattooed. Hoodie iphone sriracha, chillwave four loko mixtape marfa american apparel.</p>\n<p>Mlkshk skateboard farm-to-table leggings keytar banksy. Next level bespoke seitan sriracha, trust fund DIY twee put a bird on it +1 salvia hella blog. Sriracha skateboard small batch iphone, mlkshk hoodie brooklyn lomo terry richardson ennui art party. Farm-to-table mcsweeney's marfa pitchfork stumptown. Helvetica mixtape fap fingerstache brooklyn, selvage cray thundercats viral skateboard. Ethnic truffaut high life biodiesel, before they sold out readymade tofu next level locavore brooklyn you probably haven't heard of them. Banksy before they sold out cred, mixtape vice carles pickled gastropub bicycle rights keffiyeh.</p>\n<p>Trust fund vegan helvetica, fanny pack polaroid photo booth flexitarian kale chips fixie 8-bit keytar locavore mumblecore small batch fingerstache. +1 biodiesel tofu, mlkshk artisan bushwick craft beer jean shorts occupy art party master cleanse messenger bag forage shoreditch. Biodiesel brunch post-ironic, wolf quinoa ethnic etsy chillwave photo booth american apparel locavore pour-over kale chips. Semiotics organic leggings vegan. Gluten-free fanny pack before they sold out tattooed. Jean shorts ennui cardigan squid. Salvia occupy +1 art party.</p>",
+        "description" : "Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.",
+        "expiry_date" : null,
+        "featured_media" : [  ],
+        "gen_description" : true,
+        "icon" : "",
+        "keywords_string" : "",
+        "parent_topic" : null,
+        "publish_date" : "2012-08-01T02:22:59.101Z",
+        "short_url" : null,
+        "site" : 1,
+        "slug" : "feminism",
+        "status" : 2,
+        "title" : "Feminism"
+      },
+    "model" : "cmlproject.topic",
+    "pk" : 5
+  },
+  { "fields" : { "_order" : 1,
+        "content" : "<p>Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.</p>\n<p>High life 3 wolf moon street art fixie food truck, biodiesel flexitarian. Craft beer organic typewriter, sustainable DIY high life seitan forage williamsburg synth mustache direct trade pork belly PBR banh mi. Jean shorts vinyl cliche, cardigan skateboard pork belly tumblr salvia raw denim artisan bespoke williamsburg organic helvetica sartorial. Vegan locavore organic, lomo mcsweeney's cred carles. Pour-over cliche high life master cleanse, skateboard salvia fanny pack. Pork belly stumptown mumblecore high life trust fund sartorial selvage viral cliche, kale chips +1 vinyl artisan tattooed. Hoodie iphone sriracha, chillwave four loko mixtape marfa american apparel.</p>\n<p>Mlkshk skateboard farm-to-table leggings keytar banksy. Next level bespoke seitan sriracha, trust fund DIY twee put a bird on it +1 salvia hella blog. Sriracha skateboard small batch iphone, mlkshk hoodie brooklyn lomo terry richardson ennui art party. Farm-to-table mcsweeney's marfa pitchfork stumptown. Helvetica mixtape fap fingerstache brooklyn, selvage cray thundercats viral skateboard. Ethnic truffaut high life biodiesel, before they sold out readymade tofu next level locavore brooklyn you probably haven't heard of them. Banksy before they sold out cred, mixtape vice carles pickled gastropub bicycle rights keffiyeh.</p>\n<p>Trust fund vegan helvetica, fanny pack polaroid photo booth flexitarian kale chips fixie 8-bit keytar locavore mumblecore small batch fingerstache. +1 biodiesel tofu, mlkshk artisan bushwick craft beer jean shorts occupy art party master cleanse messenger bag forage shoreditch. Biodiesel brunch post-ironic, wolf quinoa ethnic etsy chillwave photo booth american apparel locavore pour-over kale chips. Semiotics organic leggings vegan. Gluten-free fanny pack before they sold out tattooed. Jean shorts ennui cardigan squid. Salvia occupy +1 art party.</p>",
+        "description" : "Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.",
+        "expiry_date" : null,
+        "featured_media" : [  ],
+        "gen_description" : true,
+        "icon" : "",
+        "keywords_string" : "",
+        "parent_topic" : 3,
+        "publish_date" : "2012-08-01T02:41:16.343Z",
+        "short_url" : null,
+        "site" : 1,
+        "slug" : "lgbt/gay",
+        "status" : 2,
+        "title" : "Gay"
+      },
+    "model" : "cmlproject.topic",
+    "pk" : 13
+  },
+  { "fields" : { "_order" : 1,
+        "content" : "<p>Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.</p>\n<p>High life 3 wolf moon street art fixie food truck, biodiesel flexitarian. Craft beer organic typewriter, sustainable DIY high life seitan forage williamsburg synth mustache direct trade pork belly PBR banh mi. Jean shorts vinyl cliche, cardigan skateboard pork belly tumblr salvia raw denim artisan bespoke williamsburg organic helvetica sartorial. Vegan locavore organic, lomo mcsweeney's cred carles. Pour-over cliche high life master cleanse, skateboard salvia fanny pack. Pork belly stumptown mumblecore high life trust fund sartorial selvage viral cliche, kale chips +1 vinyl artisan tattooed. Hoodie iphone sriracha, chillwave four loko mixtape marfa american apparel.</p>\n<p>Mlkshk skateboard farm-to-table leggings keytar banksy. Next level bespoke seitan sriracha, trust fund DIY twee put a bird on it +1 salvia hella blog. Sriracha skateboard small batch iphone, mlkshk hoodie brooklyn lomo terry richardson ennui art party. Farm-to-table mcsweeney's marfa pitchfork stumptown. Helvetica mixtape fap fingerstache brooklyn, selvage cray thundercats viral skateboard. Ethnic truffaut high life biodiesel, before they sold out readymade tofu next level locavore brooklyn you probably haven't heard of them. Banksy before they sold out cred, mixtape vice carles pickled gastropub bicycle rights keffiyeh.</p>\n<p>Trust fund vegan helvetica, fanny pack polaroid photo booth flexitarian kale chips fixie 8-bit keytar locavore mumblecore small batch fingerstache. +1 biodiesel tofu, mlkshk artisan bushwick craft beer jean shorts occupy art party master cleanse messenger bag forage shoreditch. Biodiesel brunch post-ironic, wolf quinoa ethnic etsy chillwave photo booth american apparel locavore pour-over kale chips. Semiotics organic leggings vegan. Gluten-free fanny pack before they sold out tattooed. Jean shorts ennui cardigan squid. Salvia occupy +1 art party.</p>",
+        "description" : "Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.",
+        "expiry_date" : null,
+        "featured_media" : [  ],
+        "gen_description" : true,
+        "icon" : "",
+        "keywords_string" : "",
+        "parent_topic" : null,
+        "publish_date" : "2012-08-01T02:22:27.204Z",
+        "short_url" : null,
+        "site" : 1,
+        "slug" : "gender",
+        "status" : 2,
+        "title" : "Gender"
+      },
+    "model" : "cmlproject.topic",
+    "pk" : 2
+  },
+  { "fields" : { "_order" : 0,
+        "content" : "<p>Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.</p>\n<p>High life 3 wolf moon street art fixie food truck, biodiesel flexitarian. Craft beer organic typewriter, sustainable DIY high life seitan forage williamsburg synth mustache direct trade pork belly PBR banh mi. Jean shorts vinyl cliche, cardigan skateboard pork belly tumblr salvia raw denim artisan bespoke williamsburg organic helvetica sartorial. Vegan locavore organic, lomo mcsweeney's cred carles. Pour-over cliche high life master cleanse, skateboard salvia fanny pack. Pork belly stumptown mumblecore high life trust fund sartorial selvage viral cliche, kale chips +1 vinyl artisan tattooed. Hoodie iphone sriracha, chillwave four loko mixtape marfa american apparel.</p>\n<p>Mlkshk skateboard farm-to-table leggings keytar banksy. Next level bespoke seitan sriracha, trust fund DIY twee put a bird on it +1 salvia hella blog. Sriracha skateboard small batch iphone, mlkshk hoodie brooklyn lomo terry richardson ennui art party. Farm-to-table mcsweeney's marfa pitchfork stumptown. Helvetica mixtape fap fingerstache brooklyn, selvage cray thundercats viral skateboard. Ethnic truffaut high life biodiesel, before they sold out readymade tofu next level locavore brooklyn you probably haven't heard of them. Banksy before they sold out cred, mixtape vice carles pickled gastropub bicycle rights keffiyeh.</p>\n<p>Trust fund vegan helvetica, fanny pack polaroid photo booth flexitarian kale chips fixie 8-bit keytar locavore mumblecore small batch fingerstache. +1 biodiesel tofu, mlkshk artisan bushwick craft beer jean shorts occupy art party master cleanse messenger bag forage shoreditch. Biodiesel brunch post-ironic, wolf quinoa ethnic etsy chillwave photo booth american apparel locavore pour-over kale chips. Semiotics organic leggings vegan. Gluten-free fanny pack before they sold out tattooed. Jean shorts ennui cardigan squid. Salvia occupy +1 art party.</p>",
+        "description" : "Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.",
+        "expiry_date" : null,
+        "featured_media" : [  ],
+        "gen_description" : true,
+        "icon" : "",
+        "keywords_string" : "",
+        "parent_topic" : 5,
+        "publish_date" : "2012-08-01T02:41:56.530Z",
+        "short_url" : null,
+        "site" : 1,
+        "slug" : "feminism/gender-inequality",
+        "status" : 2,
+        "title" : "Gender Inequality"
+      },
+    "model" : "cmlproject.topic",
+    "pk" : 15
+  },
+  { "fields" : { "_order" : 2,
+        "content" : "<p>Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.</p>\n<p>High life 3 wolf moon street art fixie food truck, biodiesel flexitarian. Craft beer organic typewriter, sustainable DIY high life seitan forage williamsburg synth mustache direct trade pork belly PBR banh mi. Jean shorts vinyl cliche, cardigan skateboard pork belly tumblr salvia raw denim artisan bespoke williamsburg organic helvetica sartorial. Vegan locavore organic, lomo mcsweeney's cred carles. Pour-over cliche high life master cleanse, skateboard salvia fanny pack. Pork belly stumptown mumblecore high life trust fund sartorial selvage viral cliche, kale chips +1 vinyl artisan tattooed. Hoodie iphone sriracha, chillwave four loko mixtape marfa american apparel.</p>\n<p>Mlkshk skateboard farm-to-table leggings keytar banksy. Next level bespoke seitan sriracha, trust fund DIY twee put a bird on it +1 salvia hella blog. Sriracha skateboard small batch iphone, mlkshk hoodie brooklyn lomo terry richardson ennui art party. Farm-to-table mcsweeney's marfa pitchfork stumptown. Helvetica mixtape fap fingerstache brooklyn, selvage cray thundercats viral skateboard. Ethnic truffaut high life biodiesel, before they sold out readymade tofu next level locavore brooklyn you probably haven't heard of them. Banksy before they sold out cred, mixtape vice carles pickled gastropub bicycle rights keffiyeh.</p>\n<p>Trust fund vegan helvetica, fanny pack polaroid photo booth flexitarian kale chips fixie 8-bit keytar locavore mumblecore small batch fingerstache. +1 biodiesel tofu, mlkshk artisan bushwick craft beer jean shorts occupy art party master cleanse messenger bag forage shoreditch. Biodiesel brunch post-ironic, wolf quinoa ethnic etsy chillwave photo booth american apparel locavore pour-over kale chips. Semiotics organic leggings vegan. Gluten-free fanny pack before they sold out tattooed. Jean shorts ennui cardigan squid. Salvia occupy +1 art party.</p>",
+        "description" : "Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.",
+        "expiry_date" : null,
+        "featured_media" : [  ],
+        "gen_description" : true,
+        "icon" : "",
+        "keywords_string" : "",
+        "parent_topic" : null,
+        "publish_date" : "2012-08-01T02:22:36.179Z",
+        "short_url" : null,
+        "site" : 1,
+        "slug" : "lgbt",
+        "status" : 2,
+        "title" : "LGBT"
+      },
+    "model" : "cmlproject.topic",
+    "pk" : 3
+  },
+  { "fields" : { "_order" : 3,
+        "content" : "<p>Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.</p>\n<p>High life 3 wolf moon street art fixie food truck, biodiesel flexitarian. Craft beer organic typewriter, sustainable DIY high life seitan forage williamsburg synth mustache direct trade pork belly PBR banh mi. Jean shorts vinyl cliche, cardigan skateboard pork belly tumblr salvia raw denim artisan bespoke williamsburg organic helvetica sartorial. Vegan locavore organic, lomo mcsweeney's cred carles. Pour-over cliche high life master cleanse, skateboard salvia fanny pack. Pork belly stumptown mumblecore high life trust fund sartorial selvage viral cliche, kale chips +1 vinyl artisan tattooed. Hoodie iphone sriracha, chillwave four loko mixtape marfa american apparel.</p>\n<p>Mlkshk skateboard farm-to-table leggings keytar banksy. Next level bespoke seitan sriracha, trust fund DIY twee put a bird on it +1 salvia hella blog. Sriracha skateboard small batch iphone, mlkshk hoodie brooklyn lomo terry richardson ennui art party. Farm-to-table mcsweeney's marfa pitchfork stumptown. Helvetica mixtape fap fingerstache brooklyn, selvage cray thundercats viral skateboard. Ethnic truffaut high life biodiesel, before they sold out readymade tofu next level locavore brooklyn you probably haven't heard of them. Banksy before they sold out cred, mixtape vice carles pickled gastropub bicycle rights keffiyeh.</p>\n<p>Trust fund vegan helvetica, fanny pack polaroid photo booth flexitarian kale chips fixie 8-bit keytar locavore mumblecore small batch fingerstache. +1 biodiesel tofu, mlkshk artisan bushwick craft beer jean shorts occupy art party master cleanse messenger bag forage shoreditch. Biodiesel brunch post-ironic, wolf quinoa ethnic etsy chillwave photo booth american apparel locavore pour-over kale chips. Semiotics organic leggings vegan. Gluten-free fanny pack before they sold out tattooed. Jean shorts ennui cardigan squid. Salvia occupy +1 art party.</p>",
+        "description" : "Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.",
+        "expiry_date" : null,
+        "featured_media" : [  ],
+        "gen_description" : true,
+        "icon" : "",
+        "keywords_string" : "",
+        "parent_topic" : 1,
+        "publish_date" : "2012-08-01T02:41:03.157Z",
+        "short_url" : null,
+        "site" : 1,
+        "slug" : "race-ethnicity/latino",
+        "status" : 2,
+        "title" : "Latino"
+      },
+    "model" : "cmlproject.topic",
+    "pk" : 12
+  },
+  { "fields" : { "_order" : 0,
+        "content" : "<p>Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.</p>\n<p>High life 3 wolf moon street art fixie food truck, biodiesel flexitarian. Craft beer organic typewriter, sustainable DIY high life seitan forage williamsburg synth mustache direct trade pork belly PBR banh mi. Jean shorts vinyl cliche, cardigan skateboard pork belly tumblr salvia raw denim artisan bespoke williamsburg organic helvetica sartorial. Vegan locavore organic, lomo mcsweeney's cred carles. Pour-over cliche high life master cleanse, skateboard salvia fanny pack. Pork belly stumptown mumblecore high life trust fund sartorial selvage viral cliche, kale chips +1 vinyl artisan tattooed. Hoodie iphone sriracha, chillwave four loko mixtape marfa american apparel.</p>\n<p>Mlkshk skateboard farm-to-table leggings keytar banksy. Next level bespoke seitan sriracha, trust fund DIY twee put a bird on it +1 salvia hella blog. Sriracha skateboard small batch iphone, mlkshk hoodie brooklyn lomo terry richardson ennui art party. Farm-to-table mcsweeney's marfa pitchfork stumptown. Helvetica mixtape fap fingerstache brooklyn, selvage cray thundercats viral skateboard. Ethnic truffaut high life biodiesel, before they sold out readymade tofu next level locavore brooklyn you probably haven't heard of them. Banksy before they sold out cred, mixtape vice carles pickled gastropub bicycle rights keffiyeh.</p>\n<p>Trust fund vegan helvetica, fanny pack polaroid photo booth flexitarian kale chips fixie 8-bit keytar locavore mumblecore small batch fingerstache. +1 biodiesel tofu, mlkshk artisan bushwick craft beer jean shorts occupy art party master cleanse messenger bag forage shoreditch. Biodiesel brunch post-ironic, wolf quinoa ethnic etsy chillwave photo booth american apparel locavore pour-over kale chips. Semiotics organic leggings vegan. Gluten-free fanny pack before they sold out tattooed. Jean shorts ennui cardigan squid. Salvia occupy +1 art party.</p>",
+        "description" : "Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.",
+        "expiry_date" : null,
+        "featured_media" : [  ],
+        "gen_description" : true,
+        "icon" : "",
+        "keywords_string" : "",
+        "parent_topic" : 3,
+        "publish_date" : "2012-08-01T02:40:51.885Z",
+        "short_url" : null,
+        "site" : 1,
+        "slug" : "lgbt/lesbian",
+        "status" : 2,
+        "title" : "Lesbian"
+      },
+    "model" : "cmlproject.topic",
+    "pk" : 11
+  },
+  { "fields" : { "_order" : 1,
+        "content" : "<p>Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.</p>\n<p>High life 3 wolf moon street art fixie food truck, biodiesel flexitarian. Craft beer organic typewriter, sustainable DIY high life seitan forage williamsburg synth mustache direct trade pork belly PBR banh mi. Jean shorts vinyl cliche, cardigan skateboard pork belly tumblr salvia raw denim artisan bespoke williamsburg organic helvetica sartorial. Vegan locavore organic, lomo mcsweeney's cred carles. Pour-over cliche high life master cleanse, skateboard salvia fanny pack. Pork belly stumptown mumblecore high life trust fund sartorial selvage viral cliche, kale chips +1 vinyl artisan tattooed. Hoodie iphone sriracha, chillwave four loko mixtape marfa american apparel.</p>\n<p>Mlkshk skateboard farm-to-table leggings keytar banksy. Next level bespoke seitan sriracha, trust fund DIY twee put a bird on it +1 salvia hella blog. Sriracha skateboard small batch iphone, mlkshk hoodie brooklyn lomo terry richardson ennui art party. Farm-to-table mcsweeney's marfa pitchfork stumptown. Helvetica mixtape fap fingerstache brooklyn, selvage cray thundercats viral skateboard. Ethnic truffaut high life biodiesel, before they sold out readymade tofu next level locavore brooklyn you probably haven't heard of them. Banksy before they sold out cred, mixtape vice carles pickled gastropub bicycle rights keffiyeh.</p>\n<p>Trust fund vegan helvetica, fanny pack polaroid photo booth flexitarian kale chips fixie 8-bit keytar locavore mumblecore small batch fingerstache. +1 biodiesel tofu, mlkshk artisan bushwick craft beer jean shorts occupy art party master cleanse messenger bag forage shoreditch. Biodiesel brunch post-ironic, wolf quinoa ethnic etsy chillwave photo booth american apparel locavore pour-over kale chips. Semiotics organic leggings vegan. Gluten-free fanny pack before they sold out tattooed. Jean shorts ennui cardigan squid. Salvia occupy +1 art party.</p>",
+        "description" : "Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.",
+        "expiry_date" : null,
+        "featured_media" : [  ],
+        "gen_description" : true,
+        "icon" : "",
+        "keywords_string" : "",
+        "parent_topic" : 2,
+        "publish_date" : "2012-08-01T02:40:28.591Z",
+        "short_url" : null,
+        "site" : 1,
+        "slug" : "gender/masculinity",
+        "status" : 2,
+        "title" : "Masculinity"
+      },
+    "model" : "cmlproject.topic",
+    "pk" : 10
+  },
+  { "fields" : { "_order" : 0,
+        "content" : "<p>Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.</p>\n<p>High life 3 wolf moon street art fixie food truck, biodiesel flexitarian. Craft beer organic typewriter, sustainable DIY high life seitan forage williamsburg synth mustache direct trade pork belly PBR banh mi. Jean shorts vinyl cliche, cardigan skateboard pork belly tumblr salvia raw denim artisan bespoke williamsburg organic helvetica sartorial. Vegan locavore organic, lomo mcsweeney's cred carles. Pour-over cliche high life master cleanse, skateboard salvia fanny pack. Pork belly stumptown mumblecore high life trust fund sartorial selvage viral cliche, kale chips +1 vinyl artisan tattooed. Hoodie iphone sriracha, chillwave four loko mixtape marfa american apparel.</p>\n<p>Mlkshk skateboard farm-to-table leggings keytar banksy. Next level bespoke seitan sriracha, trust fund DIY twee put a bird on it +1 salvia hella blog. Sriracha skateboard small batch iphone, mlkshk hoodie brooklyn lomo terry richardson ennui art party. Farm-to-table mcsweeney's marfa pitchfork stumptown. Helvetica mixtape fap fingerstache brooklyn, selvage cray thundercats viral skateboard. Ethnic truffaut high life biodiesel, before they sold out readymade tofu next level locavore brooklyn you probably haven't heard of them. Banksy before they sold out cred, mixtape vice carles pickled gastropub bicycle rights keffiyeh.</p>\n<p>Trust fund vegan helvetica, fanny pack polaroid photo booth flexitarian kale chips fixie 8-bit keytar locavore mumblecore small batch fingerstache. +1 biodiesel tofu, mlkshk artisan bushwick craft beer jean shorts occupy art party master cleanse messenger bag forage shoreditch. Biodiesel brunch post-ironic, wolf quinoa ethnic etsy chillwave photo booth american apparel locavore pour-over kale chips. Semiotics organic leggings vegan. Gluten-free fanny pack before they sold out tattooed. Jean shorts ennui cardigan squid. Salvia occupy +1 art party.</p>",
+        "description" : "Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.",
+        "expiry_date" : null,
+        "featured_media" : [  ],
+        "gen_description" : true,
+        "icon" : "",
+        "keywords_string" : "",
+        "parent_topic" : null,
+        "publish_date" : "2012-08-01T02:22:14.980Z",
+        "short_url" : null,
+        "site" : 1,
+        "slug" : "race-ethnicity",
+        "status" : 2,
+        "title" : "Race & Ethnicity"
+      },
+    "model" : "cmlproject.topic",
+    "pk" : 1
+  },
+  { "fields" : { "_order" : 1,
+        "content" : "<p>Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.</p>\n<p>High life 3 wolf moon street art fixie food truck, biodiesel flexitarian. Craft beer organic typewriter, sustainable DIY high life seitan forage williamsburg synth mustache direct trade pork belly PBR banh mi. Jean shorts vinyl cliche, cardigan skateboard pork belly tumblr salvia raw denim artisan bespoke williamsburg organic helvetica sartorial. Vegan locavore organic, lomo mcsweeney's cred carles. Pour-over cliche high life master cleanse, skateboard salvia fanny pack. Pork belly stumptown mumblecore high life trust fund sartorial selvage viral cliche, kale chips +1 vinyl artisan tattooed. Hoodie iphone sriracha, chillwave four loko mixtape marfa american apparel.</p>\n<p>Mlkshk skateboard farm-to-table leggings keytar banksy. Next level bespoke seitan sriracha, trust fund DIY twee put a bird on it +1 salvia hella blog. Sriracha skateboard small batch iphone, mlkshk hoodie brooklyn lomo terry richardson ennui art party. Farm-to-table mcsweeney's marfa pitchfork stumptown. Helvetica mixtape fap fingerstache brooklyn, selvage cray thundercats viral skateboard. Ethnic truffaut high life biodiesel, before they sold out readymade tofu next level locavore brooklyn you probably haven't heard of them. Banksy before they sold out cred, mixtape vice carles pickled gastropub bicycle rights keffiyeh.</p>\n<p>Trust fund vegan helvetica, fanny pack polaroid photo booth flexitarian kale chips fixie 8-bit keytar locavore mumblecore small batch fingerstache. +1 biodiesel tofu, mlkshk artisan bushwick craft beer jean shorts occupy art party master cleanse messenger bag forage shoreditch. Biodiesel brunch post-ironic, wolf quinoa ethnic etsy chillwave photo booth american apparel locavore pour-over kale chips. Semiotics organic leggings vegan. Gluten-free fanny pack before they sold out tattooed. Jean shorts ennui cardigan squid. Salvia occupy +1 art party.</p>",
+        "description" : "Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.",
+        "expiry_date" : null,
+        "featured_media" : [  ],
+        "gen_description" : true,
+        "icon" : "",
+        "keywords_string" : "",
+        "parent_topic" : 5,
+        "publish_date" : "2012-08-01T02:42:10.212Z",
+        "short_url" : null,
+        "site" : 1,
+        "slug" : "feminism/sexual-power",
+        "status" : 2,
+        "title" : "Sexual Power"
+      },
+    "model" : "cmlproject.topic",
+    "pk" : 16
+  },
+  { "fields" : { "_order" : 2,
+        "content" : "<p>Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.</p>\n<p>High life 3 wolf moon street art fixie food truck, biodiesel flexitarian. Craft beer organic typewriter, sustainable DIY high life seitan forage williamsburg synth mustache direct trade pork belly PBR banh mi. Jean shorts vinyl cliche, cardigan skateboard pork belly tumblr salvia raw denim artisan bespoke williamsburg organic helvetica sartorial. Vegan locavore organic, lomo mcsweeney's cred carles. Pour-over cliche high life master cleanse, skateboard salvia fanny pack. Pork belly stumptown mumblecore high life trust fund sartorial selvage viral cliche, kale chips +1 vinyl artisan tattooed. Hoodie iphone sriracha, chillwave four loko mixtape marfa american apparel.</p>\n<p>Mlkshk skateboard farm-to-table leggings keytar banksy. Next level bespoke seitan sriracha, trust fund DIY twee put a bird on it +1 salvia hella blog. Sriracha skateboard small batch iphone, mlkshk hoodie brooklyn lomo terry richardson ennui art party. Farm-to-table mcsweeney's marfa pitchfork stumptown. Helvetica mixtape fap fingerstache brooklyn, selvage cray thundercats viral skateboard. Ethnic truffaut high life biodiesel, before they sold out readymade tofu next level locavore brooklyn you probably haven't heard of them. Banksy before they sold out cred, mixtape vice carles pickled gastropub bicycle rights keffiyeh.</p>\n<p>Trust fund vegan helvetica, fanny pack polaroid photo booth flexitarian kale chips fixie 8-bit keytar locavore mumblecore small batch fingerstache. +1 biodiesel tofu, mlkshk artisan bushwick craft beer jean shorts occupy art party master cleanse messenger bag forage shoreditch. Biodiesel brunch post-ironic, wolf quinoa ethnic etsy chillwave photo booth american apparel locavore pour-over kale chips. Semiotics organic leggings vegan. Gluten-free fanny pack before they sold out tattooed. Jean shorts ennui cardigan squid. Salvia occupy +1 art party.</p>",
+        "description" : "Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.",
+        "expiry_date" : null,
+        "featured_media" : [  ],
+        "gen_description" : true,
+        "icon" : "",
+        "keywords_string" : "",
+        "parent_topic" : 3,
+        "publish_date" : "2012-08-01T02:41:37.476Z",
+        "short_url" : null,
+        "site" : 1,
+        "slug" : "lgbt/transgender-issues",
+        "status" : 2,
+        "title" : "Transgender Issues"
+      },
+    "model" : "cmlproject.topic",
+    "pk" : 14
+  },
+  { "fields" : { "_order" : 1,
+        "content" : "<p>Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.</p>\n<p>High life 3 wolf moon street art fixie food truck, biodiesel flexitarian. Craft beer organic typewriter, sustainable DIY high life seitan forage williamsburg synth mustache direct trade pork belly PBR banh mi. Jean shorts vinyl cliche, cardigan skateboard pork belly tumblr salvia raw denim artisan bespoke williamsburg organic helvetica sartorial. Vegan locavore organic, lomo mcsweeney's cred carles. Pour-over cliche high life master cleanse, skateboard salvia fanny pack. Pork belly stumptown mumblecore high life trust fund sartorial selvage viral cliche, kale chips +1 vinyl artisan tattooed. Hoodie iphone sriracha, chillwave four loko mixtape marfa american apparel.</p>\n<p>Mlkshk skateboard farm-to-table leggings keytar banksy. Next level bespoke seitan sriracha, trust fund DIY twee put a bird on it +1 salvia hella blog. Sriracha skateboard small batch iphone, mlkshk hoodie brooklyn lomo terry richardson ennui art party. Farm-to-table mcsweeney's marfa pitchfork stumptown. Helvetica mixtape fap fingerstache brooklyn, selvage cray thundercats viral skateboard. Ethnic truffaut high life biodiesel, before they sold out readymade tofu next level locavore brooklyn you probably haven't heard of them. Banksy before they sold out cred, mixtape vice carles pickled gastropub bicycle rights keffiyeh.</p>\n<p>Trust fund vegan helvetica, fanny pack polaroid photo booth flexitarian kale chips fixie 8-bit keytar locavore mumblecore small batch fingerstache. +1 biodiesel tofu, mlkshk artisan bushwick craft beer jean shorts occupy art party master cleanse messenger bag forage shoreditch. Biodiesel brunch post-ironic, wolf quinoa ethnic etsy chillwave photo booth american apparel locavore pour-over kale chips. Semiotics organic leggings vegan. Gluten-free fanny pack before they sold out tattooed. Jean shorts ennui cardigan squid. Salvia occupy +1 art party.</p>",
+        "description" : "Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.",
+        "expiry_date" : null,
+        "featured_media" : [  ],
+        "gen_description" : true,
+        "icon" : "",
+        "keywords_string" : "",
+        "parent_topic" : 4,
+        "publish_date" : "2012-08-01T02:42:39.582Z",
+        "short_url" : null,
+        "site" : 1,
+        "slug" : "class/upper-class",
+        "status" : 2,
+        "title" : "Upper Class"
+      },
+    "model" : "cmlproject.topic",
+    "pk" : 18
+  },
+  { "fields" : { "_order" : 2,
+        "content" : "<p>Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.</p>\n<p>High life 3 wolf moon street art fixie food truck, biodiesel flexitarian. Craft beer organic typewriter, sustainable DIY high life seitan forage williamsburg synth mustache direct trade pork belly PBR banh mi. Jean shorts vinyl cliche, cardigan skateboard pork belly tumblr salvia raw denim artisan bespoke williamsburg organic helvetica sartorial. Vegan locavore organic, lomo mcsweeney's cred carles. Pour-over cliche high life master cleanse, skateboard salvia fanny pack. Pork belly stumptown mumblecore high life trust fund sartorial selvage viral cliche, kale chips +1 vinyl artisan tattooed. Hoodie iphone sriracha, chillwave four loko mixtape marfa american apparel.</p>\n<p>Mlkshk skateboard farm-to-table leggings keytar banksy. Next level bespoke seitan sriracha, trust fund DIY twee put a bird on it +1 salvia hella blog. Sriracha skateboard small batch iphone, mlkshk hoodie brooklyn lomo terry richardson ennui art party. Farm-to-table mcsweeney's marfa pitchfork stumptown. Helvetica mixtape fap fingerstache brooklyn, selvage cray thundercats viral skateboard. Ethnic truffaut high life biodiesel, before they sold out readymade tofu next level locavore brooklyn you probably haven't heard of them. Banksy before they sold out cred, mixtape vice carles pickled gastropub bicycle rights keffiyeh.</p>\n<p>Trust fund vegan helvetica, fanny pack polaroid photo booth flexitarian kale chips fixie 8-bit keytar locavore mumblecore small batch fingerstache. +1 biodiesel tofu, mlkshk artisan bushwick craft beer jean shorts occupy art party master cleanse messenger bag forage shoreditch. Biodiesel brunch post-ironic, wolf quinoa ethnic etsy chillwave photo booth american apparel locavore pour-over kale chips. Semiotics organic leggings vegan. Gluten-free fanny pack before they sold out tattooed. Jean shorts ennui cardigan squid. Salvia occupy +1 art party.</p>",
+        "description" : "Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.",
+        "expiry_date" : null,
+        "featured_media" : [  ],
+        "gen_description" : true,
+        "icon" : "",
+        "keywords_string" : "",
+        "parent_topic" : 1,
+        "publish_date" : "2012-08-01T02:40:00.528Z",
+        "short_url" : null,
+        "site" : 1,
+        "slug" : "race-ethnicity/white",
+        "status" : 2,
+        "title" : "White"
+      },
+    "model" : "cmlproject.topic",
+    "pk" : 8
+  },
+  { "fields" : { "_order" : 0,
+        "content" : "<p>Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.</p>\n<p>High life 3 wolf moon street art fixie food truck, biodiesel flexitarian. Craft beer organic typewriter, sustainable DIY high life seitan forage williamsburg synth mustache direct trade pork belly PBR banh mi. Jean shorts vinyl cliche, cardigan skateboard pork belly tumblr salvia raw denim artisan bespoke williamsburg organic helvetica sartorial. Vegan locavore organic, lomo mcsweeney's cred carles. Pour-over cliche high life master cleanse, skateboard salvia fanny pack. Pork belly stumptown mumblecore high life trust fund sartorial selvage viral cliche, kale chips +1 vinyl artisan tattooed. Hoodie iphone sriracha, chillwave four loko mixtape marfa american apparel.</p>\n<p>Mlkshk skateboard farm-to-table leggings keytar banksy. Next level bespoke seitan sriracha, trust fund DIY twee put a bird on it +1 salvia hella blog. Sriracha skateboard small batch iphone, mlkshk hoodie brooklyn lomo terry richardson ennui art party. Farm-to-table mcsweeney's marfa pitchfork stumptown. Helvetica mixtape fap fingerstache brooklyn, selvage cray thundercats viral skateboard. Ethnic truffaut high life biodiesel, before they sold out readymade tofu next level locavore brooklyn you probably haven't heard of them. Banksy before they sold out cred, mixtape vice carles pickled gastropub bicycle rights keffiyeh.</p>\n<p>Trust fund vegan helvetica, fanny pack polaroid photo booth flexitarian kale chips fixie 8-bit keytar locavore mumblecore small batch fingerstache. +1 biodiesel tofu, mlkshk artisan bushwick craft beer jean shorts occupy art party master cleanse messenger bag forage shoreditch. Biodiesel brunch post-ironic, wolf quinoa ethnic etsy chillwave photo booth american apparel locavore pour-over kale chips. Semiotics organic leggings vegan. Gluten-free fanny pack before they sold out tattooed. Jean shorts ennui cardigan squid. Salvia occupy +1 art party.</p>",
+        "description" : "Hoodie bicycle rights fanny pack, yr sustainable pickled wes anderson. Keffiyeh etsy mustache pickled quinoa cardigan, carles PBR banksy bicycle rights organic echo park kogi. Twee cliche mcsweeney's biodiesel sartorial mlkshk trust fund portland, salvia cray kogi letterpress viral. Letterpress put a bird on it craft beer PBR pitchfork american apparel, butcher 8-bit portland freegan. Put a bird on it iphone sustainable selvage. Cred thundercats williamsburg aesthetic before they sold out sriracha brooklyn. Thundercats four loko lomo single-origin coffee keffiyeh, readymade food truck synth polaroid dreamcatcher art party biodiesel williamsburg seitan.",
+        "expiry_date" : null,
+        "featured_media" : [  ],
+        "gen_description" : true,
+        "icon" : "",
+        "keywords_string" : "",
+        "parent_topic" : 4,
+        "publish_date" : "2012-08-01T02:42:29.610Z",
+        "short_url" : null,
+        "site" : 1,
+        "slug" : "class/working-class",
+        "status" : 2,
+        "title" : "Working Class"
+      },
+    "model" : "cmlproject.topic",
+    "pk" : 17
+  },
+  { "fields" : { "codename" : "add_logentry",
+        "content_type" : 36,
+        "name" : "Can add log entry"
+      },
+    "model" : "auth.permission",
+    "pk" : 106
+  },
+  { "fields" : { "codename" : "change_logentry",
+        "content_type" : 36,
+        "name" : "Can change log entry"
+      },
+    "model" : "auth.permission",
+    "pk" : 107
+  },
+  { "fields" : { "codename" : "delete_logentry",
+        "content_type" : 36,
+        "name" : "Can delete log entry"
+      },
+    "model" : "auth.permission",
+    "pk" : 108
+  },
+  { "fields" : { "codename" : "add_group",
+        "content_type" : 2,
+        "name" : "Can add group"
+      },
+    "model" : "auth.permission",
+    "pk" : 4
+  },
+  { "fields" : { "codename" : "change_group",
+        "content_type" : 2,
+        "name" : "Can change group"
+      },
+    "model" : "auth.permission",
+    "pk" : 5
+  },
+  { "fields" : { "codename" : "delete_group",
+        "content_type" : 2,
+        "name" : "Can delete group"
+      },
+    "model" : "auth.permission",
+    "pk" : 6
+  },
+  { "fields" : { "codename" : "add_permission",
+        "content_type" : 1,
+        "name" : "Can add permission"
+      },
+    "model" : "auth.permission",
+    "pk" : 1
+  },
+  { "fields" : { "codename" : "change_permission",
+        "content_type" : 1,
+        "name" : "Can change permission"
+      },
+    "model" : "auth.permission",
+    "pk" : 2
+  },
+  { "fields" : { "codename" : "delete_permission",
+        "content_type" : 1,
+        "name" : "Can delete permission"
+      },
+    "model" : "auth.permission",
+    "pk" : 3
+  },
+  { "fields" : { "codename" : "add_user",
+        "content_type" : 3,
+        "name" : "Can add user"
+      },
+    "model" : "auth.permission",
+    "pk" : 7
+  },
+  { "fields" : { "codename" : "change_user",
+        "content_type" : 3,
+        "name" : "Can change user"
+      },
+    "model" : "auth.permission",
+    "pk" : 8
+  },
+  { "fields" : { "codename" : "delete_user",
+        "content_type" : 3,
+        "name" : "Can delete user"
+      },
+    "model" : "auth.permission",
+    "pk" : 9
+  },
+  { "fields" : { "codename" : "add_blogcategory",
+        "content_type" : 14,
+        "name" : "Can add Blog Category"
+      },
+    "model" : "auth.permission",
+    "pk" : 40
+  },
+  { "fields" : { "codename" : "change_blogcategory",
+        "content_type" : 14,
+        "name" : "Can change Blog Category"
+      },
+    "model" : "auth.permission",
+    "pk" : 41
+  },
+  { "fields" : { "codename" : "delete_blogcategory",
+        "content_type" : 14,
+        "name" : "Can delete Blog Category"
+      },
+    "model" : "auth.permission",
+    "pk" : 42
+  },
+  { "fields" : { "codename" : "add_blogpost",
+        "content_type" : 13,
+        "name" : "Can add Blog post"
+      },
+    "model" : "auth.permission",
+    "pk" : 37
+  },
+  { "fields" : { "codename" : "change_blogpost",
+        "content_type" : 13,
+        "name" : "Can change Blog post"
+      },
+    "model" : "auth.permission",
+    "pk" : 38
+  },
+  { "fields" : { "codename" : "delete_blogpost",
+        "content_type" : 13,
+        "name" : "Can delete Blog post"
+      },
+    "model" : "auth.permission",
+    "pk" : 39
+  },
+  { "fields" : { "codename" : "add_glossaryterm",
+        "content_type" : 29,
+        "name" : "Can add Glossary Term"
+      },
+    "model" : "auth.permission",
+    "pk" : 85
+  },
+  { "fields" : { "codename" : "change_glossaryterm",
+        "content_type" : 29,
+        "name" : "Can change Glossary Term"
+      },
+    "model" : "auth.permission",
+    "pk" : 86
+  },
+  { "fields" : { "codename" : "delete_glossaryterm",
+        "content_type" : 29,
+        "name" : "Can delete Glossary Term"
+      },
+    "model" : "auth.permission",
+    "pk" : 87
+  },
+  { "fields" : { "codename" : "add_mediaartefact",
+        "content_type" : 27,
+        "name" : "Can add Media Artefact"
+      },
+    "model" : "auth.permission",
+    "pk" : 79
+  },
+  { "fields" : { "codename" : "change_mediaartefact",
+        "content_type" : 27,
+        "name" : "Can change Media Artefact"
+      },
+    "model" : "auth.permission",
+    "pk" : 80
+  },
+  { "fields" : { "codename" : "delete_mediaartefact",
+        "content_type" : 27,
+        "name" : "Can delete Media Artefact"
+      },
+    "model" : "auth.permission",
+    "pk" : 81
+  },
+  { "fields" : { "codename" : "add_tag",
+        "content_type" : 28,
+        "name" : "Can add Media Tag"
+      },
+    "model" : "auth.permission",
+    "pk" : 82
+  },
+  { "fields" : { "codename" : "change_tag",
+        "content_type" : 28,
+        "name" : "Can change Media Tag"
+      },
+    "model" : "auth.permission",
+    "pk" : 83
+  },
+  { "fields" : { "codename" : "delete_tag",
+        "content_type" : 28,
+        "name" : "Can delete Media Tag"
+      },
+    "model" : "auth.permission",
+    "pk" : 84
+  },
+  { "fields" : { "codename" : "add_topic",
+        "content_type" : 26,
+        "name" : "Can add Topic"
+      },
+    "model" : "auth.permission",
+    "pk" : 76
+  },
+  { "fields" : { "codename" : "change_topic",
+        "content_type" : 26,
+        "name" : "Can change Topic"
+      },
+    "model" : "auth.permission",
+    "pk" : 77
+  },
+  { "fields" : { "codename" : "delete_topic",
+        "content_type" : 26,
+        "name" : "Can delete Topic"
+      },
+    "model" : "auth.permission",
+    "pk" : 78
+  },
+  { "fields" : { "codename" : "add_comment",
+        "content_type" : 37,
+        "name" : "Can add comment"
+      },
+    "model" : "auth.permission",
+    "pk" : 109
+  },
+  { "fields" : { "codename" : "can_moderate",
+        "content_type" : 37,
+        "name" : "Can moderate comments"
+      },
+    "model" : "auth.permission",
+    "pk" : 112
+  },
+  { "fields" : { "codename" : "change_comment",
+        "content_type" : 37,
+        "name" : "Can change comment"
+      },
+    "model" : "auth.permission",
+    "pk" : 110
+  },
+  { "fields" : { "codename" : "delete_comment",
+        "content_type" : 37,
+        "name" : "Can delete comment"
+      },
+    "model" : "auth.permission",
+    "pk" : 111
+  },
+  { "fields" : { "codename" : "add_commentflag",
+        "content_type" : 38,
+        "name" : "Can add comment flag"
+      },
+    "model" : "auth.permission",
+    "pk" : 113
+  },
+  { "fields" : { "codename" : "change_commentflag",
+        "content_type" : 38,
+        "name" : "Can change comment flag"
+      },
+    "model" : "auth.permission",
+    "pk" : 114
+  },
+  { "fields" : { "codename" : "delete_commentflag",
+        "content_type" : 38,
+        "name" : "Can delete comment flag"
+      },
+    "model" : "auth.permission",
+    "pk" : 115
+  },
+  { "fields" : { "codename" : "add_setting",
+        "content_type" : 8,
+        "name" : "Can add Setting"
+      },
+    "model" : "auth.permission",
+    "pk" : 22
+  },
+  { "fields" : { "codename" : "change_setting",
+        "content_type" : 8,
+        "name" : "Can change Setting"
+      },
+    "model" : "auth.permission",
+    "pk" : 23
+  },
+  { "fields" : { "codename" : "delete_setting",
+        "content_type" : 8,
+        "name" : "Can delete Setting"
+      },
+    "model" : "auth.permission",
+    "pk" : 24
+  },
+  { "fields" : { "codename" : "add_contenttype",
+        "content_type" : 4,
+        "name" : "Can add content type"
+      },
+    "model" : "auth.permission",
+    "pk" : 10
+  },
+  { "fields" : { "codename" : "change_contenttype",
+        "content_type" : 4,
+        "name" : "Can change content type"
+      },
+    "model" : "auth.permission",
+    "pk" : 11
+  },
+  { "fields" : { "codename" : "delete_contenttype",
+        "content_type" : 4,
+        "name" : "Can delete content type"
+      },
+    "model" : "auth.permission",
+    "pk" : 12
+  },
+  { "fields" : { "codename" : "add_field",
+        "content_type" : 16,
+        "name" : "Can add Field"
+      },
+    "model" : "auth.permission",
+    "pk" : 46
+  },
+  { "fields" : { "codename" : "change_field",
+        "content_type" : 16,
+        "name" : "Can change Field"
+      },
+    "model" : "auth.permission",
+    "pk" : 47
+  },
+  { "fields" : { "codename" : "delete_field",
+        "content_type" : 16,
+        "name" : "Can delete Field"
+      },
+    "model" : "auth.permission",
+    "pk" : 48
+  },
+  { "fields" : { "codename" : "add_fieldentry",
+        "content_type" : 18,
+        "name" : "Can add Form field entry"
+      },
+    "model" : "auth.permission",
+    "pk" : 52
+  },
+  { "fields" : { "codename" : "change_fieldentry",
+        "content_type" : 18,
+        "name" : "Can change Form field entry"
+      },
+    "model" : "auth.permission",
+    "pk" : 53
+  },
+  { "fields" : { "codename" : "delete_fieldentry",
+        "content_type" : 18,
+        "name" : "Can delete Form field entry"
+      },
+    "model" : "auth.permission",
+    "pk" : 54
+  },
+  { "fields" : { "codename" : "add_form",
+        "content_type" : 15,
+        "name" : "Can add Form"
+      },
+    "model" : "auth.permission",
+    "pk" : 43
+  },
+  { "fields" : { "codename" : "change_form",
+        "content_type" : 15,
+        "name" : "Can change Form"
+      },
+    "model" : "auth.permission",
+    "pk" : 44
+  },
+  { "fields" : { "codename" : "delete_form",
+        "content_type" : 15,
+        "name" : "Can delete Form"
+      },
+    "model" : "auth.permission",
+    "pk" : 45
+  },
+  { "fields" : { "codename" : "add_formentry",
+        "content_type" : 17,
+        "name" : "Can add Form entry"
+      },
+    "model" : "auth.permission",
+    "pk" : 49
+  },
+  { "fields" : { "codename" : "change_formentry",
+        "content_type" : 17,
+        "name" : "Can change Form entry"
+      },
+    "model" : "auth.permission",
+    "pk" : 50
+  },
+  { "fields" : { "codename" : "delete_formentry",
+        "content_type" : 17,
+        "name" : "Can delete Form entry"
+      },
+    "model" : "auth.permission",
+    "pk" : 51
+  },
+  { "fields" : { "codename" : "add_gallery",
+        "content_type" : 22,
+        "name" : "Can add Gallery"
+      },
+    "model" : "auth.permission",
+    "pk" : 64
+  },
+  { "fields" : { "codename" : "change_gallery",
+        "content_type" : 22,
+        "name" : "Can change Gallery"
+      },
+    "model" : "auth.permission",
+    "pk" : 65
+  },
+  { "fields" : { "codename" : "delete_gallery",
+        "content_type" : 22,
+        "name" : "Can delete Gallery"
+      },
+    "model" : "auth.permission",
+    "pk" : 66
+  },
+  { "fields" : { "codename" : "add_galleryimage",
+        "content_type" : 23,
+        "name" : "Can add Image"
+      },
+    "model" : "auth.permission",
+    "pk" : 67
+  },
+  { "fields" : { "codename" : "change_galleryimage",
+        "content_type" : 23,
+        "name" : "Can change Image"
+      },
+    "model" : "auth.permission",
+    "pk" : 68
+  },
+  { "fields" : { "codename" : "delete_galleryimage",
+        "content_type" : 23,
+        "name" : "Can delete Image"
+      },
+    "model" : "auth.permission",
+    "pk" : 69
+  },
+  { "fields" : { "codename" : "add_assignedkeyword",
+        "content_type" : 11,
+        "name" : "Can add assigned keyword"
+      },
+    "model" : "auth.permission",
+    "pk" : 31
+  },
+  { "fields" : { "codename" : "change_assignedkeyword",
+        "content_type" : 11,
+        "name" : "Can change assigned keyword"
+      },
+    "model" : "auth.permission",
+    "pk" : 32
+  },
+  { "fields" : { "codename" : "delete_assignedkeyword",
+        "content_type" : 11,
+        "name" : "Can delete assigned keyword"
+      },
+    "model" : "auth.permission",
+    "pk" : 33
+  },
+  { "fields" : { "codename" : "add_keyword",
+        "content_type" : 10,
+        "name" : "Can add Keyword"
+      },
+    "model" : "auth.permission",
+    "pk" : 28
+  },
+  { "fields" : { "codename" : "change_keyword",
+        "content_type" : 10,
+        "name" : "Can change Keyword"
+      },
+    "model" : "auth.permission",
+    "pk" : 29
+  },
+  { "fields" : { "codename" : "delete_keyword",
+        "content_type" : 10,
+        "name" : "Can delete Keyword"
+      },
+    "model" : "auth.permission",
+    "pk" : 30
+  },
+  { "fields" : { "codename" : "add_rating",
+        "content_type" : 12,
+        "name" : "Can add Rating"
+      },
+    "model" : "auth.permission",
+    "pk" : 34
+  },
+  { "fields" : { "codename" : "change_rating",
+        "content_type" : 12,
+        "name" : "Can change Rating"
+      },
+    "model" : "auth.permission",
+    "pk" : 35
+  },
+  { "fields" : { "codename" : "delete_rating",
+        "content_type" : 12,
+        "name" : "Can delete Rating"
+      },
+    "model" : "auth.permission",
+    "pk" : 36
+  },
+  { "fields" : { "codename" : "add_threadedcomment",
+        "content_type" : 9,
+        "name" : "Can add Comment"
+      },
+    "model" : "auth.permission",
+    "pk" : 25
+  },
+  { "fields" : { "codename" : "change_threadedcomment",
+        "content_type" : 9,
+        "name" : "Can change Comment"
+      },
+    "model" : "auth.permission",
+    "pk" : 26
+  },
+  { "fields" : { "codename" : "delete_threadedcomment",
+        "content_type" : 9,
+        "name" : "Can delete Comment"
+      },
+    "model" : "auth.permission",
+    "pk" : 27
+  },
+  { "fields" : { "codename" : "add_bookmark",
+        "content_type" : 32,
+        "name" : "Can add Bookmark"
+      },
+    "model" : "auth.permission",
+    "pk" : 94
+  },
+  { "fields" : { "codename" : "change_bookmark",
+        "content_type" : 32,
+        "name" : "Can change Bookmark"
+      },
+    "model" : "auth.permission",
+    "pk" : 95
+  },
+  { "fields" : { "codename" : "delete_bookmark",
+        "content_type" : 32,
+        "name" : "Can delete Bookmark"
+      },
+    "model" : "auth.permission",
+    "pk" : 96
+  },
+  { "fields" : { "codename" : "add_bookmarkitem",
+        "content_type" : 33,
+        "name" : "Can add Bookmark Item"
+      },
+    "model" : "auth.permission",
+    "pk" : 97
+  },
+  { "fields" : { "codename" : "change_bookmarkitem",
+        "content_type" : 33,
+        "name" : "Can change Bookmark Item"
+      },
+    "model" : "auth.permission",
+    "pk" : 98
+  },
+  { "fields" : { "codename" : "delete_bookmarkitem",
+        "content_type" : 33,
+        "name" : "Can delete Bookmark Item"
+      },
+    "model" : "auth.permission",
+    "pk" : 99
+  },
+  { "fields" : { "codename" : "add_help",
+        "content_type" : 34,
+        "name" : "Can add Help"
+      },
+    "model" : "auth.permission",
+    "pk" : 100
+  },
+  { "fields" : { "codename" : "change_help",
+        "content_type" : 34,
+        "name" : "Can change Help"
+      },
+    "model" : "auth.permission",
+    "pk" : 101
+  },
+  { "fields" : { "codename" : "delete_help",
+        "content_type" : 34,
+        "name" : "Can delete Help"
+      },
+    "model" : "auth.permission",
+    "pk" : 102
+  },
+  { "fields" : { "codename" : "add_helpitem",
+        "content_type" : 35,
+        "name" : "Can add Help Entry"
+      },
+    "model" : "auth.permission",
+    "pk" : 103
+  },
+  { "fields" : { "codename" : "change_helpitem",
+        "content_type" : 35,
+        "name" : "Can change Help Entry"
+      },
+    "model" : "auth.permission",
+    "pk" : 104
+  },
+  { "fields" : { "codename" : "delete_helpitem",
+        "content_type" : 35,
+        "name" : "Can delete Help Entry"
+      },
+    "model" : "auth.permission",
+    "pk" : 105
+  },
+  { "fields" : { "codename" : "add_navigation",
+        "content_type" : 30,
+        "name" : "Can add Navigation"
+      },
+    "model" : "auth.permission",
+    "pk" : 88
+  },
+  { "fields" : { "codename" : "change_navigation",
+        "content_type" : 30,
+        "name" : "Can change Navigation"
+      },
+    "model" : "auth.permission",
+    "pk" : 89
+  },
+  { "fields" : { "codename" : "delete_navigation",
+        "content_type" : 30,
+        "name" : "Can delete Navigation"
+      },
+    "model" : "auth.permission",
+    "pk" : 90
+  },
+  { "fields" : { "codename" : "add_navigationitem",
+        "content_type" : 31,
+        "name" : "Can add Navigation Item"
+      },
+    "model" : "auth.permission",
+    "pk" : 91
+  },
+  { "fields" : { "codename" : "change_navigationitem",
+        "content_type" : 31,
+        "name" : "Can change Navigation Item"
+      },
+    "model" : "auth.permission",
+    "pk" : 92
+  },
+  { "fields" : { "codename" : "delete_navigationitem",
+        "content_type" : 31,
+        "name" : "Can delete Navigation Item"
+      },
+    "model" : "auth.permission",
+    "pk" : 93
+  },
+  { "fields" : { "codename" : "add_link",
+        "content_type" : 21,
+        "name" : "Can add Link"
+      },
+    "model" : "auth.permission",
+    "pk" : 61
+  },
+  { "fields" : { "codename" : "change_link",
+        "content_type" : 21,
+        "name" : "Can change Link"
+      },
+    "model" : "auth.permission",
+    "pk" : 62
+  },
+  { "fields" : { "codename" : "delete_link",
+        "content_type" : 21,
+        "name" : "Can delete Link"
+      },
+    "model" : "auth.permission",
+    "pk" : 63
+  },
+  { "fields" : { "codename" : "add_page",
+        "content_type" : 19,
+        "name" : "Can add Page"
+      },
+    "model" : "auth.permission",
+    "pk" : 55
+  },
+  { "fields" : { "codename" : "change_page",
+        "content_type" : 19,
+        "name" : "Can change Page"
+      },
+    "model" : "auth.permission",
+    "pk" : 56
+  },
+  { "fields" : { "codename" : "delete_page",
+        "content_type" : 19,
+        "name" : "Can delete Page"
+      },
+    "model" : "auth.permission",
+    "pk" : 57
+  },
+  { "fields" : { "codename" : "add_richtextpage",
+        "content_type" : 20,
+        "name" : "Can add Rich text page"
+      },
+    "model" : "auth.permission",
+    "pk" : 58
+  },
+  { "fields" : { "codename" : "change_richtextpage",
+        "content_type" : 20,
+        "name" : "Can change Rich text page"
+      },
+    "model" : "auth.permission",
+    "pk" : 59
+  },
+  { "fields" : { "codename" : "delete_richtextpage",
+        "content_type" : 20,
+        "name" : "Can delete Rich text page"
+      },
+    "model" : "auth.permission",
+    "pk" : 60
+  },
+  { "fields" : { "codename" : "add_redirect",
+        "content_type" : 5,
+        "name" : "Can add redirect"
+      },
+    "model" : "auth.permission",
+    "pk" : 13
+  },
+  { "fields" : { "codename" : "change_redirect",
+        "content_type" : 5,
+        "name" : "Can change redirect"
+      },
+    "model" : "auth.permission",
+    "pk" : 14
+  },
+  { "fields" : { "codename" : "delete_redirect",
+        "content_type" : 5,
+        "name" : "Can delete redirect"
+      },
+    "model" : "auth.permission",
+    "pk" : 15
+  },
+  { "fields" : { "codename" : "add_session",
+        "content_type" : 6,
+        "name" : "Can add session"
+      },
+    "model" : "auth.permission",
+    "pk" : 16
+  },
+  { "fields" : { "codename" : "change_session",
+        "content_type" : 6,
+        "name" : "Can change session"
+      },
+    "model" : "auth.permission",
+    "pk" : 17
+  },
+  { "fields" : { "codename" : "delete_session",
+        "content_type" : 6,
+        "name" : "Can delete session"
+      },
+    "model" : "auth.permission",
+    "pk" : 18
+  },
+  { "fields" : { "codename" : "add_site",
+        "content_type" : 7,
+        "name" : "Can add site"
+      },
+    "model" : "auth.permission",
+    "pk" : 19
+  },
+  { "fields" : { "codename" : "change_site",
+        "content_type" : 7,
+        "name" : "Can change site"
+      },
+    "model" : "auth.permission",
+    "pk" : 20
+  },
+  { "fields" : { "codename" : "delete_site",
+        "content_type" : 7,
+        "name" : "Can delete site"
+      },
+    "model" : "auth.permission",
+    "pk" : 21
+  },
+  { "fields" : { "codename" : "add_query",
+        "content_type" : 24,
+        "name" : "Can add Twitter query"
+      },
+    "model" : "auth.permission",
+    "pk" : 70
+  },
+  { "fields" : { "codename" : "change_query",
+        "content_type" : 24,
+        "name" : "Can change Twitter query"
+      },
+    "model" : "auth.permission",
+    "pk" : 71
+  },
+  { "fields" : { "codename" : "delete_query",
+        "content_type" : 24,
+        "name" : "Can delete Twitter query"
+      },
+    "model" : "auth.permission",
+    "pk" : 72
+  },
+  { "fields" : { "codename" : "add_tweet",
+        "content_type" : 25,
+        "name" : "Can add Tweet"
+      },
+    "model" : "auth.permission",
+    "pk" : 73
+  },
+  { "fields" : { "codename" : "change_tweet",
+        "content_type" : 25,
+        "name" : "Can change Tweet"
+      },
+    "model" : "auth.permission",
+    "pk" : 74
+  },
+  { "fields" : { "codename" : "delete_tweet",
+        "content_type" : 25,
+        "name" : "Can delete Tweet"
+      },
+    "model" : "auth.permission",
+    "pk" : 75
+  },
+  { "fields" : { "date_joined" : "2012-08-01T01:26:39.757Z",
+        "email" : "melissa.loudon@gmail.com",
+        "first_name" : "",
+        "groups" : [  ],
+        "is_active" : true,
+        "is_staff" : true,
+        "is_superuser" : true,
+        "last_login" : "2012-08-01T01:57:56.161Z",
+        "last_name" : "",
+        "password" : "pbkdf2_sha256$10000$G3WjwcsALSaQ$jfD6eb6qCDokI749GCgzJWQMIKio9G09cIdBr6xK1+4=",
+        "user_permissions" : [  ],
+        "username" : "admin"
+      },
+    "model" : "auth.user",
+    "pk" : 1
+  },
+  { "fields" : { "action_flag" : 1,
+        "action_time" : "2012-08-01T02:42:39.592Z",
+        "change_message" : "",
+        "content_type" : 26,
+        "object_id" : "18",
+        "object_repr" : "Upper Class",
+        "user" : 1
+      },
+    "model" : "admin.logentry",
+    "pk" : 18
+  },
+  { "fields" : { "action_flag" : 1,
+        "action_time" : "2012-08-01T02:42:29.621Z",
+        "change_message" : "",
+        "content_type" : 26,
+        "object_id" : "17",
+        "object_repr" : "Working Class",
+        "user" : 1
+      },
+    "model" : "admin.logentry",
+    "pk" : 17
+  },
+  { "fields" : { "action_flag" : 1,
+        "action_time" : "2012-08-01T02:42:10.222Z",
+        "change_message" : "",
+        "content_type" : 26,
+        "object_id" : "16",
+        "object_repr" : "Sexual Power",
+        "user" : 1
+      },
+    "model" : "admin.logentry",
+    "pk" : 16
+  },
+  { "fields" : { "action_flag" : 1,
+        "action_time" : "2012-08-01T02:41:56.540Z",
+        "change_message" : "",
+        "content_type" : 26,
+        "object_id" : "15",
+        "object_repr" : "Gender Inequality",
+        "user" : 1
+      },
+    "model" : "admin.logentry",
+    "pk" : 15
+  },
+  { "fields" : { "action_flag" : 1,
+        "action_time" : "2012-08-01T02:41:37.486Z",
+        "change_message" : "",
+        "content_type" : 26,
+        "object_id" : "14",
+        "object_repr" : "Transgender Issues",
+        "user" : 1
+      },
+    "model" : "admin.logentry",
+    "pk" : 14
+  },
+  { "fields" : { "action_flag" : 1,
+        "action_time" : "2012-08-01T02:41:16.353Z",
+        "change_message" : "",
+        "content_type" : 26,
+        "object_id" : "13",
+        "object_repr" : "Gay",
+        "user" : 1
+      },
+    "model" : "admin.logentry",
+    "pk" : 13
+  },
+  { "fields" : { "action_flag" : 1,
+        "action_time" : "2012-08-01T02:41:03.167Z",
+        "change_message" : "",
+        "content_type" : 26,
+        "object_id" : "12",
+        "object_repr" : "Latino",
+        "user" : 1
+      },
+    "model" : "admin.logentry",
+    "pk" : 12
+  },
+  { "fields" : { "action_flag" : 1,
+        "action_time" : "2012-08-01T02:40:51.896Z",
+        "change_message" : "",
+        "content_type" : 26,
+        "object_id" : "11",
+        "object_repr" : "Lesbian",
+        "user" : 1
+      },
+    "model" : "admin.logentry",
+    "pk" : 11
+  },
+  { "fields" : { "action_flag" : 1,
+        "action_time" : "2012-08-01T02:40:28.601Z",
+        "change_message" : "",
+        "content_type" : 26,
+        "object_id" : "10",
+        "object_repr" : "Masculinity",
+        "user" : 1
+      },
+    "model" : "admin.logentry",
+    "pk" : 10
+  },
+  { "fields" : { "action_flag" : 1,
+        "action_time" : "2012-08-01T02:40:18.952Z",
+        "change_message" : "",
+        "content_type" : 26,
+        "object_id" : "9",
+        "object_repr" : "Femininity",
+        "user" : 1
+      },
+    "model" : "admin.logentry",
+    "pk" : 9
+  },
+  { "fields" : { "action_flag" : 1,
+        "action_time" : "2012-08-01T02:40:00.592Z",
+        "change_message" : "",
+        "content_type" : 26,
+        "object_id" : "8",
+        "object_repr" : "White",
+        "user" : 1
+      },
+    "model" : "admin.logentry",
+    "pk" : 8
+  },
+  { "fields" : { "action_flag" : 1,
+        "action_time" : "2012-08-01T02:39:48.673Z",
+        "change_message" : "",
+        "content_type" : 26,
+        "object_id" : "7",
+        "object_repr" : "African American",
+        "user" : 1
+      },
+    "model" : "admin.logentry",
+    "pk" : 7
+  },
+  { "fields" : { "action_flag" : 1,
+        "action_time" : "2012-08-01T02:39:38.305Z",
+        "change_message" : "",
+        "content_type" : 26,
+        "object_id" : "6",
+        "object_repr" : "Asian/Pacific Islander",
+        "user" : 1
+      },
+    "model" : "admin.logentry",
+    "pk" : 6
+  },
+  { "fields" : { "action_flag" : 1,
+        "action_time" : "2012-08-01T02:22:59.111Z",
+        "change_message" : "",
+        "content_type" : 26,
+        "object_id" : "5",
+        "object_repr" : "Feminism",
+        "user" : 1
+      },
+    "model" : "admin.logentry",
+    "pk" : 5
+  },
+  { "fields" : { "action_flag" : 1,
+        "action_time" : "2012-08-01T02:22:47.216Z",
+        "change_message" : "",
+        "content_type" : 26,
+        "object_id" : "4",
+        "object_repr" : "Class",
+        "user" : 1
+      },
+    "model" : "admin.logentry",
+    "pk" : 4
+  },
+  { "fields" : { "action_flag" : 1,
+        "action_time" : "2012-08-01T02:22:36.190Z",
+        "change_message" : "",
+        "content_type" : 26,
+        "object_id" : "3",
+        "object_repr" : "LGBT",
+        "user" : 1
+      },
+    "model" : "admin.logentry",
+    "pk" : 3
+  },
+  { "fields" : { "action_flag" : 1,
+        "action_time" : "2012-08-01T02:22:27.214Z",
+        "change_message" : "",
+        "content_type" : 26,
+        "object_id" : "2",
+        "object_repr" : "Gender",
+        "user" : 1
+      },
+    "model" : "admin.logentry",
+    "pk" : 2
+  },
+  { "fields" : { "action_flag" : 1,
+        "action_time" : "2012-08-01T02:22:14.992Z",
+        "change_message" : "",
+        "content_type" : 26,
+        "object_id" : "1",
+        "object_repr" : "Race & Ethnicity",
+        "user" : 1
+      },
+    "model" : "admin.logentry",
+    "pk" : 1
+  }
+]
