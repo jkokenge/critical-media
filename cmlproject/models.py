@@ -130,16 +130,13 @@ class Tag(Slugged):
         return self.name
     
     def save(self, *args, **kwargs):
-        """
-        Create a unique slug by appending an index.
-        """
         if not self.title:
             self.title = self.name
             
         super(Tag, self).save(*args, **kwargs)
         
-class GlossaryTerm(models.Model):
-    name = models.CharField(_("Term"), max_length=1000)
+class GlossaryTerm(Slugged):
+    name = models.CharField(_("Term"), max_length=1000, unique=True)
     explanation = models.TextField(_("Explanation"))
     
     class Meta:
@@ -148,5 +145,11 @@ class GlossaryTerm(models.Model):
         
     def __unicode__(self):
         return self.name
+    
+    def save(self, *args, **kwargs):
+        if not self.title:
+            self.title = self.name
+            
+        super(GlossaryTerm, self).save(*args, **kwargs)
 
  
