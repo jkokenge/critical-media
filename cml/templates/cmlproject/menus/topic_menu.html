@@ -1,21 +1,15 @@
 {% load i18n cml_tags %}
 
 {% spaceless %}
-<div>
+<ul class = "thumbnails">
   {% get_topics as topic_list %}
   {% for t in topic_list %}
-  <div class="well well-small center topicmenu {% if t == topic or t == topic.parent_topic %}active{% endif %}" id="topic_title_{{t.slug}}">
-  <div class="div-inner" style="font-size: 58px;">
-  <a href="{% url topic_background t.slug %}">
-  <i class="icon-camera-retro icon-large"></i>
+  <li class="span2 topic-image">
+  <a href="{% url topic_background t.slug %}" class="thumbnail">
+  <img src="http://placehold.it/150x113" alt="">
+  <span class="topic-title">{{t.title}}</span>
   </a>
-  <br/>
-  </div>
-  <div class="div-inner">
-  <a href="{% url topic_background t.slug %}">{{t.title}}</a>
-  </div>
-  
-  </div>
+  </li>
   {% endfor %}
-</div>
+</ul>
 {% endspaceless %}
