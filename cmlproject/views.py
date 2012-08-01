@@ -7,7 +7,7 @@ from django import VERSION
 
 from mezzanine.conf import settings
 from mezzanine.pages import page_processors
-from .models import MediaArtefact, Topic, Tag
+from .models import MediaArtefact, Topic, Tag, GlossaryTerm
 from mezzanine.utils.views import render, paginate
 
 
@@ -80,6 +80,16 @@ def mediaartefact_list (request, tag=None, topic=None, template="cmlproject/medi
                           5)
     context = {"mediaartefacts": mediaartefacts,
                "tag": tag, "topic":topic}
+    templates.append(template)
+    return render(request, templates, context)
+
+def glossary_list (request, template="cmlproject/glossary_list.html"):
+    """
+    Display an alphabetical list of glossary words.
+    """
+    templates = []
+    terms = GlossaryTerm.objects.all().order_by("name")
+    context = {"terms": terms,}
     templates.append(template)
     return render(request, templates, context)
 

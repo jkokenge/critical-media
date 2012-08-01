@@ -8,5 +8,6 @@ urlpatterns = patterns("cmlproject.views",
     url("^media/$", "mediaartefact_list", name="mediaartefact_list"),
     url("^media/topic/(?P<topic>.*)/$", "mediaartefact_list", name="mediaartefact_list_topic"),
     url("^media/(?P<slug>.*)/$", "mediaartefact_detail", name="mediaartefact_detail"),
+    url("^glossary/$", "glossary_list", name="glossary_list"),
     
 )

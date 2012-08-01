@@ -25,7 +25,7 @@ ADMIN_MENU_ORDER = (
     ("Content", ("pages.Page","blog.BlogPost", "generic.ThreadedComment",
         ("Media Library", "fb_browse"),)),
     ("Site", ("conf.Setting","auth.User", "auth.Group", "sites.Site", "redirects.Redirect")),
-    ("Critical Media Literacy Project", ("cmlproject.Topic", "cmlproject.MediaArtefact", "cmlproject.Tag")),
+    ("Critical Media Literacy Project", ("cmlproject.Topic", "cmlproject.MediaArtefact", "cmlproject.Tag", "cmlproject.GlossaryTerm")),
 )
 
 ########################
@@ -170,7 +170,7 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     #"mezzanine.accounts",
     #"mezzanine.mobile",
-    "south",
+    "pagination",
     "cmlproject",
 )
 
@@ -207,6 +207,7 @@ MIDDLEWARE_CLASSES = (
     # "mezzanine.core.middleware.SSLRedirectMiddleware",
     "mezzanine.pages.middleware.PageMiddleware",
     "mezzanine.core.middleware.FetchFromCacheMiddleware",
+    "pagination.middleware.PaginationMiddleware",
 )
 
 # Store these package names here as they may change in the future since

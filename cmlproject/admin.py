@@ -3,7 +3,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from django.contrib import admin
 
-from .models import MediaArtefact, Topic, Tag
+from .models import MediaArtefact, Topic, Tag, GlossaryTerm
 
 from mezzanine.core.admin import DisplayableAdmin
 
@@ -29,7 +29,17 @@ class TagAdmin(admin.ModelAdmin):
             "fields": ["name","tag_type"],
         }),
     )
+    
+    
+class GlossaryTermAdmin(admin.ModelAdmin):
+    fieldsets = (
+        (None, {
+            "fields": ["name","explanation"],
+        }),
+    )
+
 
 admin.site.register(Topic, TopicAdmin)
 admin.site.register(MediaArtefact,MediaAdmin)
 admin.site.register(Tag, TagAdmin)
+admin.site.register(GlossaryTerm, GlossaryTermAdmin)
