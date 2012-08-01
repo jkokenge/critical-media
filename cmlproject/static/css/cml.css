@@ -1,12 +1,18 @@
-[class^="icon-"],[class*=" icon-"]
-{display:inline-block;
-width:69px;
-height:65px;
-line-height:75px;
-vertical-align:text-top;
-background-image:url("");
-*margin-right:.3em;}
-[class^="icon-"]:last-child,[class*=" icon-"]:last-child{*margin-left:0;}
+#navbar-icon-facebook
+{
+line-height:36px;
+font-size:24px;
+vertical-align:middle;
+text-align: -webkit-match-parent;
+}
+
+#navbar-icon-twitter
+{
+line-height:36px;
+font-size:24px;
+vertical-align:middle;
+text-align: -webkit-match-parent;
+}
 
 .well.topicmenu.active, .well.topicmenu.active a, .well.topicmenu.active li
 {
@@ -24,7 +30,7 @@ color:white;
 }
 
 .center .div-inner {
-    text-align:center;
+text-align:center;
 }
 
 li.subtopic > a
