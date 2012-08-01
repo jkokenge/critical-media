@@ -16,9 +16,26 @@
 <div class="span5" id="{{topic.slug}}-content">
 {{ topic.content|richtext_filter|safe }}
 </div>
+
 <div class="span2" id="{{topic.slug}}-featured">
-<a class="btn btn-success" href="{% url mediaartefact_list_topic topic.slug %}">See Featured Media</a>
+<ul class = "thumbnails">
+  <li class="span2 featuredmediathumb">
+  <div class="thumbnail">
+  <img src="http://placehold.it/160x120" alt="">
+  <a href="#">
+  <span class="mediatitle">Banh mi art party banksy, keffiyeh wayfarers stumptown fingerstache</span>
+  </a>
+  </div>
+  </li>
+  <li class="span2 featuredmediathumb">
+  <div class="thumbnail">
+  <img src="http://placehold.it/160x120" alt="">
+  <a href="#">
+  <span class="mediatitle">Mlkshk tumblr VHS bespoke street art, swag put a bird on it Austin artisan</span>
+  </a>
+  </div>
+  </li>
+</ul>
 </div>
 </div>
 {% endblock %}
-

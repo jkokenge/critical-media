@@ -94,19 +94,24 @@ $(function() {
 
 <div class="span3 right">
 	<div class="row">
+	<div class="span3">
 	<div class="search">
     <form action="{% url search %}" class="pull-right">
         <input class="search-query" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}">
     </form>
     </div>
     </div>
+    </div>
     <div class="row">
+	<div class="span3">
+    <div class="userpanel">
     {% nevercache %}
     {% include "includes/user_panel.html" %}
     {% endnevercache %}
-    
+    </div>
     <div class="panel">
     {% block right_panel %}{% include "cmlproject/menus/tag_menu.html" %}{% endblock %}
+    </div>
     </div>
     </div>
 </div>

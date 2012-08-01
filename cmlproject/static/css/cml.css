@@ -24,15 +24,30 @@ background-image:none;
    position: absolute; 
    top: 20%; 
    left: 0; 
-   width: 60%; 
-   color: white; 
-   font: bold 18px/36px; 
-   letter-spacing: -1px;  
+   width: 75%; 
+   color: yellow; 
+   font-size: 16px; 
+   font-weight: bold; 
    background: rgb(0, 0, 0); /* fallback color */
    background: rgba(0, 0, 0, 0.7);
    padding: 3px;
 }
 
+.featuredmediathumb
+{
+text-align:center;
+}
+
+.mediatitle {
+display:block;
+padding-top:3px;
+margin:0;
+font-family:inherit;
+font-weight:700;color:inherit;
+text-rendering:optimizelegibility;
+font-size:11px;
+line-height:14px;
+}
 .well.topicmenu.active, .well.topicmenu.active a, .well.topicmenu.active li
 {
 background-color:#08C;

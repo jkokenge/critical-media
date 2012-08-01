@@ -6,7 +6,7 @@
   {% for t in topic_list %}
   <li class="span2 topic-image">
   <a href="{% url topic_background t.slug %}" class="thumbnail">
-  <img src="http://placehold.it/150x113" alt="">
+  <img src="{{t.icon.url}}" alt="">
   <span class="topic-title">{{t.title}}</span>
   </a>
   </li>
