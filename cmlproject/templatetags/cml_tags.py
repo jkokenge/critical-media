@@ -1,6 +1,7 @@
 from django import template
 from cmlproject.models import Topic, Tag, GlossaryTerm
 from mezzanine import template
+import re
 
 register = template.Library()
 
@@ -14,11 +15,6 @@ def get_tags(type):
     tags = Tag.objects.filter(tag_type=type).order_by("name")
     return tags
 
-@register.assignment_tag
-def get_terms():
-    terms = GlossaryTerm.objects.all().order_by("name")
-    return terms
-
 @register.simple_tag
 def active(request, url_name, *myargs):
     from django.core.urlresolvers import reverse
@@ -26,3 +22,14 @@ def active(request, url_name, *myargs):
     if request.path == relative_url:
         return 'active'
     return ''
+
+@register.filter
+def add_glossary_tooltips(text):
+    terms = dict((t.name.upper(), t.explanation) for t in GlossaryTerm.objects.all())
+    words = re.split('(\W)',text)
+        
+    for i in range(len(words)):
+        if (not words[i]==" ") and (words[i].upper() in terms):
+            words[i] = '<a href="#" rel="tooltip" title="%s">%s</a>' % (terms[words[i].upper()], words[i])
+                                                                                
+    return "".join(words)

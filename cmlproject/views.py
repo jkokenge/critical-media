@@ -89,6 +89,7 @@ def glossary_list (request, template="cmlproject/glossary_list.html"):
     """
     templates = []
     terms = GlossaryTerm.objects.all().order_by("name")
+    
     context = {"terms": terms,}
     templates.append(template)
     return render(request, templates, context)

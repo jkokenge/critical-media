@@ -1,5 +1,5 @@
 {% extends "cmlproject/topic_base.html" %}
-{% load i18n mezzanine_tags blog_tags keyword_tags %}
+{% load i18n mezzanine_tags cml_tags %}
 
 {% block meta_title %}{{topic.title}}{% endblock %}
 
@@ -11,10 +11,12 @@
 {{topic.title}}
 {% endblock %}
 
+
 {% block main %}
+
 <div class="row">
 <div class="span5" id="{{topic.slug}}-content">
-{{ topic.content|richtext_filter|safe }}
+{{ topic.content|add_glossary_tooltips|richtext_filter|safe}}
 </div>
 
 <div class="span2" id="{{topic.slug}}-featured">
