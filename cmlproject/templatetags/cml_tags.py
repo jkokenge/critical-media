@@ -25,11 +25,11 @@ def active(request, url_name, *myargs):
 
 @register.filter
 def add_glossary_tooltips(text):
-    terms = dict((t.name.upper(), t.explanation) for t in GlossaryTerm.objects.all())
+    terms = dict((t.name.upper(), [t.explanation, t.get_absolute_url()]) for t in GlossaryTerm.objects.all())
     words = re.split('(\W)',text)
         
     for i in range(len(words)):
         if (not words[i]==" ") and (words[i].upper() in terms):
-            words[i] = '<a href="#" rel="tooltip" title="%s">%s</a>' % (terms[words[i].upper()], words[i])
+            words[i] = '<a href="%s" rel="tooltip" title="%s">%s</a>' % (terms[words[i].upper()][1],terms[words[i].upper()][0], words[i])
                                                                                 
     return "".join(words)

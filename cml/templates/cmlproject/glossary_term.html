@@ -1,36 +1,26 @@
 {% extends "base.html" %}
-{% load i18n mezzanine_tags cml_tags pagination_tags %}
+{% load i18n mezzanine_tags %}
 
 {% block meta_title %}Glossary{% endblock %}
 
 {% block meta_description %}{% metablock %}
-Glossary
+Glossary - {{term.name}}
 {% endmetablock %}{% endblock %}
 
 {% block title %}
-Glossary
+Glossary - {{term.name}}
 {% endblock %}
 
 {% block main %}
 <div class="row">
 <div class="span7" id="glossary-content">
 <br />
-{% autopaginate terms 30 %}
-{% for term in terms %}
-<div class="row">
-<div class="span2" id="term-{{term.slug}}">
 <h6>
 {{term.name}}
 </h6>
-</div>
-<div class="span5" id="explanation-{{term.slug}}">
 <p>
 {{term.explanation}}
 </p>
-</div>
-</div>
-{% endfor %}
-{% paginate %}
 </div>
 </div>
 {% endblock %}

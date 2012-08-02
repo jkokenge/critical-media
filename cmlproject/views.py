@@ -94,6 +94,17 @@ def glossary_list (request, template="cmlproject/glossary_list.html"):
     templates.append(template)
     return render(request, templates, context)
 
+def glossary_term (request, slug=None, template="cmlproject/glossary_term.html"):
+    """
+    Display a single glossary words.
+    """
+    templates = []
+    term = get_object_or_404(GlossaryTerm, slug=slug)
+    
+    context = {"term": term,}
+    templates.append(template)
+    return render(request, templates, context)
+
 def mediaartefact_detail(request, slug,
                      template="cmlproject/mediaartefact_detail.html"):
     

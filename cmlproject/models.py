@@ -151,5 +151,9 @@ class GlossaryTerm(Slugged):
             self.title = self.name
             
         super(GlossaryTerm, self).save(*args, **kwargs)
+    
+    def get_absolute_url(self):
+        slug = self.slug
+        return reverse("glossary_term", kwargs={"slug": slug})
 
  
