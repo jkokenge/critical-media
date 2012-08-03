@@ -10,11 +10,19 @@
 {% block main %}
 <div class="row">
 <div class="span7">
+<div class="center">
+
 {% if mediaartefact.embed_code %}
 {{ mediaartefact.embed_code|safe }}
 {% else %}
 <img src="http://placehold.it/400x270" alt="">
 {% endif %}
+{% editable mediaartefact.title %}
+<h3>
+    <a href="{{ mediaartefact.get_absolute_url }}">{{ mediaartefact.title }}</a>
+</h3>
+{% endeditable %}
+</div>
 </div>
 </div>
 <div class="row">

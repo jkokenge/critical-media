@@ -57,16 +57,12 @@ border-bottom: 1px dashed #CCC;
 vertical-align: bottom;
 }
 
-.center,
-.center > div {
-    float:none;
-    display:block;
-    *display:inline; /* ie7 fix */
-    *zoom:1; /* hasLayout ie7 trigger */
-    vertical-align: top;
+.media-tags {
+vertical-align: bottom;
 }
 
-.center .div-inner {
+.center {
+margin: 0 auto;
 text-align:center;
 }
 
