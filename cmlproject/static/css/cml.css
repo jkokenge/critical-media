@@ -48,10 +48,13 @@ text-rendering:optimizelegibility;
 font-size:11px;
 line-height:14px;
 }
-.well.topicmenu.active, .well.topicmenu.active a, .well.topicmenu.active li
-{
-background-color:#08C;
-color:white;
+
+.media-list {
+border-bottom: 1px dashed #CCC;
+}
+
+.media-tags {
+vertical-align: bottom;
 }
 
 .center,
