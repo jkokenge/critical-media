@@ -11,7 +11,7 @@ from mezzanine.core.admin import DisplayableAdmin
 class MediaAdmin(DisplayableAdmin):
     fieldsets = (
                  (None, {
-                         "fields": ["title", "media_type","thumbnail","embed_code","content","tags"],
+                         "fields": ["title", "media_type","embed_code","content","tags"],
                           }),
                  )
 

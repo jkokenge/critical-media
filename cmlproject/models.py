@@ -1,6 +1,8 @@
 from django.db import models
 from django.core.urlresolvers import resolve, reverse
 
+from django.db.models import URLField
+
 from django.utils.translation import ugettext_lazy as _
 
 from mezzanine.core.fields import FileField
@@ -91,22 +93,17 @@ class Topic(Orderable, Displayable, RichText, AdminThumbMixin):
         return admin_url(self, "change", self.id)
         
         
-class MediaArtefact(Orderable, Displayable, RichText, AdminThumbMixin):
-    thumbnail = FileField(verbose_name=_("Thumbnail"),
-                               upload_to="thumbs", format="Image",
-                               max_length=255, null=True, blank=True)
+class MediaArtefact(Orderable, Displayable, RichText):
+    thumbnail_url = URLField(verbose_name=_("Thumbnail"),blank=True, null=True)
 
-    admin_thumb_field = "thumbnail"
     media_type = models.SmallIntegerField(choices=MEDIA_TYPE_CHOICES, default = VIDEO)
-    
-    embed_code = models.TextField("Embed Code",blank=True, null=True)
-    
+    embed_code = models.TextField("Embed Code")
     tags = models.ManyToManyField("Tag", blank=True, null=True,related_name="tagged_media")
     
     
     class Meta:
-        verbose_name = _("Media Artefact")
-        verbose_name_plural = _("Media Artefacts")
+        verbose_name = _("Media Artifact")
+        verbose_name_plural = _("Media Artifacts")
         
     def __unicode__(self):
         return self.title
@@ -117,6 +114,10 @@ class MediaArtefact(Orderable, Displayable, RichText, AdminThumbMixin):
     
     def get_admin_url(self):
         return admin_url(self, "change", self.id)
+    
+    def save(self, *args, **kwargs):
+        #set thumbnail url here   
+        super(MediaArtefact, self).save(*args, **kwargs)
         
 class Tag(Slugged):
     name = models.CharField(_("Tag Name"), max_length=100)
