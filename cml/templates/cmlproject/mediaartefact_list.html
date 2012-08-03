@@ -3,18 +3,12 @@
 
 {% block meta_title %}{% if page %}{{ page.richtextpage.title }}{% else %}{% trans "Media" %}{% endif %}{% endblock %}
 
-{% block meta_keywords %}{% metablock %}
-{% if page %}
-{% keywords_for page as keywords %}
-{% for keyword in keywords %}
-    {% if not forloop.first %}, {% endif %}
-    {{ keyword }}
-{% endfor %}
-{% endif %}
-{% endmetablock %}{% endblock %}
-
 {% block meta_description %}{% metablock %}
-{{ page.description }}
+{% if topic %}
+Featured Media on {{topic.title}}
+{% elif tag %}
+Media tagged {{tag.name}}
+{% endif %}
 {% endmetablock %}{% endblock %}
 
 {% block main %}
@@ -23,32 +17,46 @@
 {% elif tag %}
 <h2> Media tagged {{tag.name}} </h2>
 {% endif %}
+
 {% for mediaartefact in mediaartefacts.object_list %}
+<div class="media-list">
+<div class="row">
+<div class="span4">
 {% editable mediaartefact.title %}
 <h3>
     <a href="{{ mediaartefact.get_absolute_url }}">{{ mediaartefact.title }}</a>
 </h3>
 {% endeditable %}
 
-
 {% editable mediaartefact.content %}
 {{ mediaartefact.description_from_content|safe }}
 {% endeditable %}
-
-<p class="blog-list-detail">
-    {% if mediaartefact.keyword_list %}
+<p>
+<a href="{{ mediaartefact.get_absolute_url }}">{% trans "read more" %}</a>
+</p>
+<div class="media-tags">
+    {% if mediaartefact.tags %}
     {% trans "Tags" %}:
     {% spaceless %}
-    {% for tag in mediaartefact.keyword_list %}
-    <a href="{% url mediaartefact_list_tag tag.slug %}" class="tag">{{ tag }}</a>
+    {% for tag in mediaartefact.tags.all %}
+    <a href="{% url mediaartefact_list_tag tag.slug %}" class="tag">{{ tag.name }}</a>
     {% endfor %}
     {% endspaceless %}
     <br>
     {% endif %}
-    <a href="{{ mediaartefact.get_absolute_url }}">{% trans "read more" %}</a>
-    
-    
-</p>
+</div>
+</div>
+<div class="span3">
+<ul class = "thumbnails">
+  <li class="span3 medialistthumb">
+  <a href="#" class="thumbnail">
+  <img src="http://placehold.it/260x180" alt="">
+  </a>
+  </li>
+</ul>
+</div>
+</div>
+</div>
 {% endfor %}
 
 {% pagination_for mediaartefacts %}
