@@ -94,10 +94,12 @@ class Topic(Orderable, Displayable, RichText, AdminThumbMixin):
         
         
 class MediaArtefact(Orderable, Displayable, RichText):
-    thumbnail_url = URLField(verbose_name=_("Thumbnail"),blank=True, null=True)
+    media_url = URLField(verbose_name=_("Media URL"),blank=True, null=True)
 
     media_type = models.SmallIntegerField(choices=MEDIA_TYPE_CHOICES, default = VIDEO)
     embed_code = models.TextField("Embed Code")
+    thumbnail_url = URLField(verbose_name=_("Thumbnail"),blank=True, null=True)
+    
     tags = models.ManyToManyField("Tag", blank=True, null=True,related_name="tagged_media")
     
     
