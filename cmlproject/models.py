@@ -12,6 +12,10 @@ from mezzanine.utils.models import AdminThumbMixin
 
 from mezzanine.utils.urls import admin_url, slugify
 
+from .exceptions import MediaURLFetchError
+
+import micawber
+
 TOPIC_TAG = 0
 GENRE_TAG = 1
 
@@ -118,7 +122,18 @@ class MediaArtefact(Orderable, Displayable, RichText):
         return admin_url(self, "change", self.id)
     
     def save(self, *args, **kwargs):
-        #set thumbnail url here   
+        providers = micawber.bootstrap_basic()
+        providers.register('https?:\/\/(.+)?(wistia\.com|wi\.st)\/(medias|embed)\/.*', micawber.Provider('http://fast.wistia.com/oembed/'))
+        
+        try:
+            oembed_response = providers.request(self.media_url)
+            print oembed_response
+            
+            self.embed_code=oembed_response['html']
+            self.thumbnail_url=oembed_response['thumbnail_url']
+        except:
+            raise MediaURLFetchError(self.media_url)
+        
         super(MediaArtefact, self).save(*args, **kwargs)
         
 class Tag(Slugged):

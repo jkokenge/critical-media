@@ -4,3 +4,4 @@ psycopg2==2.4.5
 gunicorn==0.14.3
 mezzanine==1.1.4
 django-pagination==1.0.7
+micawber==0.2.4
