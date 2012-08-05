@@ -20,23 +20,18 @@
 </div>
 
 <div class="span2" id="{{topic.slug}}-featured">
+<h3> Featured Media </h3>
 <ul class = "thumbnails">
+{% for mediaartefact in topic.featured_media.all  %}
   <li class="span2 featuredmediathumb">
-  <div class="thumbnail">
-  <img src="http://placehold.it/160x120" alt="">
-  <a href="#">
-  <span class="mediatitle">Banh mi art party banksy, keffiyeh wayfarers stumptown fingerstache</span>
+  <div class="thumbnail-small">
+  <a href="{{ mediaartefact.get_absolute_url }}" class="thumbnail">
+  <img src="{% thumbnail mediaartefact.thumbnail_url 160 120 %}" alt="">
+  <span class="mediatitle">{{ mediaartefact.title }}</span>
   </a>
   </div>
   </li>
-  <li class="span2 featuredmediathumb">
-  <div class="thumbnail">
-  <img src="http://placehold.it/160x120" alt="">
-  <a href="#">
-  <span class="mediatitle">Mlkshk tumblr VHS bespoke street art, swag put a bird on it Austin artisan</span>
-  </a>
-  </div>
-  </li>
+{% endfor %}
 </ul>
 </div>
 </div>
