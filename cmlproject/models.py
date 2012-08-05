@@ -1,3 +1,4 @@
+import re
 from django.db import models
 from django.core.urlresolvers import resolve, reverse
 
@@ -33,6 +34,8 @@ MEDIA_TYPE_CHOICES = (
     (SOUND, "Sound"),
     (IMAGE, "Image"),
 )
+
+WISTIA_REGEX = "https?:\/\/(.+)?(wistia\.com|wi\.st)\/(medias|embed)\/.*"
 
 
     
@@ -123,16 +126,18 @@ class MediaArtefact(Orderable, Displayable, RichText):
     
     def save(self, *args, **kwargs):
         providers = micawber.bootstrap_basic()
-        providers.register('https?:\/\/(.+)?(wistia\.com|wi\.st)\/(medias|embed)\/.*', micawber.Provider('http://fast.wistia.com/oembed/'))
+        providers.register(WISTIA_REGEX, micawber.Provider('http://fast.wistia.com/oembed/'))
         
-        try:
-            oembed_response = providers.request(self.media_url)
-            print oembed_response
-            
-            self.embed_code=oembed_response['html']
-            self.thumbnail_url=oembed_response['thumbnail_url']
-        except:
-            raise MediaURLFetchError(self.media_url)
+        request_opts = {"maxwidth":400}
+        
+        oembed_response = providers.request(self.media_url,maxwidth=400)
+        
+        self.embed_code=oembed_response['html']
+        self.thumbnail_url=oembed_response['thumbnail_url']
+        
+        #TODO hacky wistia thumbnail size fix - split off size limits after ?
+        if re.match(WISTIA_REGEX,self.media_url):
+            self.thumbnail_url = self.thumbnail_url.split("?")[0]
         
         super(MediaArtefact, self).save(*args, **kwargs)
         

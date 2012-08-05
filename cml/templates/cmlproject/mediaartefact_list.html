@@ -49,8 +49,8 @@ Media tagged {{tag.name}}
 <div class="span3">
 <ul class = "thumbnails">
   <li class="span3 medialistthumb">
-  <a href="#" class="thumbnail">
-  <img src="http://placehold.it/260x180" alt="">
+  <a href="{{ mediaartefact.get_absolute_url }}" class="thumbnail">
+  <img src="{% thumbnail mediaartefact.thumbnail_url 260 180 %}" alt="">
   </a>
   </li>
 </ul>
