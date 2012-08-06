@@ -128,8 +128,7 @@ class MediaArtefact(Orderable, Displayable, RichText):
         providers = micawber.bootstrap_basic()
         providers.register(WISTIA_REGEX, micawber.Provider('http://fast.wistia.com/oembed/'))
         
-        
-        oembed_response = providers.request(self.media_url,maxwidth=600)
+        oembed_response = providers.request(self.media_url,maxwidth=600, width=600)
         
         self.embed_code=oembed_response['html']
         self.thumbnail_url=oembed_response['thumbnail_url']
