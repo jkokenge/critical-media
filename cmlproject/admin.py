@@ -14,6 +14,10 @@ class MediaAdmin(DisplayableAdmin):
                          "fields": ["title", "media_url","content","tags"],
                           }),
                  )
+    
+    list_display = ("title", "media_url", "status")
+    list_filter = ('tags', 'featured_in')
+    date_hierarchy = ""
 
 
 class TopicAdmin(DisplayableAdmin):
@@ -23,12 +27,15 @@ class TopicAdmin(DisplayableAdmin):
         }),
     )
     
+    
 class TagAdmin(admin.ModelAdmin):
     fieldsets = (
         (None, {
             "fields": ["name","tag_type"],
         }),
     )
+    
+    list_display = ("name","tag_type")
     
     
 class GlossaryTermAdmin(admin.ModelAdmin):
