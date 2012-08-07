@@ -147,7 +147,8 @@ class MediaArtefact(Orderable, Displayable, RichText):
 
             #TODO should this be necessary?
             if oembed_response["type"]=="photo":
-                self.embed_code.replace("image_crop_resized","image_resize")
+                self.embed_code = re.sub("image_crop_resized","image_resize",self.embed_code)
+
                 
         super(MediaArtefact, self).save(*args, **kwargs)
         
