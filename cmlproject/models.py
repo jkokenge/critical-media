@@ -126,16 +126,24 @@ class MediaArtefact(Orderable, Displayable, RichText):
     
     def save(self, *args, **kwargs):
         providers = micawber.bootstrap_basic()
-        providers.register(WISTIA_REGEX, micawber.Provider('http://fast.wistia.com/oembed/'))
+        providers.register(WISTIA_REGEX, micawber.Provider("http://fast.wistia.com/oembed/"))
         
         oembed_response = providers.request(self.media_url,maxwidth=600, width=600)
         
-        self.embed_code=oembed_response['html']
-        self.thumbnail_url=oembed_response['thumbnail_url']
+        self.embed_code=oembed_response["html"]
+        
+        try:
+            if oembed_response["thumbnail_url"]:
+                self.thumbnail_url=oembed_response["thumbnail_url"]
+            elif oembed_response["type"]=="photo":
+                self.thumbnail_url = oembed_response["url"]
+        except:
+            self.thumbnail_url=""
         
         #TODO hacky wistia thumbnail size fix - split off size limits after ?
         if re.match(WISTIA_REGEX,self.media_url):
-            self.thumbnail_url = "%s?image_crop_resized=260x180" % self.thumbnail_url.split("?")[0]
+            if oembed_response["thumbnail_url"]:
+                self.thumbnail_url = "%s?image_crop_resized=260x180" % self.thumbnail_url.split("?")[0]
         
         super(MediaArtefact, self).save(*args, **kwargs)
         
