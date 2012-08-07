@@ -142,8 +142,7 @@ class MediaArtefact(Orderable, Displayable, RichText):
         
         #TODO hacky wistia thumbnail size fix - split off size limits after ?
         if re.match(WISTIA_REGEX,self.media_url):
-            if oembed_response["thumbnail_url"]:
-                self.thumbnail_url = "%s?image_crop_resized=260x180" % self.thumbnail_url.split("?")[0]
+            self.thumbnail_url = "%s?image_crop_resized=260x180" % self.thumbnail_url.split("?")[0]
         
         super(MediaArtefact, self).save(*args, **kwargs)
         
