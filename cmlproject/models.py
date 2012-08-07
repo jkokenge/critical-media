@@ -140,10 +140,15 @@ class MediaArtefact(Orderable, Displayable, RichText):
         except:
             self.thumbnail_url=""
         
-        #TODO hacky wistia thumbnail size fix - split off size limits after ?
-        if re.match(WISTIA_REGEX,self.media_url):
-            self.thumbnail_url = "%s?image_crop_resized=260x180" % self.thumbnail_url.split("?")[0]
         
+        if re.match(WISTIA_REGEX,self.media_url):
+            #TODO hacky wistia thumbnail size fix - split off size limits after ?
+            self.thumbnail_url = "%s?image_crop_resized=260x180" % self.thumbnail_url.split("?")[0]
+
+            #TODO should this be necessary?
+            if oembed_response["type"]=="photo":
+                self.embed_code.replace("image_crop_resized","image_resize")
+                
         super(MediaArtefact, self).save(*args, **kwargs)
         
 class Tag(Slugged):
