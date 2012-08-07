@@ -133,7 +133,7 @@ class MediaArtefact(Orderable, Displayable, RichText):
         self.embed_code=oembed_response["html"]
         
         try:
-            if oembed_response["thumbnail_url"]:
+            if "thumbnail_url" in oembed_response:
                 self.thumbnail_url=oembed_response["thumbnail_url"]
             elif oembed_response["type"]=="photo":
                 self.thumbnail_url = oembed_response["url"]
