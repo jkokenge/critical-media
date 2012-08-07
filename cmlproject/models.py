@@ -1,8 +1,9 @@
-import re
+import os,re
 from django.db import models
 from django.core.urlresolvers import resolve, reverse
 
 from django.db.models import URLField
+from django.conf import settings
 
 from django.utils.translation import ugettext_lazy as _
 
@@ -26,12 +27,12 @@ TAG_TYPE_CHOICES = (
 )
 
 VIDEO = 0
-SOUND = 1
+RICH = 1
 IMAGE = 2
 
 MEDIA_TYPE_CHOICES = (
     (VIDEO, "Video"),
-    (SOUND, "Sound"),
+    (RICH, "Rich"),
     (IMAGE, "Image"),
 )
 
@@ -103,7 +104,7 @@ class Topic(Orderable, Displayable, RichText, AdminThumbMixin):
 class MediaArtefact(Orderable, Displayable, RichText):
     media_url = URLField(verbose_name=_("Media URL"),blank=True, null=True)
 
-    media_type = models.SmallIntegerField(choices=MEDIA_TYPE_CHOICES, default = VIDEO)
+    media_type = models.SmallIntegerField(choices=MEDIA_TYPE_CHOICES, default = RICH)
     embed_code = models.TextField("Embed Code")
     thumbnail_url = URLField(verbose_name=_("Thumbnail"),blank=True, null=True)
     
@@ -129,14 +130,32 @@ class MediaArtefact(Orderable, Displayable, RichText):
         providers.register(WISTIA_REGEX, micawber.Provider("http://fast.wistia.com/oembed/"))
         
         oembed_response = providers.request(self.media_url,maxwidth=600, maxheight=500, width=600)
-        
         self.embed_code=oembed_response["html"]
+        
+        if oembed_response["type"]=="photo":
+            self.media_type = IMAGE
+            
+            #request the image again, add full-size link to the embed code
+            second_oembed_response = providers.request(self.media_url)
+            link_text = '<div class="viewfullsize-link"><a href="%s">View full-size image</a></div>' % second_oembed_response["url"]
+            self.embed_code = "".join([self.embed_code,link_text])
+            
+            
+        elif oembed_response["type"]=="video":
+            self.media_type = VIDEO
+        elif oembed_response["type"]=="rich":
+            self.media_type = RICH
         
         try:
             if "thumbnail_url" in oembed_response:
                 self.thumbnail_url=oembed_response["thumbnail_url"]
+                
             elif oembed_response["type"]=="photo":
                 self.thumbnail_url = oembed_response["url"]
+                
+            else:
+                self.thumbnail_url = os.path.join(settings.STATIC_URL,"images/rich.png")
+
         except:
             self.thumbnail_url=""
         
@@ -145,9 +164,7 @@ class MediaArtefact(Orderable, Displayable, RichText):
             #TODO hacky wistia thumbnail size fix - split off size limits after ?
             self.thumbnail_url = "%s?image_crop_resized=260x180" % self.thumbnail_url.split("?")[0]
 
-            #TODO should this be necessary?
-            if oembed_response["type"]=="photo":
-                self.embed_code = re.sub("image_crop_resized","image_resize",self.embed_code)
+            
 
                 
         super(MediaArtefact, self).save(*args, **kwargs)
