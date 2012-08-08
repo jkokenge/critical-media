@@ -61,6 +61,10 @@ vertical-align: bottom;
 vertical-align: bottom;
 }
 
+h4.featuredmedia {
+text-align: center;
+}
+
 .center {
 margin: 0 auto;
 text-align:center;
@@ -70,3 +74,19 @@ li.subtopic > a
 {
 background-color:#EEE;
 }
+
+.nav-pills>.active>a,.nav-pills>.active>a:hover {
+color:#ffffff;
+background-color:#cc0022;
+}
+
+a {
+color: #284C8E;
+text-decoration: none;
+}
+
+a:hover {
+color: #cc0022;
+text-decoration: underline;
+}
+
