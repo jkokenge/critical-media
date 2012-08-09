@@ -12,16 +12,26 @@ Media tagged {{tag.name}}
 {% endmetablock %}{% endblock %}
 
 {% block main %}
+<div class="media-list-title">
 {% if topic %}
 <h2> Featured Media on {{topic.title}} </h2>
 {% elif tag %}
 <h2> Media tagged {{tag.name}} </h2>
 {% endif %}
-
+</div>
 {% for mediaartefact in mediaartefacts.object_list %}
 <div class="media-list">
 <div class="row">
 <div class="span4">
+<div class="media-tags">
+    {% if mediaartefact.tags %}
+   
+    {% for tag in mediaartefact.tags.all %}
+    <a href={% url mediaartefact_list_tag tag.slug %}><span class="label tag-label">{{tag.name}}</span></a>
+    {% endfor %}
+    
+    {% endif %}
+</div>
 {% editable mediaartefact.title %}
 <h3>
     <a href="{{ mediaartefact.get_absolute_url }}">{{ mediaartefact.title }}</a>
@@ -34,17 +44,6 @@ Media tagged {{tag.name}}
 <p>
 <a href="{{ mediaartefact.get_absolute_url }}">{% trans "read more" %}</a>
 </p>
-<div class="media-tags">
-    {% if mediaartefact.tags %}
-    {% trans "Tags" %}:
-    {% spaceless %}
-    {% for tag in mediaartefact.tags.all %}
-    <a href="{% url mediaartefact_list_tag tag.slug %}" class="tag">{{ tag.name }}</a>
-    {% endfor %}
-    {% endspaceless %}
-    <br>
-    {% endif %}
-</div>
 </div>
 <div class="span3">
 <ul class = "thumbnails">
@@ -54,6 +53,7 @@ Media tagged {{tag.name}}
   </a>
   </li>
 </ul>
+
 </div>
 </div>
 </div>

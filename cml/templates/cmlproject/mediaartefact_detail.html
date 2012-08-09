@@ -30,16 +30,12 @@
 {% editable mediaartefact.content %}
 {{ mediaartefact.content|richtext_filter|safe }}
 {% endeditable %}
-
 <div class="media-tags">
     {% if mediaartefact.tags %}
-    {% trans "Tags" %}:
-    {% spaceless %}
     {% for tag in mediaartefact.tags.all %}
-    <a href="{% url mediaartefact_list_tag tag.slug %}" class="tag">{{ tag.name }}</a>
+    <a href={% url mediaartefact_list_tag tag.slug %}><span class="label tag-label">{{tag.name}}</span></a>
     {% endfor %}
-    {% endspaceless %}
-    <br>
+    
     {% endif %}
 </div>
 </div>
