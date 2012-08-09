@@ -5,10 +5,10 @@
 
 <h6>Topic tags</h6>
 {% for t in topic_tag_list %}
-<a href={% url mediaartefact_list_tag t.slug %}><span class="label">{{t.name}}</span></a>
+<a href={% url mediaartefact_list_tag t.slug %}><span class="label tag-label">{{t.name}}</span></a>
 {% endfor %}
 
 <h6>Genre tags</h6>
 {% for t in genre_tag_list %}
-<a href={% url mediaartefact_list_tag t.slug %}><span class="label">{{t.name}}</span></a>
+<a href={% url mediaartefact_list_tag t.slug %}><span class="label tag-label">{{t.name}}</span></a>
 {% endfor %}
