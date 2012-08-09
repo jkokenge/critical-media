@@ -94,13 +94,13 @@ span.tag-label {
 padding: 1px 4px 2px;
 text-shadow: none;
 color: white;
-background-color: #cc0022;
+background-color: #284C8E;
 }
 
 span.tag-label:hover {
 padding: 1px 4px 2px;
 text-shadow: none;
-background-color: #284C8E;
+background-color: #cc0022;
 text-decoration: none;
 }
 
