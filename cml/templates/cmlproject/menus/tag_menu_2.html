@@ -1,0 +1,26 @@
+{% load i18n cml_tags %}
+
+{% get_tags 0 as topic_tag_list %}
+{% get_tags 1 as genre_tag_list %}
+
+<div class="btn-group" data-toggle="buttons-radio">
+  <button class="btn btn-tags active tag-toggle" value="topic-div">Topic Tags</button>
+  <button class="btn btn-tags tag-toggle" value="genre-div">Genre Tags</button>
+</div>
+
+<div id="topic-div" class="tags tag-togglable">
+{% for t in topic_tag_list %}
+<a href={% url mediaartefact_list_tag t.slug %}><span class="tag">{{t.name}}</span></a>
+{% endfor %}
+</li>
+</ul>
+</div>
+
+<div id="genre-div" style="display:none;" class="tags tag-togglable">
+{% for t in genre_tag_list %}
+<a href={% url mediaartefact_list_tag t.slug %}><span class="tag">{{t.name}}</span></a>
+{% endfor %}
+</div>
+</div>
+</div>
+</div>
