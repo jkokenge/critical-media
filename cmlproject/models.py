@@ -142,8 +142,10 @@ class MediaArtefact(Orderable, Displayable, RichText):
             
         elif oembed_response["type"]=="video":
             self.media_type = VIDEO
+            
         elif oembed_response["type"]=="rich":
             self.media_type = RICH
+            
         
         try:
             if "thumbnail_url" in oembed_response:
@@ -151,14 +153,15 @@ class MediaArtefact(Orderable, Displayable, RichText):
                 
             elif oembed_response["type"]=="photo":
                 self.thumbnail_url = oembed_response["url"]
-                
             else:
                 self.thumbnail_url = os.path.join(settings.STATIC_URL,"images/rich.png")
 
         except:
             self.thumbnail_url=""
         
-        
+        '''
+        Wistia-specific additions here
+        '''
         if re.match(WISTIA_REGEX,self.media_url):
             #TODO hacky wistia thumbnail size fix - split off size limits after ?
             self.thumbnail_url = "%s?image_crop_resized=260x180" % self.thumbnail_url.split("?")[0]
@@ -166,6 +169,12 @@ class MediaArtefact(Orderable, Displayable, RichText):
             #TODO should this be necessary? change to resize, not crop-resize
             if self.media_type == IMAGE:
                 self.embed_code = re.sub("image_crop_resized","image_resize",self.embed_code)
+                
+            elif self.media_type == RICH:
+                
+                if oembed_response["url"]:
+                    link_text = '<div class="viewfullsize-link"><a href="%s">Download this file</a></div>' % oembed_response["url"]
+                    self.embed_code = "".join([self.embed_code,link_text])
 
         super(MediaArtefact, self).save(*args, **kwargs)
         
