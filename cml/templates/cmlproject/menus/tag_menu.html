@@ -4,19 +4,67 @@
 {% get_tags 1 as genre_tag_list %}
 
 <h6>Topic tags</h6>
-<div class="media-tags">
-<p>
-{% for t in topic_tag_list %}
+<div class="row media-tags">
+<div class="span1">
+{% for t in topic_tag_list|partition:"2"|first %}
 <a href={% url mediaartefact_list_tag t.slug %}><span class="label tag-label">{{t.name}}</span></a>
 {% endfor %}
-</p>
+</div>
+<div class="span1 tags-second-column">
+{% for t in topic_tag_list|partition:"2"|last  %}
+<a href={% url mediaartefact_list_tag t.slug %}><span class="label tag-label">{{t.name}}</span></a>
+{% endfor %}
+</div>
 </div>
 
 <h6>Genre tags</h6>
-<div class="media-tags">
-<p>
-{% for t in genre_tag_list %}
+<div class="row media-tags">
+<div class="span1">
+{% for t in genre_tag_list|partition:"2"|first %}
 <a href={% url mediaartefact_list_tag t.slug %}><span class="label tag-label">{{t.name}}</span></a>
 {% endfor %}
-</p>
+</div>
+<div class="span1 tags-second-column">
+{% for t in genre_tag_list|partition:"2"|last  %}
+<a href={% url mediaartefact_list_tag t.slug %}><span class="label tag-label">{{t.name}}</span></a>
+{% endfor %}
+</div>
+</div>
+
+<div class="btn-group" data-toggle="buttons-checkbox">
+  <button class="btn">Topic Tags</button>
+  <button class="btn">Genre Tags</button>
+</div>
+
+<div class="topic-div">
+<h6>Topic tags</h6>
+<div class="row">
+<div class="span3">
+<ul>
+{% for t in topic_tag_list %}
+<li>
+<a href={% url mediaartefact_list_tag t.slug %}><span>{{t.name}}</span></a>
+{% endfor %}
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="genre-div">
+<h6>Genre tags</h6>
+<div class="row">
+<div class="span3">
+<ul>
+{% for t in genre_tag_list %}
+<li>
+<a href={% url mediaartefact_list_tag t.slug %}><span>{{t.name}}</span></a>
+{% endfor %}
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
