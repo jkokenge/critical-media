@@ -110,7 +110,7 @@ $(function() {
     {% endnevercache %}
     </div>
     <div class="panel">
-    {% block right_panel %}{% include "cmlproject/menus/tag_menu.html" %}{% endblock %}
+    {% block right_panel %}{% include "cmlproject/menus/tag_menu_2.html" %}{% endblock %}
     </div>
     </div>
     </div>
@@ -140,8 +140,16 @@ $(function() {
 </footer>
 
 {% include "includes/footer_scripts.html" %}
+
 <script>
-$(".collapse").collapse()
+$(function() {
+    $('button.tag-toggle').click(function(){
+            $('.tag-togglable').hide();
+            var div = "#"+$(this).val();
+            $(div).show();
+    });
+ });
 </script>
+
 </body>
 </html>
