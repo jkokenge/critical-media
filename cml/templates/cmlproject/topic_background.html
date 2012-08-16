@@ -15,13 +15,13 @@
 {% block main %}
 
 <div class="row">
-<div class="span6" id="{{topic.slug}}-content">
+<div class="span6" id="{{topic.slug}}-content" class="about-content">
 {{ topic.content|add_glossary_tooltips|richtext_filter|safe}}
 </div>
 
 
 <div class="span2" id="{{topic.slug}}-featured">
-<h4 class="featuredmedia"> Featured Media </h4>
+<h4 class="featuredmedia"> featured media </h4>
 <ul class = "thumbnails">
 {% for mediaartefact in topic.featured_media.all  %}
   <li class="span2 featuredmediathumb">

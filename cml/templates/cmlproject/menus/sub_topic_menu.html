@@ -7,7 +7,7 @@
   <ul class="nav nav-pills">
   {% for sub in topic.ordered_sub_topics %}
   <li class="subtopic {% if topic == sub %}active{% endif %}">
-  <a href="{% url topic_background sub.slug %}">{{ sub.title }}</a>
+  <a href="{% url topic_background sub.slug %}">{{ sub.title|lower }}</a>
   </li>
   {% endfor %}
   </ul>
@@ -19,7 +19,7 @@
   <ul class="nav nav-pills">
   {% for sub in topic.parent_topic.ordered_sub_topics %}
   <li class="subtopic {% if topic == sub %}active{% endif %}">
-  <a href="{% url topic_background sub.slug %}">{{ sub.title }}</a>
+  <a href="{% url topic_background sub.slug %}">{{ sub.title|lower }}</a>
   </li>
   {% endfor %}
   </ul>

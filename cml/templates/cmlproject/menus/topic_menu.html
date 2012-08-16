@@ -7,7 +7,7 @@
   <li class="span2 topic-image">
   <a href="{% url topic_background t.slug %}" class="thumbnail">
   <img src="{{t.icon.url}}" alt="">
-  <span class="topic-title">{{t.title}}</span>
+  <span class="topic-title">{{t.title|lower}}</span>
   </a>
   </li>
   {% endfor %}
