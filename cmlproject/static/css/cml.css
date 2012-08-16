@@ -1,7 +1,7 @@
 #navbar-icon-facebook
 {
-line-height:36px;
-font-size:24px;
+line-height:48px;
+font-size:36px;
 vertical-align:middle;
 text-align: -webkit-match-parent;
 background-image:none;
@@ -9,8 +9,8 @@ background-image:none;
 
 #navbar-icon-twitter
 {
-line-height:36px;
-font-size:24px;
+line-height:48px;
+font-size:36px;
 vertical-align:middle;
 text-align: -webkit-match-parent;
 background-image:none;
@@ -72,22 +72,28 @@ text-align:center;
 
 li.subtopic > a
 {
-background-color:#EEE;
+color:#ffffff;
+background-color:#bdbcbc;
+}
+
+li.subtopic > a:hover
+{
+color:#f68a17;
+background-color:#bdbcbc;
 }
 
 .nav-pills>.active>a,.nav-pills>.active>a:hover {
 color:#ffffff;
-background-color:#cc0022;
+background-color:#f68a17;
 }
 
 a {
-color: #284C8E;
-text-decoration: none;
+  color: #f68a17;
+  text-decoration: none;
 }
-
 a:hover {
-color: #cc0022;
-text-decoration: underline;
+  color: #f68a17;
+  text-decoration: underline;
 }
 
 .btn-tags {
@@ -113,6 +119,27 @@ padding-top:5px;
 
 span.tag {
 display:block;
+}
+
+.navbar-inner {
+  min-height: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #bdbcbc;
+  background-image: none;
+  background-repeat: none;
+  filter: none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.navbar-fixed-top {
+  position: static;
+  margin-bottom: 18px;
 }
 
 /* for old tag layouts
