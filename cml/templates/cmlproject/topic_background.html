@@ -15,7 +15,7 @@
 {% block main %}
 
 <div class="row">
-<div class="span6" id="{{topic.slug}}-content" class="about-content">
+<div class="span6" id="{{topic.slug}}-content"  class="about-content">
 {{ topic.content|add_glossary_tooltips|richtext_filter|safe}}
 </div>
 
