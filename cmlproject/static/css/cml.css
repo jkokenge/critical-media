@@ -184,12 +184,8 @@ display:block;
   margin-bottom: 18px;
 }
 
-.navbar .nav > li {
-padding: 35px 10px 10px;
-}
-
-
 .navbar .nav > li > a {
+padding: 35px 10px 10px;
 float: none;
 padding: 29px 10px 31px;
 line-height: 19px;
