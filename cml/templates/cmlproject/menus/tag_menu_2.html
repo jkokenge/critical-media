@@ -2,13 +2,14 @@
 
 {% get_tags 0 as topic_tag_list %}
 {% get_tags 1 as genre_tag_list %}
-<div class="topicswitcher">
-<div class="btn-group" data-toggle="buttons-radio">
-  <button class="btn btn-tags active tag-toggle" value="topic-div">Topic Tags</button>
-  <button class="btn btn-tags tag-toggle" value="genre-div">Genre Tags</button>
-</div>
-</div>
-<div id="topic-div" class="tags tag-togglable">
+
+<ul class="nav nav-tabs" id="tag-tabs">
+  <li class="active"><a href="#topic-div" data-toggle="tab">topic tags</a></li>
+  <li><a href="#genre-div" data-toggle="tab">genre tags</a></li>
+</ul>
+
+<div class="tab-content">
+<div id="topic-div" class="tab-pane tags active">
 {% for t in topic_tag_list %}
 <a href={% url mediaartefact_list_tag t.slug %}><span class="tag">{{t.name}}</span></a>
 {% endfor %}
@@ -16,10 +17,11 @@
 </ul>
 </div>
 
-<div id="genre-div" style="display:none;" class="tags tag-togglable">
+<div id="genre-div" class="tab-pane tags">
 {% for t in genre_tag_list %}
 <a href={% url mediaartefact_list_tag t.slug %}><span class="tag">{{t.name}}</span></a>
 {% endfor %}
+</div>
 </div>
 </div>
 </div>

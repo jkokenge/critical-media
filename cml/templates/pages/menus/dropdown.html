@@ -9,7 +9,6 @@
     <li class="{% if on_home %} active{% endif %}" id="dropdown-menu-{{ page.html_id }}">
         <a href="{% url home %}">{% trans "Home" %}</a>
     </li>
-    <li class="divider-vertical"></li>
     {% endif %}
     {% if page.in_navigation %}
     <li class="dropdown{% if page.is_current_or_ascendant %} active{% endif %}"
@@ -20,16 +19,8 @@
         </a>
         {% if page.has_children %}{% page_menu page %}{% endif %}
     </li>
-    <li class="divider-vertical"></li>
     {% endif %}
     {% endfor %}
-    <li class="dropdown pull-right">
-  		<i class="icon-facebook-sign" id="navbar-icon-facebook"></i>
-	</li>
-	<li class="divider-vertical"></li>
-	<li class="dropdown navbar-icon pull-right">
-  		<i class="icon-twitter-sign" id="navbar-icon-twitter"></i>
-	</li>
 </ul>
 {% endif %}
 

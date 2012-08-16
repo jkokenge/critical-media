@@ -15,9 +15,10 @@
 {% block main %}
 
 <div class="row">
-<div class="span5" id="{{topic.slug}}-content">
+<div class="span6" id="{{topic.slug}}-content">
 {{ topic.content|add_glossary_tooltips|richtext_filter|safe}}
 </div>
+
 
 <div class="span2" id="{{topic.slug}}-featured">
 <h4 class="featuredmedia"> Featured Media </h4>
@@ -33,6 +34,7 @@
   </li>
 {% endfor %}
 </ul>
+
 </div>
 </div>
 {% endblock %}

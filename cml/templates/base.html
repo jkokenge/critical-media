@@ -50,16 +50,32 @@ $(function() {
 <div class="navbar navbar-fixed-top">
 <div class="navbar-inner">
 <div class="container">
-    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-    </a>
-    {% if settings.SITE_TITLE %}<a class="brand" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
-    {% if settings.SITE_TAGLINE %}<p class="tagline">{{ settings.SITE_TAGLINE }}</p>{% endif %}
-    <div class="nav-collapse">
+<div class="row">
+<div class="span9">
+{% if settings.SITE_TITLE %}<a class="brand" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
+{% if settings.SITE_TAGLINE %}<p class="tagline">{{ settings.SITE_TAGLINE }}</p>{% endif %}
+</div>
+
+<div class="span3">
+<div class="row">
+<div class="span3">
+<div class="nav-collapse">
+        {% page_menu "pages/menus/social_icons.html" %}
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="span3">
+<div class="nav-collapse">
         {% page_menu "pages/menus/dropdown.html" %}
-    </div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 </div>
 </div>
@@ -83,7 +99,7 @@ $(function() {
 </div>
 
 
-<div class="span7 middle">
+<div class="span8 middle">
 {% block subnav_top %}
 <div>
 <h1>{% block title %}{% endblock %}</h1>
@@ -94,26 +110,19 @@ $(function() {
 </div>
 </div>
 
-<div class="span3 right">
+<div class="span2 right">
 	<div class="row">
-	<div class="span3">
+	<div class="span2">
 	<div class="search">
-    <form action="{% url search %}" class="pull-right">
+    <form action="{% url search %}" >
         <input class="search-query" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}">
     </form>
     </div>
     </div>
     </div>
     <div class="row">
-	<div class="span3">
-    <div class="userpanel">
-    {% nevercache %}
-    {% include "includes/user_panel.html" %}
-    {% endnevercache %}
-    </div>
-    <div class="panel">
+	<div class="span2">
     {% block right_panel %}{% include "cmlproject/menus/tag_menu_2.html" %}{% endblock %}
-    </div>
     </div>
     </div>
 </div>
@@ -144,13 +153,18 @@ $(function() {
 {% include "includes/footer_scripts.html" %}
 
 <script>
-$(function() {
-    $('button.tag-toggle').click(function(){
-            $('.tag-togglable').hide();
-            var div = "#"+$(this).val();
-            $(div).show();
-    });
- });
+<script>
+
+  $(function () {
+    $('#tag-tabs a:first').tab('show');
+  })
+  
+  $('#tag-tabs a').click(function (e) {
+    e.preventDefault();
+    $(this).tab('show');
+  })
+  
+</script>
 </script>
 
 </body>
