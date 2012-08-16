@@ -74,6 +74,12 @@ li.subtopic > a
 {
 color:#ffffff;
 background-color:#bdbcbc;
+-webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+border-radius: 0px;
+padding: 10px 10px 10px;
+margin-right: 4px;
+
 }
 
 li.subtopic > a:hover
@@ -98,12 +104,16 @@ a:hover {
 
 .tab-content {
 background:rgba(220,220,220, 0.1); 
-padding: 0px 15px 10px; 
+padding: 0px 5px 10px; 
 margin-bottom:20px;
 line-height:170%; 
 border:1px solid #eee; 
 border-top:none;
 border-radius:0px;
+}
+
+div.tags a {
+display:block;
 }
 
 .nav-tabs {
@@ -176,6 +186,39 @@ display:block;
 .navbar .nav > li > a {
 padding: 35px 10px 10px;
 }
+
+.navbar .brand {
+float: left;
+display: block;
+padding: 18px 20px 10px;
+margin-left: -20px;
+font-size: 30px;
+font-weight: 200;
+line-height: 1;
+color: white;
+}
+.tagline {
+float: left;
+font-size: 14px;
+font-style: italic;
+margin: 5px 5px 0 0px;
+color: white;
+opacity: 1;
+vertical-align:middle;
+}
+
+.thumbnail {
+-webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+border-radius: 0px;
+}
+
+.about-content>p:first-child {
+font-size: 22px;
+letter-spacing:2px;
+line-height:150%
+}
+
 
 /* for old tag layouts
 span.tag-label {
