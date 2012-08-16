@@ -25,9 +25,9 @@ Media tagged {{tag.name}}
 <div class="span4">
 <div class="media-tags">
     {% if mediaartefact.tags %}
-   
     {% for tag in mediaartefact.tags.all %}
-    <a href={% url mediaartefact_list_tag tag.slug %}><span class="label tag-label">{{tag.name}}</span></a>
+    <span class="label tag-label">
+	<a href={% url mediaartefact_list_tag tag.slug %}>{{tag.name}}</a></span>
     {% endfor %}
     
     {% endif %}

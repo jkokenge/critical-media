@@ -11,7 +11,11 @@
 <div class="tab-content">
 <div id="topic-div" class="tab-pane tags active">
 {% for t in topic_tag_list %}
-<a href={% url mediaartefact_list_tag t.slug %}><span class="label tag-label">{{t.name}}</span></a>
+<div id="tag-menu-div">
+<span class="label tag-label tag-menu">
+	<a href={% url mediaartefact_list_tag t.slug %}>{{t.name}}</a>
+</span>
+</div>
 {% endfor %}
 </li>
 </ul>
@@ -19,7 +23,11 @@
 
 <div id="genre-div" class="tab-pane tags">
 {% for t in genre_tag_list %}
-<a href={% url mediaartefact_list_tag t.slug %}><span class="label tag-label">{{t.name}}</span></a>
+<div id="tag-menu-div">
+<span class="label tag-label tag-menu">
+	<a href={% url mediaartefact_list_tag t.slug %}>{{t.name}}</a>
+</span>
+</div>
 {% endfor %}
 </div>
 </div>
