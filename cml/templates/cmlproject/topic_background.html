@@ -21,7 +21,11 @@
 
 
 <div class="span2" id="{{topic.slug}}-featured">
-<h4 class="featuredmedia"> featured media </h4>
+<h3 class="featuredmedia"> featured media </h3>
+{% if topic.related_tag %}
+<span class="see-more">
+<a href="{% url mediaartefact_list_tag topic.related_tag.slug %}">see more</a></span>
+{% endif %}
 <ul class = "thumbnails">
 {% for mediaartefact in topic.featured_media.all  %}
   <li class="span2 featuredmediathumb">

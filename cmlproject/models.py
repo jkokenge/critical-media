@@ -44,7 +44,7 @@ class Topic(Orderable, Displayable, RichText, AdminThumbMixin):
     
     parent_topic = models.ForeignKey("self", blank=True, null=True, related_name="sub_topics", limit_choices_to={"parent_topic":None})
     featured_media = models.ManyToManyField("MediaArtefact", blank=True, null=True,related_name="featured_in")
-    related_tag = models.ForeignKey("Tag", blank=True, null=True,related_name="linked_topic", limit_choices_to={"linked_topic":None,"tag_type":TOPIC_TAG })
+    related_tag = models.ForeignKey("Tag",related_name="linked_topic", blank=True, null=True, limit_choices_to={"tag_type":TOPIC_TAG })
     
     icon = FileField(verbose_name=_("Icon"),
                                upload_to="thumbs", format="Image",
@@ -100,7 +100,15 @@ class Topic(Orderable, Displayable, RichText, AdminThumbMixin):
                        
     def get_admin_url(self):
         return admin_url(self, "change", self.id)
+    
+    def save(self, *args, **kwargs):
         
+        if not self.related_tag:
+            tag = Tag.objects.create(name=self.title, tag_type=TOPIC_TAG)
+            tag.save();
+            self.related_tag=tag
+
+        super(Topic, self).save(*args, **kwargs)
         
 class MediaArtefact(Orderable, Displayable, RichText):
     media_url = URLField(verbose_name=_("Media URL"),blank=True, null=True)
