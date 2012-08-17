@@ -44,6 +44,7 @@ class Topic(Orderable, Displayable, RichText, AdminThumbMixin):
     
     parent_topic = models.ForeignKey("self", blank=True, null=True, related_name="sub_topics", limit_choices_to={"parent_topic":None})
     featured_media = models.ManyToManyField("MediaArtefact", blank=True, null=True,related_name="featured_in")
+    related_tag = models.ForeignKey("Tag", blank=True, null=True,related_name="linked_topic", limit_choices_to={"linked_topic":None,"tag_type":TOPIC_TAG })
     
     icon = FileField(verbose_name=_("Icon"),
                                upload_to="thumbs", format="Image",

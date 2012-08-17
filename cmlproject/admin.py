@@ -23,7 +23,7 @@ class MediaAdmin(DisplayableAdmin):
 class TopicAdmin(DisplayableAdmin):
     fieldsets = (
         (None, {
-            "fields": ["parent_topic","title","icon", "content","featured_media"],
+            "fields": ["parent_topic","title","related_tag","icon", "content","featured_media"],
         }),
     )
     
