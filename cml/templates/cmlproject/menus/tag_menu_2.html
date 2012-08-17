@@ -13,7 +13,7 @@
 {% for t in topic_tag_list %}
 <div id="tag-menu-div">
 <span class="label tag-label tag-menu">
-	<a href={% url mediaartefact_list_tag t.slug %}>{{t.name}}</a>
+	<a href={% url mediaartefact_list_tag t.slug %}>{{t.name|lower}}</a>
 </span>
 </div>
 {% endfor %}
@@ -25,7 +25,7 @@
 {% for t in genre_tag_list %}
 <div id="tag-menu-div">
 <span class="label tag-label tag-menu">
-	<a href={% url mediaartefact_list_tag t.slug %}>{{t.name}}</a>
+	<a href={% url mediaartefact_list_tag t.slug %}>{{t.name|lower}}</a>
 </span>
 </div>
 {% endfor %}

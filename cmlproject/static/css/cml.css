@@ -82,13 +82,12 @@ margin-right: 4px;
 
 }
 
-li.subtopic > a:hover,
+.nav > li.subtopic > a:hover
 {
-color:#f68a17;
-background-color:#bdbcbc;
+color:#f68a17
 }
 
-.nav-pills>.active>a,.nav-pills>.active>a:hover {
+.nav-pills>.active>a,.nav-pills>.active>a:hover,.nav > li.subtopic.active > a:hover  {
 color:#ffffff;
 background-color:#f68a17;
 }
@@ -147,7 +146,6 @@ div.tags {
 padding-top:5px;
 }
 
-
 .navbar-inner {
   min-height: 60px;
   padding-left: 20px;
@@ -179,7 +177,7 @@ display: block;
 padding: 18px 20px 5px;
 margin-left: -20px;
 font-size: 30px;
-font-weight: 700;
+font-weight: 200;
 line-height: 1;
 letter-spacing:2px;
 color: white;
@@ -193,7 +191,7 @@ margin: 5px 5px 0 0px;
 color: white;
 opacity: 1;
 vertical-align:middle;
-letter-spacing:2px;
+letter-spacing:1px;
 }
 
 .thumbnail {
@@ -233,28 +231,24 @@ background-color:#f68a17;
 text-decoration: none;
 }
 
+@media (min-width: 768px) and (max-width: 979px) {
+.container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+width: 768px;
+}
 
-/* for old tag layouts
-span.tag-label {
-padding: 1px 4px 2px;
-text-shadow: none;
+.label, .badge {
+font-size: 10px;
+font-weight: normal;
+line-height: 12px;
 color: white;
-background-color: #284C8E;
-}
-
-span.tag-label:hover {
-padding: 1px 4px 2px;
+white-space: nowrap;
 text-shadow: none;
-background-color: #cc0022;
-text-decoration: none;
+padding: 0px 2px 2px;
 }
 
-div.media-tags a:hover {
-text-decoration: none;
+.navbar .nav > li > a {
+padding: 35px 5px 5px;
 }
 
-div.tags-second-column {
-margin-left: 60px;
 }
-*/
 

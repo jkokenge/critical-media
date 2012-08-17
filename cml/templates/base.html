@@ -17,7 +17,6 @@
 
 {% compress css %}
 <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap-204.css">
-<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap-responsive-204.css">
 <link rel="stylesheet" href="{{ STATIC_URL }}css/mezzanine.css">
 <link rel="stylesheet" href="{{ STATIC_URL }}css/font-awesome.css">
 <link rel="stylesheet" href="{{ STATIC_URL }}css/cml.css">
@@ -54,37 +53,37 @@ $(function() {
 
 <div class="row">
 
-<div class="span9">
+<div class="span8">
 
 <div class="row">
-<div class="span9">
+<div class="span8">
 {% if settings.SITE_TITLE %}<a class="brand" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
 </div>
 </div>
 
 <div class="row">
-<div class="span9">
+<div class="span8">
 {% if settings.SITE_TAGLINE %}<span class="tagline">{{ settings.SITE_TAGLINE|lower }}</span>{% endif %}
 </div>
 </div>
 
 </div>
 
-<div class="span3">
+<div class="span4">
 
 <div class="row">
-<div class="span3">
-<div class="nav-collapse">
+<div class="span4 pull-right">
+
         {% page_menu "pages/menus/social_icons.html" %}
-</div>
+
 </div>
 </div>
 
 <div class="row">
-<div class="span3">
-<div class="nav-collapse">
+<div class="span4">
+
         {% page_menu "pages/menus/dropdown.html" %}
-</div>
+
 </div>
 </div>
 
