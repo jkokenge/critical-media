@@ -168,7 +168,8 @@ padding-top:5px;
 }
 
 .navbar .nav > li > a {
-padding: 35px 10px 10px;
+margin: 35px 10px 10px;
+padding: 0px 0px 0px;
 }
 
 .navbar .brand {
@@ -182,6 +183,13 @@ line-height: 1;
 letter-spacing:2px;
 color: white;
 }
+
+.navbar .nav .active > a, .navbar .nav .active > a:hover {
+color: white;
+text-decoration: none;
+background-color: #bdbcbc;
+}
+
 
 .tagline {
 float: left;

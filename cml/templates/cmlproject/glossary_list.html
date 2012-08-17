@@ -13,7 +13,7 @@ Glossary
 
 {% block main %}
 <div class="row">
-<div class="span7" id="glossary-content">
+<div class="span8" id="glossary-content">
 <br />
 {% autopaginate terms 30 %}
 {% for term in terms %}
@@ -23,7 +23,7 @@ Glossary
 {{term.name}}
 </h6>
 </div>
-<div class="span5" id="explanation-{{term.slug}}">
+<div class="span6" id="explanation-{{term.slug}}">
 <p>
 {{term.explanation}}
 </p>
