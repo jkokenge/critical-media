@@ -263,6 +263,10 @@ display:block;
 width:auto;
 }
 
+.media-tags {
+padding-top: 4px;
+}
+
 .label, .badge, .label > a, .badge > a  {
 color:#333;
 font-size: 13px;
@@ -275,11 +279,18 @@ border-radius: 0px 0px 0 0;
 text-decoration: none;
 white-space: nowrap;
 text-shadow: none;
-padding: 0px 2px 2px;
+padding: 2px 4px 2px 0px;
 }
 
-.label > a, .badge > a  {
+.label, .badge  {
+word-spacing:-2px;
+border: none;
+}
+
+.tab-content .label, .tab-content  .badge,.tab-content .label > a, .tab-content  .badge > a {
+color:#333;
 background: transparent;
+border: none;
 }
 
 .label:hover, .label > a:hover, .label:hover > a {
