@@ -64,6 +64,9 @@ class Topic(Orderable, Displayable, RichText, AdminThumbMixin):
     def ordered_sub_topics(self):
         return self.sub_topics.order_by('_order')
     
+    def alphabetical_featured_media(self):
+        return self.featured_media.order_by('title')
+    
     def get_slug(self):
         """
         Recursively build the slug from the chain of parents.

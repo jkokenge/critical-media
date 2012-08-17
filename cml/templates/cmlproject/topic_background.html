@@ -27,7 +27,7 @@
 <a href="{% url mediaartefact_list_tag topic.related_tag.slug %}">see more</a></span>
 {% endif %}
 <ul class = "thumbnails">
-{% for mediaartefact in topic.featured_media.all  %}
+{% for mediaartefact in topic.alphabetical_featured_media.all  %}
   <li class="span2 featuredmediathumb">
   <div class="thumbnail-small">
   <a href="{{ mediaartefact.get_absolute_url }}" class="thumbnail">

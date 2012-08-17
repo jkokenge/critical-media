@@ -67,9 +67,8 @@ def mediaartefact_list (request, tag=None, topic=None, template="cmlproject/medi
     mediaartefacts = MediaArtefact.objects.published(for_user=request.user)
     if tag is not None:
         tag = get_object_or_404(Tag, slug=tag)
-        mediaartefacts = mediaartefacts.filter(tags__in=[tag])
-        #print mediaartefacts
-    
+        mediaartefacts = mediaartefacts.filter(tags__in=[tag]).order_by('title')
+
     if topic is not None:
         topic = get_object_or_404(Topic, slug=topic)
         mediaartefacts = mediaartefacts.filter(featured_in__in=[topic])
