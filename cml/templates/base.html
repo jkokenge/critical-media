@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load pages_tags mezzanine_tags i18n %}
+{% load pages_tags mezzanine_tags cml_tags i18n %}
 <html>
 <head>
 
@@ -57,7 +57,13 @@ $(function() {
 
 <div class="row">
 <div class="span8">
-{% if settings.SITE_TITLE %}<a class="brand" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
+{% if settings.SITE_TITLE %}
+<a class="brand" href="/">
+{% autoescape off %}
+{{ settings.SITE_TITLE|lower|add_title_classes }}
+{% endautoescape %}
+</a>
+{% endif %}
 </div>
 </div>
 

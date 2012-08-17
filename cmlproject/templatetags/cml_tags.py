@@ -35,6 +35,22 @@ def add_glossary_tooltips(text):
     return "".join(words)
 
 @register.filter
+def add_title_classes(text):
+    words = re.split('(?:\W)',text)
+    print words
+    output=''
+        
+    for i in range(len(words)):
+        if i % 2 ==0:
+            titleclass='even'
+        else:
+            titleclass='odd'
+        
+        output += '<span class="%s">%s</span>' % (titleclass, words[i])
+                                                                                
+    return output
+
+@register.filter
 def partition(thelist, n):
     """
     http://djangosnippets.org/snippets/6/
