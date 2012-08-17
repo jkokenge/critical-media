@@ -279,7 +279,7 @@ border-radius: 0px 0px 0 0;
 text-decoration: none;
 white-space: nowrap;
 text-shadow: none;
-padding: 2px 4px 2px 0px;
+padding: 2px 2px 2px 2px;
 }
 
 .label, .badge  {
