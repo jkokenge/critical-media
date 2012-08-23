@@ -217,6 +217,12 @@ padding: 0px 0px 0px;
 font-size: 15px;
 }
 
+div.logo-div {
+float: left;
+display: inline;
+padding: 4px 6px 2px 2px;
+}
+
 .navbar .brand {
 float: left;
 display: block;

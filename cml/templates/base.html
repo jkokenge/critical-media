@@ -57,6 +57,10 @@ $(function() {
 
 <div class="row">
 <div class="span8">
+<div class="logo-div">
+<img src="{{ STATIC_URL }}images/icon.png" width="75" height="75" alt="critical media project icon" class="logo-image" />
+</div>
+<div>
 {% if settings.SITE_TITLE %}
 <a class="brand" href="/">
 {% autoescape off %}
@@ -64,12 +68,10 @@ $(function() {
 {% endautoescape %}
 </a>
 {% endif %}
-</div>
-</div>
-
-<div class="row">
-<div class="span8">
+<div>
 {% if settings.SITE_TAGLINE %}<span class="tagline">{{ settings.SITE_TAGLINE|lower }}</span>{% endif %}
+</div>
+</div>
 </div>
 </div>
 
