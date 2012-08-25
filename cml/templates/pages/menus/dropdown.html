@@ -3,7 +3,8 @@
 {% if page_branch_in_navigation %}
 
 {% if branch_level == 0 %}
-<ul class="nav pull-right">
+<div class="top-bar-nav">
+<ul class="nav pull-right top-bar-nav">
     {% for page in page_branch %}
     {% if page.is_primary and forloop.first %}
     <li class="{% if on_home %} active{% endif %}" id="home">
@@ -22,6 +23,7 @@
     {% endif %}
     {% endfor %}
 </ul>
+</div>
 {% endif %}
 
 {% if branch_level == 1 %}

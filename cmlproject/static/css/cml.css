@@ -250,11 +250,15 @@ background-color: #bdbcbc;
 float: left;
 font-size: 16px;
 font-style: normal;
-margin: 0px 5px 0 0px;
+margin: 0px 5px 30px 0px;
 color: white;
 opacity: 1;
 vertical-align:middle;
 letter-spacing:1px;
+}
+
+div.top-bar-nav {
+margin: 15px 5px 15px 0px;
 }
 
 
