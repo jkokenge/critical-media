@@ -230,7 +230,7 @@ font-size: 15px;
 div.logo-div {
 float: left;
 display: inline;
-padding: 4px 6px 2px 2px;
+padding: 8px 10px 2px 2px;
 }
 
 .navbar .brand {
@@ -260,7 +260,7 @@ background-color: #bdbcbc;
 float: left;
 font-size: 16px;
 font-style: normal;
-margin: 0px 5px 30px 0px;
+margin: 0px 5px 24px 0px;
 color: white;
 opacity: 1;
 vertical-align:middle;

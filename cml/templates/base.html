@@ -134,18 +134,18 @@ $(function() {
 </div>
 
 <div class="span2 right">
-	<div class="row">
+    <div class="row">
+	<div class="span2">
+    {% block right_panel %}{% include "cmlproject/menus/tag_menu_2.html" %}{% endblock %}
+    </div>
+    </div>
+    <div class="row">
 	<div class="span2">
 	<div class="search">
     <form action="{% url search %}" >
         <input class="search-query" placeholder="{% trans "search" %}" type="text" name="q" value="{{ request.REQUEST.q }}">
     </form>
     </div>
-    </div>
-    </div>
-    <div class="row">
-	<div class="span2">
-    {% block right_panel %}{% include "cmlproject/menus/tag_menu_2.html" %}{% endblock %}
     </div>
     </div>
 </div>
