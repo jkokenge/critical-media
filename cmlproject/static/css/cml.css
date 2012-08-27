@@ -186,6 +186,11 @@ border-bottom-color: transparent;
 width:100%;
 }
 
+.search > form {
+margin: 0 0 5px;
+}
+
+
 div.tags {
 padding-top:5px;
 }
