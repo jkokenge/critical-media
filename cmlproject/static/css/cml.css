@@ -34,7 +34,6 @@ padding: 8px 10px 2px 2px;
 
 .navbar .brand {
 float: left;
-display: block;
 padding: 12px 20px 5px;
 margin-left: -20px;
 font-size: 40px;
@@ -313,6 +312,15 @@ width: 768px;
 width: 480px;
 }
 
+.navbar .brand {
+font-size: 32px;
+}
+
+.tagline {
+float: none;
+font-size: 14px;
+}
+
 .medialistthumbs {
 margin-left:-20px;
 }
@@ -348,7 +356,7 @@ word-spacing:-1px;
 }
 
 .navbar .nav > li > a {
-margin:35px 5px 5px;
+margin: 5px 5px 5px;
 padding: 0px 0px 0px;
 font-size: 13px;
 }
