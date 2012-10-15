@@ -255,7 +255,7 @@ padding-top:5px;
 }
 
 
-.about-content > p:first-child {
+.about-content p:first-child {
 font-size: 22px;
 letter-spacing:2px;
 line-height:150%
