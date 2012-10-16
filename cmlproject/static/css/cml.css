@@ -158,7 +158,7 @@ text-transform: uppercase;
 color: #F68A17;
 }
 
-table.full-width-fixed {
+table {
 width: 100%;
 table-layout: fixed;
 }
