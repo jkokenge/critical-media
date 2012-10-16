@@ -158,6 +158,11 @@ text-transform: uppercase;
 color: #F68A17;
 }
 
+table.full-width-fixed {
+width: 100%;
+table-layout: fixed;
+}
+
 span.see-more {
 display:block;
 text-align: center;
