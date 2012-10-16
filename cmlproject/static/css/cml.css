@@ -153,6 +153,11 @@ text-align: center;
 margin-bottom: 0px;
 }
 
+h4 {
+text-transform: uppercase;
+color: #F68A17;
+}
+
 span.see-more {
 display:block;
 text-align: center;
