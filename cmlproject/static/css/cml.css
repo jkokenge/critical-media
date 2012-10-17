@@ -148,9 +148,15 @@ vertical-align: bottom;
 vertical-align: bottom;
 }
 
+h3 {
+text-transform: lowercase;
+color: #F68A17;
+}
+
 h3.featuredmedia {
 text-align: center;
 margin-bottom: 0px;
+color: #000000;
 }
 
 h4 {
