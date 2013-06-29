@@ -1,7 +1,8 @@
 Django==1.4
-gondor==1.1
+gondor==1.1.6
 psycopg2==2.4.5
 gunicorn==0.14.3
 mezzanine==1.1.4
 django-pagination==1.0.7
 micawber==0.2.4
+grappelli_safe==0.2.7
