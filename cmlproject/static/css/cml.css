@@ -105,7 +105,7 @@ margin-left:10px;
 
 .medialistthumb > .thumbnail {
 width:210px;
-height:180px;
+height:auto;
 overflow:hidden;
 padding:4px;
 display:block;
