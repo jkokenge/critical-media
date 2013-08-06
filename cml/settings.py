@@ -28,6 +28,8 @@ ADMIN_MENU_ORDER = (
     ("Critical Media Literacy Project", ("cmlproject.Topic", "cmlproject.MediaArtefact", "cmlproject.Tag", "cmlproject.GlossaryTerm")),
 )
 
+TINYMCE_SETUP_JS="js/admin/tinymce_setup.js"
+
 ########################
 # MAIN DJANGO SETTINGS #
 ########################
