@@ -149,6 +149,7 @@ vertical-align: bottom;
 }
 
 h1 {
+text-transform: lowercase;
 color: #F68A17;
 }
 
