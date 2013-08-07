@@ -26,18 +26,18 @@ def active(request, url_name, *myargs):
 @register.filter
 def add_glossary_tooltips(text):
     terms = dict((t.name.upper(), [t.explanation, t.get_absolute_url()]) for t in GlossaryTerm.objects.all())
-    tipped_text = ""    
-    for chunk in re.split('(<.*?>)',text):
-        if not chunk.startswith("<"):
-            words = re.split('(\W)',text)
+    def chunks():
+        for chunk in re.split('(<.*?>)',text):
+            if not chunk.startswith("<"):
+                words = re.split('(\W)',chunk)
                 
-            for i in range(len(words)):
-                if (not words[i]==" ") and (words[i].upper() in terms):
-                    words[i] = '<a href="%s" rel="tooltip" title="%s">%s</a>' % (terms[words[i].upper()][1],terms[words[i].upper()][0], words[i])
+                for i in range(len(words)):
+                    if (not words[i]==" ") and (words[i].upper() in terms):
+                        words[i] = '<a href="%s" rel="tooltip" title="%s">%s</a>' % (terms[words[i].upper()][1],terms[words[i].upper()][0], words[i])
                                                                                         
-            chunk = "".join(words)
-        tipped_text = "".join([tipped_text,chunk])
-    return tipped_text
+                chunk = "".join(words)
+            yield chunk
+    return ''.join(chunks())
 
 @register.filter
 def add_title_classes(text):
