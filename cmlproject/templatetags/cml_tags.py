@@ -29,7 +29,7 @@ def add_glossary_tooltips(text):
     words = re.split('(\W)',text)
         
     for i in range(len(words)):
-        if (not words[i]==" ") and (words[i].upper() in terms):
+        if (not words[i]==" ") and not (words[i].startswith("href=")) and (words[i].upper() in terms):
             words[i] = '<a href="%s" rel="tooltip" title="%s">%s</a>' % (terms[words[i].upper()][1],terms[words[i].upper()][0], words[i])
                                                                                 
     return "".join(words)

@@ -1,7 +1,7 @@
 to run:
 
 source ../cml-env/bin/activate
-python manage.py runserver --settin=cml.dev_settings
+python manage.py runserver --settings=cml.dev_settings
 
 
 to deploy:
