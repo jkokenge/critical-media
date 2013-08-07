@@ -151,6 +151,7 @@ vertical-align: bottom;
 h1 {
 text-transform: lowercase;
 color: #F68A17;
+line-height: 48px;
 }
 
 h3 {
