@@ -25,7 +25,7 @@ def active(request, url_name, *myargs):
 
 @register.filter
 def add_glossary_tooltips(text):
-    terms = dict((t.name.upper().strip(), [t.explanation, t.get_absolute_url()]) for t in GlossaryTerm.objects.all())
+    terms = dict((t.name.upper().strip(), [t.explanation, t.get_absolute_url()]) for t in GlossaryTerm.objects.filter(auto_highlight=True))
     def chunks():
         for chunk in re.split('(<.*?>)',text):
             if not chunk.startswith("<"):

@@ -208,6 +208,7 @@ class Tag(Slugged):
 class GlossaryTerm(Slugged):
     name = models.CharField(_("Term"), max_length=1000, unique=True)
     explanation = models.TextField(_("Explanation"))
+    auto_highlight = models.BooleanField(_("Automatically Highlight in Text"), default=True)
     
     class Meta:
         verbose_name = _("Glossary Term")

@@ -41,7 +41,7 @@ class TagAdmin(admin.ModelAdmin):
 class GlossaryTermAdmin(admin.ModelAdmin):
     fieldsets = (
         (None, {
-            "fields": ["name","explanation"],
+            "fields": ["name","explanation","auto_highlight"],
         }),
     )
 
