@@ -33,7 +33,9 @@ def add_glossary_tooltips(text):
                 
                 for i in range(len(words)):
                     if (not words[i]==" ") and (words[i].upper() in terms):
-                        words[i] = '<a href="%s" rel="tooltip" title="%s">%s</a>' % (terms[words[i].upper()][1],terms[words[i].upper()][0], words[i])
+                        key = words[i].upper()
+                        words[i] = '<a href="%s" rel="tooltip" title="%s">%s</a>' % (terms[key][1],terms[key][0], words[i])
+                        del terms[key]
                                                                                         
                 chunk = "".join(words)
             yield chunk
