@@ -392,8 +392,12 @@ line-height: 14px;
 font-size: 12px; 
 }
 
-h6 {
+h6.glossaryterm {
 font-size: 11px; 
+}
+
+.glossaryexplanation {
+margin-left: 40px;
 }
 
 }

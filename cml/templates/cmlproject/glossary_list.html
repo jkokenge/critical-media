@@ -18,12 +18,12 @@ Glossary
 
 {% for term in terms %}
 <div class="row">
-<div class="span2" id="term-{{term.slug}}">
+<div class="span2" class="glossaryterm"  id="term-{{term.slug}}">
 <h6>
 {{term.name}}
 </h6>
 </div>
-<div class="span5" id="explanation-{{term.slug}}">
+<div class="span6" class="glossaryexplanation" id="explanation-{{term.slug}}">
 <p>
 {{term.explanation}}
 </p>
