@@ -173,6 +173,7 @@ INSTALLED_APPS = (
     #"mezzanine.accounts",
     #"mezzanine.mobile",
     "pagination",
+    "nashvegas",
     "cmlproject",
 )
 
