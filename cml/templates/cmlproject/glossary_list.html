@@ -14,7 +14,7 @@ Glossary
 {% block main %}
 <div class="row">
 <div class="span8" id="glossary-content">
-<br />
+<p>This glossary provides simple and basic definitions to some very complex concepts. It is recommended that you use these definitions as a jumping off point to more deeply engage these terms, learn how to understand them, and apply them.</p>
 
 {% for term in terms %}
 <div class="row">
@@ -23,7 +23,7 @@ Glossary
 {{term.name}}
 </h6>
 </div>
-<div class="span6" id="explanation-{{term.slug}}">
+<div class="span5" id="explanation-{{term.slug}}">
 <p>
 {{term.explanation}}
 </p>
