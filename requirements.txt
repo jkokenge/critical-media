@@ -6,3 +6,4 @@ mezzanine==1.1.4
 django-pagination==1.0.7
 micawber==0.2.4
 grappelli_safe==0.2.7
+nashvegas==0.8

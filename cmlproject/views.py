@@ -89,6 +89,11 @@ def glossary_list (request, template="cmlproject/glossary_list.html"):
     templates = []
     terms = GlossaryTerm.objects.all().order_by("name")
     
+    terms = paginate(terms,
+                          request.GET.get("page", 1),
+                          15,
+                          5)
+    
     context = {"terms": terms,}
     templates.append(template)
     return render(request, templates, context)
