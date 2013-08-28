@@ -1,0 +1,1 @@
+﻿alter table cmlproject_topic add column overview_doc character varying(255);

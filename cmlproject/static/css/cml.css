@@ -121,11 +121,22 @@ max-height:100%;
 max-width:100%;
 border:0;
 }
-​
 
 .featuredmediathumb .mediatitle
 {
 text-align:center;
+}
+
+.overviewdoc {
+margin-bottom: 8px;
+text-align:center;
+}
+
+.overviewdoc button {
+color: #F68A17;
+border: none;
+padding: 10px;
+background-color: #eee;
 }
 
 .mediatitle {
