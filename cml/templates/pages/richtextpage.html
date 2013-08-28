@@ -3,9 +3,11 @@
 {% load mezzanine_tags %}
 
 {% block main %}{{ block.super }}
-
+<div class="row">
+<div class="span7">
 {% editable page.richtextpage.content %}
 {{ page.richtextpage.content|richtext_filter|safe }}
 {% endeditable %}
-
+</div>
+</div>
 {% endblock %}
