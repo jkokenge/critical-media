@@ -21,6 +21,15 @@
 
 
 <div class="span2" id="{{topic.slug}}-featured">
+
+{% if topic.overview_doc %}
+<div class="overviewdoc">
+<button class="download_overview" onclick="location.href='{{topic.overview_doc.url}}'">
+<i class="icon-download-alt icon-large"></i> overview pdf</a>
+</button>
+</div>
+{% endif %}
+
 <h3 class="featuredmedia"> featured media </h3>
 {% if topic.related_tag %}
 <span class="see-more">
