@@ -1,3 +1,7 @@
+a.nohoverunderline:hover{
+text-decoration: none;
+}
+
 
 .navbar-inner {
   min-height: 60px;
@@ -324,6 +328,41 @@ background-color:#f68a17;
 text-decoration: none;
 }
 
+li.whoareyou {
+font-size: 17px;
+font-weight: 900;
+color: #f68a17;
+}
+
+/* speech bubble */
+.triangle-isosceles {
+	position:relative;
+	padding:15px;
+	color:#000;
+	background:#f68a17;
+}
+
+/* creates triangle */
+.triangle-isosceles:after {
+	content:"";
+	position:absolute;
+	bottom:-15px; /* value = - border-top-width - border-bottom-width */
+	left:100px; /* controls horizontal position */
+	border-width:15px 15px 0; /* vary these values to change the angle of the vertex */
+	border-style:solid;
+	border-color:#f68a17 transparent;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+
+.speech-bubble-text { 
+   color: white;
+   text-align: center;
+   font-size: 15px; 
+   font-weight: normal;
+   margin-top:0;
+}
 
 @media (min-width: 768px) and (max-width: 979px) {
 .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {

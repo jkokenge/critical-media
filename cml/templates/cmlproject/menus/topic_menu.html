@@ -2,6 +2,9 @@
 
 {% spaceless %}
 <ul class = "thumbnails">
+<li class="span2"><a href="http://www.criticalmediaproject.org/about/key-concepts/" class="nohoverunderline">
+<p class="triangle-isosceles speech-bubble-text">who are you?</p></a>
+  </li>
   {% get_topics as topic_list %}
   {% for t in topic_list %}
   <li class="span2 topic-image">
@@ -11,5 +14,6 @@
   </a>
   </li>
   {% endfor %}
+  
 </ul>
 {% endspaceless %}
