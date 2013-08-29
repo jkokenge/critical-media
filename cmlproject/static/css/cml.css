@@ -365,7 +365,7 @@ color: #f68a17;
 	content:"";
 	position:absolute;
 	bottom:-15px; /* value = - border-top-width - border-bottom-width */
-	left:100px; /* controls horizontal position */
+	left:65%; /* controls horizontal position */
 	border-width:15px 15px 0; /* vary these values to change the angle of the vertex */
 	border-style:solid;
 	border-color:#f68a17 transparent;
