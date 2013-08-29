@@ -113,7 +113,7 @@ if (typeof tinyMCE != 'undefined') {
         + "img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name|style],"
         + "iframe[src|title|byline|portrait|frameborder|width|height],"
         + "br[clearfix],"
-        + "-p[class<clearfix?summary?code?largefirstpara],"
+        + "-p[class<clearfix?summary?code?largefirstpara?greybox],"
         + "h2[class<clearfix],h3[class<clearfix],h4[class<clearfix],"
         + "ul[class<clearfix],ol[class<clearfix],"
         + "div[class],"

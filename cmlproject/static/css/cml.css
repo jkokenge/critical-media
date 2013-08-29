@@ -127,6 +127,11 @@ border:0;
 text-align:center;
 }
 
+.greybox {
+padding: 10px;
+background-color: #eee;
+}
+
 .overviewdoc {
 margin-bottom: 8px;
 text-align:center;
@@ -135,8 +140,10 @@ text-align:center;
 .overviewdoc button {
 color: #F68A17;
 border: none;
-padding: 10px;
+padding: 5px 10px;
 background-color: #eee;
+text-align: left;
+width:90%;
 }
 
 .mediatitle {
