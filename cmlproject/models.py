@@ -50,7 +50,7 @@ class Topic(Orderable, Displayable, RichText, AdminThumbMixin):
                                upload_to="thumbs", format="Image",
                                max_length=255, null=True, blank=True)
     overview_doc = FileField(verbose_name=_("Overview PDF"),
-                               upload_to="docs", format="Document",
+                               upload_to="", format="Document",
                                max_length=255, null=True, blank=True)
     
     admin_thumb_field = "icon"
