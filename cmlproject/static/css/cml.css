@@ -358,6 +358,7 @@ color: #f68a17;
 	padding:15px;
 	color:#000;
 	background:#f68a17;
+	border-radius:15px;
 }
 
 /* creates triangle */
@@ -365,7 +366,7 @@ color: #f68a17;
 	content:"";
 	position:absolute;
 	bottom:-15px; /* value = - border-top-width - border-bottom-width */
-	left:65%; /* controls horizontal position */
+	left:60%; /* controls horizontal position */
 	border-width:15px 15px 0; /* vary these values to change the angle of the vertex */
 	border-style:solid;
 	border-color:#f68a17 transparent;
@@ -377,8 +378,9 @@ color: #f68a17;
 .speech-bubble-text { 
    color: white;
    text-align: center;
-   font-size: 15px; 
-   font-weight: normal;
+   font-size: 19px; 
+   font-weight: 700;
+   letter-spacing:-1px;
    margin-top:0;
 }
 
