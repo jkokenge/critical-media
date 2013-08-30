@@ -378,8 +378,8 @@ color: #f68a17;
 .speech-bubble-text { 
    color: white;
    text-align: center;
-   font-size: 19px; 
-   font-weight: 700;
+   font-size: 17px; 
+   font-weight: normal;
    letter-spacing:-1px;
    margin-top:0;
 }
