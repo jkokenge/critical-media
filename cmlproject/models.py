@@ -132,6 +132,7 @@ class MediaArtefact(Orderable, Displayable, RichText):
     class Meta:
         verbose_name = _("Media Artifact")
         verbose_name_plural = _("Media Artifacts")
+        ordering = ("-id",)
         
     def __unicode__(self):
         return self.title

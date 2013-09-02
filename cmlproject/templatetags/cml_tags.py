@@ -1,5 +1,5 @@
 from django import template
-from cmlproject.models import Topic, Tag, GlossaryTerm
+from cmlproject.models import Topic, Tag, GlossaryTerm, MediaArtefact
 from mezzanine import template
 import re
 
@@ -14,6 +14,11 @@ def get_topics():
 def get_tags(type):
     tags = Tag.objects.filter(tag_type=type).order_by("name")
     return tags
+
+@register.assignment_tag
+def get_recent_media():
+    medias = MediaArtefact.objects.all()[0:5]
+    return medias
 
 @register.simple_tag
 def active(request, url_name, *myargs):
