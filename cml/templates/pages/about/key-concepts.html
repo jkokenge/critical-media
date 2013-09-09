@@ -1,0 +1,36 @@
+{% extends "pages/page.html" %}
+
+{% load mezzanine_tags cml_tags staticfiles %}
+
+{% block main %}{{ block.super }}
+<div class="row">
+<div class="span6">
+{% editable page.richtextpage.content %}
+{{ page.richtextpage.content|richtext_filter|safe }}
+{% endeditable %}
+</div>
+
+<div class="span2" id="recent-media">
+<div class="overviewdoc">
+<button class="download_overview" onclick="location.href='{% static "media/uploads/race_cropped.jpg" %}'">
+<i class="icon-download-alt icon-large"></i> overview PDF</a>
+</button>
+</div>
+<h3 class="featuredmedia"> recently added</h3>
+{% get_recent_media as media_list %}
+<ul class = "thumbnails">
+{% for mediaartefact in media_list  %}
+  <li class="span2 featuredmediathumb">
+  <div class="thumbnail-small">
+  <a href="{{ mediaartefact.get_absolute_url }}" class="thumbnail">
+  <img src="{{ mediaartefact.thumbnail_url }}" alt="{{ mediaartefact.title }} thumbnail">
+  <span class="mediatitle">{{ mediaartefact.title }}</span>
+  </a>
+  </div>
+  </li>
+{% endfor %}
+</ul>
+
+</div>
+</div>
+{% endblock %}
