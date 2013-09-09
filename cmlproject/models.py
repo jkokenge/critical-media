@@ -49,7 +49,7 @@ class Topic(Orderable, Displayable, RichText, AdminThumbMixin):
     icon = FileField(verbose_name=_("Icon"),
                                upload_to="thumbs", format="Image",
                                max_length=255, null=True, blank=True)
-    lessonplan_doc = FileField(verbose_name=_("Lesson Plan PDF"),
+    lessonplan_doc = FileField(verbose_name=_("Lesson Plan or Worksheet PDF"),
                                upload_to="", format="Document",
                                max_length=255, null=True, blank=True)  
     overview_doc = FileField(verbose_name=_("Overview PDF"),

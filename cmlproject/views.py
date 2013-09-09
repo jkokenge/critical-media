@@ -55,6 +55,10 @@ def topic_background(request, slug,
     topic = get_object_or_404(topics, slug=slug)
     #print 'topic is %s' % topic.title
     context = {"topic": topic}
+    
+    if (topic.parent_topic):
+        template = "cmlproject/subtopic_background.html"
+    
     templates = [template]
     return render(request, templates, context)
 
