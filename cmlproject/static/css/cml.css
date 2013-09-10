@@ -415,14 +415,12 @@ font-size: 14px;
 width: 100%;
 }
 
-body { padding: 0px; }
-
 .media-detail iframe, .media-detail #wistiaDocumentEmbed > embed {
 width: 480px;
 }
 
 .navbar .brand {
-font-size: 32px;
+font-size: 28px;
 }
 
 .tagline {
@@ -458,14 +456,12 @@ padding: 0px 0px 0px;
 width: 100%;
 }
 
-body { padding: 0px; }
-
 .media-detail iframe, .media-detail #wistiaDocumentEmbed > embed {
 width: 320px;
 }
 
 .navbar .brand {
-font-size: 28px;
+font-size: 24px;
 }
 
 .tagline {
