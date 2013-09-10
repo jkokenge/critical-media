@@ -17,8 +17,6 @@ CREATE TABLE cmlproject_medialist
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE cmlproject_medialist
-  OWNER TO cml;
 
 -- Index: cmlproject_medialist_site_id
 
@@ -51,8 +49,7 @@ CREATE TABLE cmlproject_medialist_listed_media
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE cmlproject_medialist_listed_media
-  OWNER TO cml;
+
 
 -- Index: cmlproject_medialist_listed_media_mediaartefact_id
 
