@@ -415,6 +415,8 @@ font-size: 14px;
 width: 100%;
 }
 
+body { padding: 0px; }
+
 .media-detail iframe, .media-detail #wistiaDocumentEmbed > embed {
 width: 480px;
 }
@@ -455,6 +457,8 @@ padding: 0px 0px 0px;
 .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
 width: 100%;
 }
+
+body { padding: 0px; }
 
 .media-detail iframe, .media-detail #wistiaDocumentEmbed > embed {
 width: 320px;
