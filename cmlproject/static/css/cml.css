@@ -451,6 +451,47 @@ overflow:hidden;
 padding: 0px 0px 0px;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+.container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+width: 320px;
+}
+
+.media-detail iframe, .media-detail #wistiaDocumentEmbed > embed {
+width: 320px;
+}
+
+.navbar .brand {
+font-size: 28px;
+}
+
+.tagline {
+float: none;
+font-size: 14px;
+}
+
+.medialistthumbs {
+margin-left:-20px;
+}
+
+.featuredmediathumb img {
+width:95px;
+height:70px;
+}
+
+.medialistthumb>.thumbnail {
+width:150px;
+height:100px;
+}
+
+.tab-content {
+padding: 0px 0px 10px;
+overflow:hidden;
+}
+
+.label, .badge {
+padding: 0px 0px 0px;
+}
+
 
 .label > a, .badge > a {
 font-size: 10px;
@@ -484,6 +525,10 @@ font-size: 11px;
 .glossaryexplanation {
 margin-left: 40px;
 }
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
 
 }
 
