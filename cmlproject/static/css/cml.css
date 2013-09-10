@@ -194,11 +194,6 @@ text-transform: lowercase;
 color: #F68A17;
 }
 
-table {
-width: 100%;
-table-layout: fixed;
-}
-
 span.see-more {
 display:block;
 text-align: center;
@@ -384,6 +379,14 @@ color: #f68a17;
    font-weight: normal;
    letter-spacing:-1px;
    margin-top:0;
+}
+
+table {
+width: 100%;
+text-align: left;
+border-collapse: collapse;
+margin: 30px 30px 10px 15px;
+border-bottom:0px;
 }
 
 @media (min-width: 980px) and (max-width: 1279px) {
