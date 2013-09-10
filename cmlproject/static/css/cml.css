@@ -385,7 +385,8 @@ table {
 width: 100%;
 text-align: left;
 border-collapse: collapse;
-margin: 30px 30px 10px 15px;
+margin-top: 15px;
+margin-bottom: 15px;
 border-bottom:0px;
 }
 
