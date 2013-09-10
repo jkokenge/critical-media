@@ -25,7 +25,7 @@ ADMIN_MENU_ORDER = (
     ("Content", ("pages.Page","blog.BlogPost", "generic.ThreadedComment",
         ("Media Library", "fb_browse"),)),
     ("Site", ("conf.Setting","auth.User", "auth.Group", "sites.Site", "redirects.Redirect")),
-    ("Critical Media Literacy Project", ("cmlproject.Topic", "cmlproject.MediaArtefact", "cmlproject.Tag", "cmlproject.GlossaryTerm")),
+    ("Critical Media Literacy Project", ("cmlproject.Topic", "cmlproject.MediaArtefact", "cmlproject.Tag", "cmlproject.GlossaryTerm", "cmlproject.MediaList")),
 )
 
 TINYMCE_SETUP_JS="js/admin/tinymce_setup.js"

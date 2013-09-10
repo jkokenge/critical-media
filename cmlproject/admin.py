@@ -3,7 +3,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from django.contrib import admin
 
-from .models import MediaArtefact, Topic, Tag, GlossaryTerm
+from .models import MediaArtefact, MediaList, Topic, Tag, GlossaryTerm
 
 from mezzanine.core.admin import DisplayableAdmin
 
@@ -19,6 +19,13 @@ class MediaAdmin(DisplayableAdmin):
     list_filter = ('tags', 'featured_in')
     date_hierarchy = ""
 
+
+class MediaListAdmin(admin.ModelAdmin):
+    fieldsets = (
+                 (None, {
+                         "fields": ["name", "listed_media"],
+                          }),
+                 )
 
 class TopicAdmin(DisplayableAdmin):
     fieldsets = (
@@ -48,5 +55,6 @@ class GlossaryTermAdmin(admin.ModelAdmin):
 
 admin.site.register(Topic, TopicAdmin)
 admin.site.register(MediaArtefact,MediaAdmin)
+admin.site.register(MediaList,MediaListAdmin)
 admin.site.register(Tag, TagAdmin)
 admin.site.register(GlossaryTerm, GlossaryTermAdmin)

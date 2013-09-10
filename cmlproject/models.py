@@ -195,6 +195,23 @@ class MediaArtefact(Orderable, Displayable, RichText):
 
         super(MediaArtefact, self).save(*args, **kwargs)
         
+class MediaList(Slugged):
+    name = models.CharField(_("List Name"), max_length=100)
+    listed_media = models.ManyToManyField("MediaArtefact", blank=True, null=True,related_name="listed_in")
+    
+    class Meta:
+        verbose_name = _("Media List")
+        verbose_name_plural = _("Media Lists")
+        
+    def __unicode__(self):
+        return self.name
+    
+    def save(self, *args, **kwargs):
+        if not self.title:
+            self.title = self.name
+            
+        super(MediaList, self).save(*args, **kwargs)
+
 class Tag(Slugged):
     name = models.CharField(_("Tag Name"), max_length=100)
     tag_type = models.SmallIntegerField(choices=TAG_TYPE_CHOICES, default = TOPIC_TAG)
