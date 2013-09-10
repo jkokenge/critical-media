@@ -12,25 +12,12 @@
 
 <div class="span2" id="recent-media">
 <div class="overviewdoc">
-<button class="download_overview" onclick="location.href='{% get_media_prefix %}uploads/who_are_you_overview.pdf'">
+<button id="who_are_you_download" class="download_overview" onclick="location.href='{% get_media_prefix %}uploads/who_are_you_overview.pdf'">
 <i class="icon-download-alt icon-large"></i> overview PDF</a>
 </button>
 </div>
-<h3 class="featuredmedia"> recently added</h3>
-{% get_recent_media as media_list %}
-<ul class = "thumbnails">
-{% for mediaartefact in media_list  %}
-  <li class="span2 featuredmediathumb">
-  <div class="thumbnail-small">
-  <a href="{{ mediaartefact.get_absolute_url }}" class="thumbnail">
-  <img src="{{ mediaartefact.thumbnail_url }}" alt="{{ mediaartefact.title }} thumbnail">
-  <span class="mediatitle">{{ mediaartefact.title }}</span>
-  </a>
-  </div>
-  </li>
-{% endfor %}
-</ul>
-
+{% include "cmlproject/menus/recent_media_menu.html" %}
+<div>{% include "cmlproject/sidebar_text.html" %}</div>
 </div>
 </div>
 {% endblock %}

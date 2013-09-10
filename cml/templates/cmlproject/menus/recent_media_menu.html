@@ -1,0 +1,16 @@
+{% load cml_tags %}
+
+<h3 class="featuredmedia"> recently added</h3>
+{% get_recent_media as media_list %}
+<ul class = "thumbnails">
+{% for mediaartefact in media_list  %}
+  <li class="span2 featuredmediathumb">
+  <div class="thumbnail-small">
+  <a href="{{ mediaartefact.get_absolute_url }}" class="thumbnail">
+  <img src="{{ mediaartefact.thumbnail_url }}" alt="{{ mediaartefact.title }} thumbnail">
+  <span class="mediatitle">{{ mediaartefact.title }}</span>
+  </a>
+  </div>
+  </li>
+{% endfor %}
+</ul>

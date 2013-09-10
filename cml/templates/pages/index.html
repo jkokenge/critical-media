@@ -1,6 +1,6 @@
 {% extends "pages/page.html" %}
 
-{% load mezzanine_tags cml_tags %}
+{% load mezzanine_tags %}
 
 {% block main %}{{ block.super }}
 <div class="row">
@@ -8,24 +8,13 @@
 {% editable page.richtextpage.content %}
 {{ page.richtextpage.content|richtext_filter|safe }}
 {% endeditable %}
+<div>{% include "cmlproject/sidebar_text.html" %}</div>
 </div>
+
 
 <div class="span2" id="recent-media">
 
-<h3 class="featuredmedia"> recently added</h3>
-{% get_recent_media as media_list %}
-<ul class = "thumbnails">
-{% for mediaartefact in media_list  %}
-  <li class="span2 featuredmediathumb">
-  <div class="thumbnail-small">
-  <a href="{{ mediaartefact.get_absolute_url }}" class="thumbnail">
-  <img src="{{ mediaartefact.thumbnail_url }}" alt="{{ mediaartefact.title }} thumbnail">
-  <span class="mediatitle">{{ mediaartefact.title }}</span>
-  </a>
-  </div>
-  </li>
-{% endfor %}
-</ul>
+{% include "cmlproject/menus/recent_media_menu.html" %}
 
 </div>
 </div>
