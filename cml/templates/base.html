@@ -52,29 +52,28 @@ $(function() {
 <div class="container">
 
 <div class="row">
-
-<div class="span8">
-
-<div class="row">
-<div class="span8">
-<div class="logo-div">
-<a href="/">
-<img src="{{ STATIC_URL }}images/icon.png" width="75" height="75" alt="critical media project icon" class="logo-image" />
-</a>
+<div class="span2">
+	<div class="logo-div">
+	<a href="/">
+	<img src="{{ STATIC_URL }}images/icon.png" width="75" height="75" alt="critical media project icon" class="logo-image" />
+	</a>
+	</div>
 </div>
-<div>
-{% if settings.SITE_TITLE %}
-<a class="brand" href="/">
-{% autoescape off %}
-{{ settings.SITE_TITLE|lower|add_title_classes }}
-{% endautoescape %}
-</a>
-{% endif %}
-{% if settings.SITE_TAGLINE %}<span class="tagline">{{ settings.SITE_TAGLINE|lower }}</span>{% endif %}
-</div>
-</div>
-</div>
-
+<div class="span6 brandandtag-div">
+	<div class="row">
+	{% if settings.SITE_TITLE %}
+	<a class="brand" href="/">
+	{% autoescape off %}
+	{{ settings.SITE_TITLE|lower|add_title_classes }}
+	{% endautoescape %}
+	</a>
+	{% endif %}
+	</div>
+	<div class="row">
+	{% if settings.SITE_TAGLINE %}
+	<span class="tagline">{{ settings.SITE_TAGLINE|lower }}</span>
+	{% endif %}
+	</div>
 </div>
 
 <div class="span4">
@@ -86,7 +85,6 @@ $(function() {
         {% page_menu "pages/menus/dropdown.html" %}
 </div>
 
-</div>
 </div>
 </div>
 

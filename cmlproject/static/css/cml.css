@@ -2,7 +2,6 @@ a.nohoverunderline:hover{
 text-decoration: none;
 }
 
-
 .navbar-inner {
   min-height: 60px;
   padding-left: 20px;
@@ -36,15 +35,21 @@ display: inline;
 padding: 8px 10px 2px 2px;
 }
 
-.navbar .brand {
+div.brandandtag-div {
 float: left;
-padding: 12px 20px 5px;
-margin-left: -20px;
+margin-left: -40px;
+}
+
+
+.navbar .brand {
+
+padding: 12px 0px 5px;
 font-size: 40px;
 font-weight: 700;
 line-height: 1;
 letter-spacing:-1px;
 color: white;
+margin-left:0px;
 }
 
 .navbar .brand .odd {
@@ -59,7 +64,7 @@ background-color: #bdbcbc;
 
 
 .tagline {
-float: left;
+
 font-size: 16px;
 font-style: normal;
 margin: 0px 5px 24px 0px;
@@ -403,14 +408,44 @@ letter-spacing: 1px;
 }
 
 @media (min-width: 980px) and (max-width: 1279px) {
+body::before{
+	content: "Small Screen media query (980 < 1279) fired";
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	background: rgba(255,255,0, 0.9); /* Semi-transparent yellow */
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+}
 
 .tagline {
 font-size: 14px;
 }
 
+div.brandandtag-div {
+margin-left: -20px;
+}
+
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
+
+body::before{
+	content: "Tablet media query (768 < 979) fired";
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	background: rgba(255,255,0, 0.9); /* Semi-transparent yellow */
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+}
+
 .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
 width: 100%;
 }
@@ -419,8 +454,12 @@ width: 100%;
 width: 480px;
 }
 
+div.brandandtag-div {
+margin-left: 0px;
+}
+
 .navbar .brand {
-font-size: 28px;
+font-size: 32px;
 }
 
 .tagline {
@@ -429,7 +468,7 @@ font-size: 14px;
 }
 
 .medialistthumbs {
-margin-left:-20px;
+margin-left:-10px;
 }
 
 .featuredmediathumb img {
@@ -450,8 +489,24 @@ overflow:hidden;
 .label, .badge {
 padding: 0px 0px 0px;
 }
+}
 
 @media (min-width: 320px) and (max-width: 767px) {
+
+body::before{
+	content: "Mobile media query (320 < 767) fired";
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	background: rgba(255,255,0, 0.9); /* Semi-transparent yellow */
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+}
+
+
 .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
 width: 100%;
 }
@@ -460,8 +515,12 @@ width: 100%;
 width: 320px;
 }
 
+div.brandandtag-div {
+margin-left: 0px;
+}
+
 .navbar .brand {
-font-size: 24px;
+font-size: 32px;
 }
 
 .tagline {
