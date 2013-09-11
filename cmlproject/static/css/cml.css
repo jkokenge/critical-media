@@ -409,19 +409,6 @@ letter-spacing: 1px;
 
 @media (min-width: 980px) and (max-width: 1279px) {
 
-body::before{
-	content: "Small Screen media query (980 < 1279) fired";
-	font-weight: bold;
-	display: block;
-	text-align: center;
-	background: rgba(255,255,0, 0.9); /* Semi-transparent yellow */
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 99;
-}
-
 .tagline {
 font-size: 12px;
 }
@@ -438,19 +425,6 @@ text-color:yellow;
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
-
-body::before{
-	content: "Tablet media query (768 < 979) fired";
-	font-weight: bold;
-	display: block;
-	text-align: center;
-	background: rgba(255,255,0, 0.9); /* Semi-transparent yellow */
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 99;
-}
 
 .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
 width: 100%;
