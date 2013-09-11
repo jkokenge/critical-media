@@ -409,6 +409,19 @@ letter-spacing: 1px;
 
 @media (min-width: 980px) and (max-width: 1279px) {
 
+body::before{
+	content: "Small Screen media query (980 < 1279) fired";
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	background: rgba(255,255,0, 0.9); /* Semi-transparent yellow */
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+}
+
 .tagline {
 font-size: 12px;
 }
@@ -417,9 +430,27 @@ div.brandandtag-div {
 margin-left: -20px;
 }
 
+.label, .badge, .label > a, .badge > a {
+font-size: 12px;
+text-color:yellow;
+}
+
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
+
+body::before{
+	content: "Tablet media query (768 < 979) fired";
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	background: rgba(255,255,0, 0.9); /* Semi-transparent yellow */
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+}
 
 .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
 width: 100%;
@@ -464,6 +495,33 @@ overflow:hidden;
 .label, .badge {
 padding: 0px 0px 0px;
 }
+
+
+.label > a, .badge > a {
+font-size: 10px;
+font-weight: normal;
+line-height: 12px;
+white-space: nowrap;
+text-shadow: none;
+padding: 0px 2px 2px;
+word-spacing:-1px;
+}
+
+.navbar .nav > li > a {
+margin: 5px 5px 5px;
+padding: 0px 0px 0px;
+font-size: 13px;
+}
+
+.nav-tabs > li > a {
+padding-right: 3px;
+padding-left: 3px;
+margin-right: 2px;
+line-height: 14px;
+
+font-size: 12px; 
+}
+
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
