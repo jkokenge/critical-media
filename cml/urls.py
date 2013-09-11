@@ -4,6 +4,8 @@ from django.contrib import admin
 
 from mezzanine.core.views import direct_to_template
 
+from django.http import HttpResponse
+
 
 admin.autodiscover()
 
@@ -44,6 +46,7 @@ urlpatterns = patterns("",
     # template "pages/index.html" can be used.
 
     url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
+    url(r'^robots\.txt$', lambda r: HttpResponse("User-agent: *\nDisallow: ", mimetype="text/plain")),
     # HOMEPAGE FOR A BLOG-ONLY SITE
     # -----------------------------
     # This pattern points the homepage to the blog post listing page,
@@ -67,10 +70,6 @@ urlpatterns = patterns("",
     ("^", include("mezzanine.urls")),
 
 )
-
-urlpatterns += patterns("",
-        ("^robots.txt$", lambda r: HttpResponse("User-agent: *\nDisallow:",
-                                                mimetype="text/plain")),)
 
 # Adds ``STATIC_URL`` to the context of error pages, so that error
 # pages can use JS, CSS and images.
