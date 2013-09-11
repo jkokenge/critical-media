@@ -44,6 +44,7 @@ urlpatterns = patterns("",
     # template "pages/index.html" can be used.
 
     url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
+    (r'^robots\.txt$', direct_to_template, {'template': 'robots.txt', 'mimetype': 'text/plain'}),
 
     # HOMEPAGE FOR A BLOG-ONLY SITE
     # -----------------------------
