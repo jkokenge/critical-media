@@ -5,3 +5,6 @@
 .coverage
 local_settings.py
 static/
+.idea/
+notes.txt
+site_media/
