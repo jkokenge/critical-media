@@ -123,6 +123,8 @@ print(PROJECT_ROOT)
 # Name of the directory for the project.
 PROJECT_DIRNAME = PROJECT_ROOT.split(os.sep)[-1]
 
+print(PROJECT_DIRNAME)
+
 # Every cache key will get prefixed with this value - here we set it to
 # the name of the directory the project is in to try and use something
 # project specific.
