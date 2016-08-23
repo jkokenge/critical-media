@@ -1,3 +1,18 @@
+import os
+from os import environ
+from django.core.exceptions import ImproperlyConfigured
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': environ['NAME'],
+        'USER': environ['USER'],
+        'PASSWORD': environ['PASSWORD'],
+        'HOST': environ['HOST'],
+        'PORT': environ['PORT'],
+    }
+}
+
 
 ######################
 # MEZZANINE SETTINGS #
@@ -61,7 +76,7 @@ LANGUAGE_CODE = "en"
 # A boolean that turns on/off debug mode. When set to ``True``, stack traces
 # are displayed for error pages. Should always be set to ``False`` in
 # production. Best set to ``True`` in local_settings.py
-DEBUG = False
+#DEBUG = False
 
 # Whether a user's session cookie expires when the Web browser is closed.
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
@@ -73,7 +88,7 @@ SITE_ID = 1
 USE_I18N = False
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = "d22f8d2a-0053-437f-ab49-65c685be18449e042a00-941e-4a97-904e-054a2a7d110bc73e5dc2-99ac-4867-b9f0-a3a876bdddd5"
+SECRET_KEY = environ['SECRET_KEY']
 
 # Tuple of IP addresses, as strings, that:
 #   * See debug comments, when DEBUG is true
@@ -101,10 +116,9 @@ STATICFILES_FINDERS = (
 # PATHS #
 #########
 
-import os
-
 # Full filesystem path to the project.
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+print(PROJECT_ROOT)
 
 # Name of the directory for the project.
 PROJECT_DIRNAME = PROJECT_ROOT.split(os.sep)[-1]
@@ -206,7 +220,7 @@ MIDDLEWARE_CLASSES = (
     "mezzanine.core.middleware.TemplateForDeviceMiddleware",
     "mezzanine.core.middleware.TemplateForHostMiddleware",
     "mezzanine.core.middleware.AdminLoginInterfaceSelectorMiddleware",
-    # Uncomment the following if using any of the SSL settings:
+    # Uncomment the following if using any of the SSL settings_hide_fromdjango:
     # "mezzanine.core.middleware.SSLRedirectMiddleware",
     "mezzanine.pages.middleware.PageMiddleware",
     "mezzanine.core.middleware.FetchFromCacheMiddleware",
@@ -215,8 +229,8 @@ MIDDLEWARE_CLASSES = (
 
 # Store these package names here as they may change in the future since
 # at the moment we are using custom forks of them.
-PACKAGE_NAME_FILEBROWSER = "filebrowser_safe"
-PACKAGE_NAME_GRAPPELLI = "grappelli_safe"
+PACKAGE_NAME_FILEBROWSER = "filebrowser-safe"
+PACKAGE_NAME_GRAPPELLI = "grappelli-safe"
 
 
 #########################
@@ -242,16 +256,16 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 # Allow any settings to be defined in local_settings.py which should be
 # ignored in your version control system allowing for settings to be
 # defined per machine.
-try:
-    from local_settings import *
-except ImportError:
-    pass
+# try:
+#     from local_settings import *
+# except ImportError:
+#     pass
 
 # defined per machine.
-try:
-    from settings_gondor import *
-except ImportError:
-    pass
+# try:
+#     from settings_gondor import *
+# except ImportError:
+#     pass
 
 
 

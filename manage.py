@@ -5,6 +5,7 @@
 # development version of Mezzanine is used rather than the installed
 # version.
 import os
+from os import environ
 import sys
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.abspath(os.path.dirname(__file__)), os.pardir, os.pardir)))
@@ -29,7 +30,9 @@ for i, arg in enumerate(sys.argv):
         sys.argv.pop(i)
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "cml.settings")
+
+    DJANGO_SETTINGS_MODULE = environ['DJANGO_SETTINGS_MODULE']
+    #os.environ.setdefault("DJANGO_SETTINGS_MODULE", "cml.settings")
 
     from django.core.management import execute_from_command_line
     execute_from_command_line(sys.argv)
