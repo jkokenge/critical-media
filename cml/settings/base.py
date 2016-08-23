@@ -2,17 +2,16 @@ import os
 from os import environ
 from django.core.exceptions import ImproperlyConfigured
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': environ['NAME'],
-        'USER': environ['USER'],
-        'PASSWORD': environ['PASSWORD'],
-        'HOST': environ['HOST'],
-        'PORT': environ['PORT'],
-    }
-}
-
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': environ['NAME'],
+#         'USER': environ['USER'],
+#         'PASSWORD': environ['PASSWORD'],
+#         'HOST': environ['HOST'],
+#         'PORT': environ['PORT'],
+#     }
+# }
 
 ######################
 # MEZZANINE SETTINGS #
@@ -278,5 +277,5 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 # set_dynamic_settings() will rewrite globals based on what has been
 # defined so far, in order to provide some better defaults where
 # applicable.
-from mezzanine.utils.conf import set_dynamic_settings
-set_dynamic_settings(globals())
+# from mezzanine.utils.conf import set_dynamic_settings
+# set_dynamic_settings(globals())
