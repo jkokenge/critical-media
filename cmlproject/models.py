@@ -50,10 +50,10 @@ class Topic(Orderable, Displayable, RichText, AdminThumbMixin):
                                upload_to="thumbs", format="Image",
                                max_length=255, null=True, blank=True)
     lessonplan_doc = FileField(verbose_name=_("Lesson Plan or Worksheet PDF"),
-                               upload_to="", format="Document",
+                               upload_to="thumbs", format="Document",
                                max_length=255, null=True, blank=True)  
     overview_doc = FileField(verbose_name=_("Overview PDF"),
-                               upload_to="", format="Document",
+                               upload_to="thumbs", format="Document",
                                max_length=255, null=True, blank=True)
     
     admin_thumb_field = "icon"
