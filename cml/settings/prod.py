@@ -17,6 +17,6 @@ DATABASES = {
 
 
 
-from cml.settings.base import *
+from cml.cml.settings.base import *
 from mezzanine.utils.conf import set_dynamic_settings
 set_dynamic_settings(globals())
