@@ -1,7 +1,7 @@
 from .base import *
 from os import environ
 
-ROOT_URLCONF = "cml.cml.urls"
+ROOT_URLCONF = "cmp.cml.urls"
 
 DEBUG = False
 
@@ -17,6 +17,6 @@ DATABASES = {
 }
 
 
-from cml.cml.settings.base import *
+from cmp.cml.settings.base import *
 from mezzanine.utils.conf import set_dynamic_settings
 set_dynamic_settings(globals())
