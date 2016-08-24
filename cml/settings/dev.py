@@ -1,4 +1,7 @@
 from os import environ
+import os
+
+ROOT_URLCONF = "%s.urls" % PROJECT_DIRNAME
 
 DEBUG = True
 

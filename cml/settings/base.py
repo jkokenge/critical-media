@@ -117,12 +117,12 @@ STATICFILES_FINDERS = (
 
 # Full filesystem path to the project.
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-print(PROJECT_ROOT)
+print("project_root %s") % PROJECT_ROOT
 
 # Name of the directory for the project.
 PROJECT_DIRNAME = PROJECT_ROOT.split(os.sep)[-1]
 
-print(PROJECT_DIRNAME)
+print("project_dirname %s") % PROJECT_DIRNAME
 
 # Every cache key will get prefixed with this value - here we set it to
 # the name of the directory the project is in to try and use something
@@ -154,7 +154,8 @@ MEDIA_ROOT = os.path.join(PROJECT_ROOT, *MEDIA_URL.strip("/").split("/"))
 ADMIN_MEDIA_PREFIX = STATIC_URL + "grappelli/"
 
 # Package/module name to import the root urlpatterns from for the project.
-ROOT_URLCONF = "%s.urls" % PROJECT_DIRNAME
+#ROOT_URLCONF = "%s.urls" % PROJECT_DIRNAME
+#print("ROOT_URLCONF %s") % ROOT_URLCONF
 
 # Put strings here, like "/home/html/django_templates"
 # or "C:/www/django/templates".

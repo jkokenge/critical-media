@@ -1,6 +1,8 @@
 from .base import *
 from os import environ
 
+ROOT_URLCONF = "cml.cml.urls"
+
 DEBUG = False
 
 DATABASES = {
@@ -13,8 +15,6 @@ DATABASES = {
         'PORT': environ['PORT'],
     }
 }
-
-
 
 
 from cml.cml.settings.base import *
